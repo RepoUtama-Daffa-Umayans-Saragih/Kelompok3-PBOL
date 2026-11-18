@@ -105,3 +105,5 @@ public final class DataPortal {
 
         // Juara grup bertemu runner-up grup lain
         laga(t, "Perempat Final", november(14, 13), "Team Alpha", "Storm Raiders", "2-1");
+        laga(t, "Perempat Final", november(14, 16), "Team Beta", "Crimson Owls", "2-0");
+        laga(t, "Perempat Final", november(15, 13), "Team Omega", "Rex Squad", "2-0");
