@@ -56,3 +56,5 @@ public final class DataPortal {
     public static List<Lomba> lombaBuatanSaya() {
         List<Lomba> hasil = new ArrayList<>();
         for (Lomba lomba : LOMBA) {
+            if (lomba.penyelenggara().equals(NAMA_PLAYER)) {
+                hasil.add(0, lomba);
