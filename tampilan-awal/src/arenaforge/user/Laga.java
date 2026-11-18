@@ -44,3 +44,5 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
         if (pemenang == null) {
             return "S";
         }
+        return pemenang.equals(tim) ? "M" : "K";
+    }
