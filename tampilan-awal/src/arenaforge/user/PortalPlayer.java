@@ -199,3 +199,5 @@ public class PortalPlayer {
      * urutan palet (marun, merah tua, merah), jadi makin dekat ke final makin merah.
      */
     static HBox jalur(Turnamen t) {
+        List<String> tahapan = t.tahapan();
+        int sekarang = t.tahapSekarang();
