@@ -46,3 +46,6 @@ public final class DataPortal {
 
     public static boolean sudahDiikuti(Lomba lomba) {
         return DIIKUTI.stream().anyMatch(t -> t.getNama().equals(lomba.nama()));
+    }
+
+    public static boolean namaLombaDipakai(String nama) {
