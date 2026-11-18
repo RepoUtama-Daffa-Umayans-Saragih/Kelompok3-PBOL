@@ -87,3 +87,5 @@ public final class DataPortal {
 
     /** 16 tim, 4 grup. Fase grup dan perempat final selesai, semifinal belum dimainkan. */
     private static Turnamen mlbbCup() {
+        Turnamen t = new Turnamen("MLBB Cup 2026", "Mobile Legends",
+                "16 tim, fase grup Bo2, knockout Bo3", "Team Alpha", "Jungler", 2);
