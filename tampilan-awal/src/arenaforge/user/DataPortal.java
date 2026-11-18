@@ -169,3 +169,5 @@ public final class DataPortal {
 
     private static Integer[] bacaSkor(String skor) {
         if (skor == null) {
+            return new Integer[] {null, null};
+        }
