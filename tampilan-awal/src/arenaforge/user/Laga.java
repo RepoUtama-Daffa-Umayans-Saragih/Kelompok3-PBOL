@@ -33,3 +33,6 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
             return null;
         }
         return skorA > skorB ? timA : timB;
+    }
+
+    /** Hasil dari sisi satu tim: "M" (menang), "S" (seri), "K" (kalah), atau null kalau belum main. */
