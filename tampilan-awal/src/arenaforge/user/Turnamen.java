@@ -12,3 +12,5 @@ import java.util.Map;
  * Klasemen dan status tim dihitung dari hasil laga, tidak diketik manual.
  */
 public class Turnamen {
+    /** Urutan fase knockout dari awal sampai akhir. */
+    private static final List<String> URUTAN_KNOCKOUT = List.of("Perempat Final", "Semifinal", "Final");
