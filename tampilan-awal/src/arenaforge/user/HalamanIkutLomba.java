@@ -73,3 +73,6 @@ class HalamanIkutLomba {
                     + lomba.kuota() + " peserta).", true);
             return;
         }
+
+        tampilkanPesan(null, false);
+        wadahHasil.getChildren().add(panelCocok(lomba));
