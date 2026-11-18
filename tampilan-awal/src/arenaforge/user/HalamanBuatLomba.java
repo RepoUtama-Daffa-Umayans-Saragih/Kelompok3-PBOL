@@ -139,3 +139,5 @@ class HalamanBuatLomba {
     private void tampilkanPesan(String teks, boolean galat) {
         lblPesan.setText(teks);
         lblPesan.setVisible(true);
+        lblPesan.setManaged(true);
+        lblPesan.getStyleClass().removeAll("pesan-galat", "pesan-info");
