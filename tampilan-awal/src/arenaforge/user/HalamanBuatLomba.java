@@ -8,3 +8,5 @@ import arenaforge.DataSementara;
 import java.util.List;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
