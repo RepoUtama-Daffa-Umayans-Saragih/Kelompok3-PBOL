@@ -20,6 +20,8 @@ public final class Tema {
     public static final Color HEADER = HITAM;
     public static final Color AKSEN = MERAH;
     public static final Color SIDEBAR = new Color(0xF2F2F2);
+    public static final Color GARIS = new Color(0xD9D9D9);
+    public static final Color TEKS_REDUP = new Color(0x666666);
 
     private Tema() {
     }
