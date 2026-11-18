@@ -113,3 +113,5 @@ public class PortalPlayer {
     void bukaMenu(String nama) {
         menu.get(nama).setSelected(true);
         if (nama.equals(menuAktif)) {
+            return;
+        }
