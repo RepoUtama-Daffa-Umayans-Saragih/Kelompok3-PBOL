@@ -388,3 +388,5 @@
 .kosong {
     -fx-background-color: -af-permukaan;
     -fx-background-radius: 10;
+    -fx-border-color: -af-garis;
+    -fx-border-radius: 10;
