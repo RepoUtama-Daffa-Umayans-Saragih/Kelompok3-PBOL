@@ -123,3 +123,6 @@ public class PortalPlayer {
             default -> new HalamanDashboard(namaPlayer, daftarTurnamen, () -> bukaMenu(IKUT_LOMBA)).buat();
         };
         akar.setCenter(gulir(isi));
+    }
+
+    private static LocalDateTime waktuBerikutnya(Turnamen t) {
