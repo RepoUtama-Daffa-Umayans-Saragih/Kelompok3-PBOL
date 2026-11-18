@@ -99,3 +99,5 @@ class HalamanIkutLomba {
         boolean ada = teks != null;
         lblPesan.setText(ada ? teks : "");
         lblPesan.setVisible(ada);
+        lblPesan.setManaged(ada);
+        lblPesan.getStyleClass().removeAll("pesan-galat", "pesan-info");
