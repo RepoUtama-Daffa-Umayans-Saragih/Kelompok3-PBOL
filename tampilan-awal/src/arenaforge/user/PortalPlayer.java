@@ -172,3 +172,5 @@ public class PortalPlayer {
     }
 
     /** Blok laga yang paling penting di layar: siapa lawan dan kapan mainnya. */
+    static VBox bannerLaga(Laga laga, String judul, String keterangan) {
+        HBox tim = new HBox(14, label(laga.timA(), "banner-tim"), label("vs", "banner-vs"),
