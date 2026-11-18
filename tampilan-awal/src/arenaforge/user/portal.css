@@ -37,3 +37,5 @@
     -fx-control-inner-background: -af-permukaan;
     -fx-accent: -af-merah-tua;
     -fx-focus-color: -af-merah;
+    -fx-faint-focus-color: #FF000030;
+    -fx-text-box-border: -af-marun;
