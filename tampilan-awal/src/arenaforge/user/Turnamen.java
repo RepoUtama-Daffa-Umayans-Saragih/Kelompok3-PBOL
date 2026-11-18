@@ -122,3 +122,5 @@ public class Turnamen {
     }
 
     /** Indeks tahapan tempat tim si player berada sekarang (0 = fase grup). */
+    public int tahapSekarang() {
+        List<String> knockout = faseKnockout();
