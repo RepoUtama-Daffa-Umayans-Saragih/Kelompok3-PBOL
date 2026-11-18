@@ -84,3 +84,4 @@ class HalamanJadwal {
         baris.getStyleClass().add("baris-agenda");
         return baris;
     }
+}
