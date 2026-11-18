@@ -54,3 +54,5 @@ public final class DataPortal {
 
     /** Lomba yang dibuat player sendiri, yang terbaru di depan. */
     public static List<Lomba> lombaBuatanSaya() {
+        List<Lomba> hasil = new ArrayList<>();
+        for (Lomba lomba : LOMBA) {
