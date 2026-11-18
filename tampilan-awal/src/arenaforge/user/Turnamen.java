@@ -137,3 +137,5 @@ public class Turnamen {
 
     /** Laga tim si player yang belum dimainkan, urut dari yang paling dekat. */
     public List<Laga> lagaBelumMain() {
+        return daftarLaga.stream()
+                .filter(laga -> !laga.selesai() && laga.melibatkan(timSaya))
