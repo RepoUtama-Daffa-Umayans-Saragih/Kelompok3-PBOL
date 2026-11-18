@@ -193,3 +193,5 @@ public class Turnamen {
 
     /** Status tim si player, mis. "Lolos ke Semifinal" atau "Fase grup, peringkat 1 di Grup B". */
     public String statusTim() {
+        Laga knockoutTerakhir = null;
+        for (String fase : faseKnockout()) {
