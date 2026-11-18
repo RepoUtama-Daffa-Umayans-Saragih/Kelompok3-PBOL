@@ -230,3 +230,5 @@ public class Turnamen {
 
     /** Hasil laga tim si player yang sudah selesai, urut waktu: "M", "S", atau "K". */
     public List<String> performaTim() {
+        return daftarLaga.stream()
+                .filter(laga -> laga.selesai() && laga.melibatkan(timSaya))
