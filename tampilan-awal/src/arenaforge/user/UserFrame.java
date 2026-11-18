@@ -107,3 +107,5 @@ public class UserFrame extends JFrame {
     }
 
     private void keluarAkun() {
+        int pilihan = JOptionPane.showConfirmDialog(this, "Keluar dari akun player?",
+                "Keluar Akun", JOptionPane.YES_NO_OPTION);
