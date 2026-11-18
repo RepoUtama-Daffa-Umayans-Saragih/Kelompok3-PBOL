@@ -31,3 +31,5 @@ class HalamanDashboard {
     HalamanDashboard(String namaPlayer, List<Turnamen> daftarTurnamen, Runnable bukaIkutLomba) {
         this.namaPlayer = namaPlayer;
         this.daftarTurnamen = daftarTurnamen;
+        this.bukaIkutLomba = bukaIkutLomba;
+    }
