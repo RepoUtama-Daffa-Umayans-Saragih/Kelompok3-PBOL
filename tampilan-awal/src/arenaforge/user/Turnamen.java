@@ -105,3 +105,6 @@ public class Turnamen {
                 .filter(laga -> !laga.faseGrup() && laga.fase().equals(fase))
                 .toList();
     }
+
+    /** Fase knockout yang dipakai turnamen ini, urut dari awal. */
+    public List<String> faseKnockout() {
