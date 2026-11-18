@@ -169,3 +169,5 @@
 
 /* Status tim: label status sungguhan, bukan hiasan */
 .badge {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
