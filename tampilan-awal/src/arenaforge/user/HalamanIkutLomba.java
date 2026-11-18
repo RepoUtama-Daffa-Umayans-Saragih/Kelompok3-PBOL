@@ -81,3 +81,6 @@ class HalamanIkutLomba {
     private VBox panelCocok(Lomba lomba) {
         Label langkah = label("Langkah berikutnya: buat tim untuk lomba ini. Halaman buat tim sedang disiapkan.",
                 "teks-redup");
+        langkah.setWrapText(true);
+
+        VBox panel = new VBox(4,
