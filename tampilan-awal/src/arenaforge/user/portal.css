@@ -57,3 +57,5 @@
 
 .teks-isi {
     -fx-text-fill: -af-teks;
+    -fx-line-spacing: 2px;
+}
