@@ -114,3 +114,5 @@ public final class DataPortal {
 
         t.tambahAnggota(new Anggota(NAMA_PLAYER, "Jungler", true));
         t.tambahAnggota(new Anggota("Raka", "Roamer", true));
+        t.tambahAnggota(new Anggota("Dimas", "Mid Laner", true));
+        t.tambahAnggota(new Anggota("Sasa", "Gold Laner", true));
