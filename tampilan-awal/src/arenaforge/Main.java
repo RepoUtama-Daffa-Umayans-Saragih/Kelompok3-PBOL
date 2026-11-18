@@ -27,5 +27,7 @@ public class Main {
         }
         if ("Player".equals(peran)) {
             new UserFrame().setVisible(true);
+        } else {
+            new MainFrame(peran).setVisible(true);
     }
 }
