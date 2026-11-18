@@ -56,3 +56,6 @@ public class Turnamen {
 
     public String getFormat() {
         return format;
+    }
+
+    public String getTimSaya() {
