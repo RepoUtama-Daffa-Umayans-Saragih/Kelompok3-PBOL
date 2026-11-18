@@ -28,3 +28,5 @@ public class Turnamen {
     public Turnamen(String nama, String game, String format, String timSaya, String roleSaya, int lolosPerGrup) {
         this.nama = nama;
         this.game = game;
+        this.format = format;
+        this.timSaya = timSaya;
