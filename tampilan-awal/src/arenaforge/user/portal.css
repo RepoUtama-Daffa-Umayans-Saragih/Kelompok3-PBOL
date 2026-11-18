@@ -171,3 +171,5 @@
 .badge {
     -fx-font-size: 12px;
     -fx-font-weight: bold;
+    -fx-padding: 3 9 3 9;
+    -fx-background-radius: 4;
