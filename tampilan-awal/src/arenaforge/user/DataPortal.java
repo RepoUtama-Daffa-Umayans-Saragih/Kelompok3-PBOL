@@ -166,3 +166,6 @@ public final class DataPortal {
         Integer[] hasil = bacaSkor(skor);
         t.tambahLaga(new Laga(fase, null, waktu, timA, timB, hasil[0], hasil[1]));
     }
+
+    private static Integer[] bacaSkor(String skor) {
+        if (skor == null) {
