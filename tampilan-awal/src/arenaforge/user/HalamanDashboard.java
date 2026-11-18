@@ -36,3 +36,6 @@ class HalamanDashboard {
 
     Node buat() {
         VBox halaman = kepalaHalaman("Game dan lomba yang kamu ikuti",
+                "Halo, " + namaPlayer + ". Ini semua game dan lomba yang sedang kamu ikuti.");
+
+        if (daftarTurnamen.isEmpty()) {
