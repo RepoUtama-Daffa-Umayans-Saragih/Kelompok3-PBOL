@@ -77,3 +77,5 @@ public class PortalPlayer {
             tombol.getStyleClass().add("menu-samping");
             tombol.setOnAction(e -> bukaMenu(nama));
             menu.put(nama, tombol);
+            samping.getChildren().add(tombol);
+        }
