@@ -151,3 +151,5 @@ public class PortalPlayer {
     }
 
     /** Judul halaman dan satu kalimat penjelasan di bawahnya. */
+    static VBox kepalaHalaman(String judul, String penjelasan) {
+        Label lblPenjelasan = label(penjelasan, "teks-redup");
