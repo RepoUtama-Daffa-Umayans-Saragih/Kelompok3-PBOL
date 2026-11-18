@@ -105,3 +105,5 @@ class HalamanBuatLomba {
         }
         Label admin = label("Menu admin untuk mengatur pertandingan lomba buatanmu sedang disiapkan.", "catatan");
         admin.setWrapText(true);
+        daftarBuatan.getChildren().add(beriJarakAtas(admin, 4));
+    }
