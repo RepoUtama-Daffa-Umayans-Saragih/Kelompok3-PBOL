@@ -88,3 +88,5 @@ class HalamanBuatLomba {
 
         Lomba baru = DataPortal.buatLomba(nama, cbGame.getValue(), cbKuota.getValue());
         tfNama.clear();
+        tampilkanPesan(baru.nama() + " sudah dibuat. Bagikan kodenya ke peserta.", false);
+        isiDaftarBuatan(baru);
