@@ -101,3 +101,5 @@ class HalamanBuatLomba {
         }
         daftarBuatan.getChildren().add(label("Lomba buatanmu", "judul-bagian"));
         for (Lomba lomba : buatan) {
+            daftarBuatan.getChildren().add(barisBuatan(lomba, lomba.equals(baru)));
+        }
