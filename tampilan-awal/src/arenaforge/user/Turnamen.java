@@ -153,3 +153,5 @@ public class Turnamen {
     public List<BarisKlasemen> klasemen(String namaGrup) {
         Map<String, BarisKlasemen> baris = new LinkedHashMap<>();
         for (String tim : grup.get(namaGrup)) {
+            baris.put(tim, new BarisKlasemen(tim));
+        }
