@@ -77,3 +77,5 @@ public final class DataPortal {
             for (int i = 0; i < 4; i++) {
                 akhiran.append(HURUF_KODE.charAt(ACAK.nextInt(HURUF_KODE.length())));
             }
+            kode = awalan + "-" + akhiran;
+        } while (cariLomba(kode) != null);
