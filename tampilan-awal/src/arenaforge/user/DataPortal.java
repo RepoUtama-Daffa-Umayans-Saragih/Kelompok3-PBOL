@@ -71,3 +71,5 @@ public final class DataPortal {
             case "Tekken" -> "TKN";
             default -> "LOMBA";
         };
+        String kode;
+        do {
