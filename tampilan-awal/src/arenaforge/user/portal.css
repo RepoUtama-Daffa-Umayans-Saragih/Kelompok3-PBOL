@@ -282,3 +282,5 @@
 .tombol-utama {
     -fx-background-color: -af-merah-tua;
     -fx-background-insets: 0;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
