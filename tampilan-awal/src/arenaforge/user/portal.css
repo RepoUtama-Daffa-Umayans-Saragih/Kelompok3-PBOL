@@ -386,3 +386,5 @@
 /* ---------- Bagian kosong ---------- */
 
 .kosong {
+    -fx-background-color: -af-permukaan;
+    -fx-background-radius: 10;
