@@ -74,3 +74,6 @@ class HalamanJadwal {
     private HBox barisAgenda(Agenda a) {
         Label jam = label(JAM.format(a.laga().waktu()), "jam-agenda");
         jam.setMinWidth(64);
+
+        VBox isi = new VBox(2,
+                label(a.laga().timA() + " vs " + a.laga().timB(), "laga-agenda"),
