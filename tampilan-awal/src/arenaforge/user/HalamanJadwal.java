@@ -37,3 +37,5 @@ class HalamanJadwal {
     Node buat() {
         List<Agenda> agenda = new ArrayList<>();
         for (Turnamen t : daftarTurnamen) {
+            for (Laga laga : t.lagaBelumMain()) {
+                agenda.add(new Agenda(t, laga));
