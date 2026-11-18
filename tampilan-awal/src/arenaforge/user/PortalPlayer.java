@@ -69,3 +69,5 @@ public class PortalPlayer {
 
     private VBox buatMenuSamping() {
         ToggleGroup grup = new ToggleGroup();
+        VBox samping = new VBox(4);
+        for (String nama : List.of(DASHBOARD, JADWAL, IKUT_LOMBA, BUAT_LOMBA)) {
