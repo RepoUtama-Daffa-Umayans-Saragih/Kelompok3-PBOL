@@ -97,3 +97,5 @@ class HalamanIkutLomba {
     /** Pesan di bawah kolom kode. galat = true untuk kesalahan, false untuk info biasa; null menyembunyikan. */
     private void tampilkanPesan(String teks, boolean galat) {
         boolean ada = teks != null;
+        lblPesan.setText(ada ? teks : "");
+        lblPesan.setVisible(ada);
