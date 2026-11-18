@@ -30,3 +30,5 @@ public class BarisKlasemen {
 
     /** Fase grup: menang 3 poin, seri 1 poin. */
     public int getPoin() {
+        return menang * 3 + seri;
+    }
