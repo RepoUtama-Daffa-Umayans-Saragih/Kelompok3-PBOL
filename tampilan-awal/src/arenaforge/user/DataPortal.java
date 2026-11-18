@@ -43,3 +43,6 @@ public final class DataPortal {
         String dicari = kode.trim().toUpperCase(Locale.ROOT);
         return LOMBA.stream().filter(lomba -> lomba.kode().equals(dicari)).findFirst().orElse(null);
     }
+
+    public static boolean sudahDiikuti(Lomba lomba) {
+        return DIIKUTI.stream().anyMatch(t -> t.getNama().equals(lomba.nama()));
