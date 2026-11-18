@@ -234,3 +234,5 @@ public class Turnamen {
                 .filter(laga -> laga.selesai() && laga.melibatkan(timSaya))
                 .sorted(Comparator.comparing(Laga::waktu))
                 .map(laga -> laga.hasilUntuk(timSaya))
+                .toList();
+    }
