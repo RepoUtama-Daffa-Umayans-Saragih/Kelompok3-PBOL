@@ -362,3 +362,5 @@
 
 .batang-jalur {
     -fx-min-height: 6;
+    -fx-pref-height: 6;
+    -fx-background-radius: 2;
