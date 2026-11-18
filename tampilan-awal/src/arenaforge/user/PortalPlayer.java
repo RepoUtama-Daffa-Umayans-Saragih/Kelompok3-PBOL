@@ -44,3 +44,6 @@ public class PortalPlayer {
     private final List<Turnamen> daftarTurnamen;
     private final BorderPane akar = new BorderPane();
     private final Map<String, ToggleButton> menu = new LinkedHashMap<>();
+    private String menuAktif;
+
+    public PortalPlayer(String namaPlayer, List<Turnamen> daftarTurnamen) {
