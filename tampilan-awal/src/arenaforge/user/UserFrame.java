@@ -88,3 +88,5 @@ public class UserFrame extends JFrame {
         kanan.setLayout(new BoxLayout(kanan, BoxLayout.X_AXIS));
         kanan.setOpaque(false);
         kanan.add(lblPlayer);
+        kanan.add(Box.createHorizontalStrut(12));
+        kanan.add(btnKeluarAkun);
