@@ -176,3 +176,6 @@ public class PortalPlayer {
         HBox tim = new HBox(14, label(laga.timA(), "banner-tim"), label("vs", "banner-vs"),
                 label(laga.timB(), "banner-tim"));
         tim.setAlignment(Pos.BASELINE_LEFT);
+
+        VBox banner = new VBox(6,
+                label(judul + ": " + keterangan, "banner-label"),
