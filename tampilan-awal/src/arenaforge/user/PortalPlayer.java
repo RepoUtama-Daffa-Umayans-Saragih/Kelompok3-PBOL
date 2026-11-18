@@ -83,3 +83,5 @@ public class PortalPlayer {
         grup.selectedToggleProperty().addListener((obs, lama, baru) -> {
             if (baru == null && lama != null) {
                 lama.setSelected(true);
+            }
+        });
