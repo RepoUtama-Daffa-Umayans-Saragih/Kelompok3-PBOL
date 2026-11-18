@@ -32,3 +32,5 @@ import javafx.scene.layout.VBox;
 public class PortalPlayer {
     static final String DASHBOARD = "Dashboard";
     static final String JADWAL = "Jadwal";
+    static final String IKUT_LOMBA = "Ikut lomba";
+    static final String BUAT_LOMBA = "Buat lomba";
