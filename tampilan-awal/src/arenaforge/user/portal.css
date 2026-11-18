@@ -295,3 +295,6 @@
 .tombol-utama:hover {
     -fx-background-color: -af-marun;
 }
+
+.tombol-utama:armed {
+    -fx-background-color: -af-permukaan-terang;
