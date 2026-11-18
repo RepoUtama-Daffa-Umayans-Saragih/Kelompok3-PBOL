@@ -36,3 +36,5 @@ public class UserFrame extends JFrame {
         // Event: minta konfirmasi sebelum jendela ditutup
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
