@@ -139,3 +139,5 @@ public class Turnamen {
     public List<Laga> lagaBelumMain() {
         return daftarLaga.stream()
                 .filter(laga -> !laga.selesai() && laga.melibatkan(timSaya))
+                .sorted(Comparator.comparing(Laga::waktu))
+                .toList();
