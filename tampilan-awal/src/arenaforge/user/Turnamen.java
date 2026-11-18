@@ -164,3 +164,5 @@ public class Turnamen {
 
         List<BarisKlasemen> hasil = new ArrayList<>(baris.values());
         hasil.sort(Comparator.comparingInt(BarisKlasemen::getPoin)
+                .thenComparingInt(BarisKlasemen::getSelisih)
+                .thenComparingInt(BarisKlasemen::getSkorMasuk)
