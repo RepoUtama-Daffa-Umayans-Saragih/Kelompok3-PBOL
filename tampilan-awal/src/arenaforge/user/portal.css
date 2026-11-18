@@ -143,3 +143,7 @@
 .menu-samping:focus-visible {
     -fx-border-color: -af-merah;
 }
+
+/* ---------- Halaman ---------- */
+
+.halaman {
