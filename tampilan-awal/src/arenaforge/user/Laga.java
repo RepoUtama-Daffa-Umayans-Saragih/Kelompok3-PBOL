@@ -29,3 +29,5 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
 
     /** Nama tim pemenang, atau null kalau laga belum selesai atau hasilnya seri. */
     public String pemenang() {
+        if (!selesai() || skorA.equals(skorB)) {
+            return null;
