@@ -146,3 +146,5 @@ public class Turnamen {
     /** Laga tim si player yang paling dekat dan belum dimainkan, atau null. */
     public Laga lagaBerikutnya() {
         List<Laga> belumMain = lagaBelumMain();
+        return belumMain.isEmpty() ? null : belumMain.get(0);
+    }
