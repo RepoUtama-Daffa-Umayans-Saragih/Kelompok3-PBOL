@@ -32,3 +32,6 @@ public class BarisKlasemen {
     public int getPoin() {
         return menang * 3 + seri;
     }
+
+    public int getSelisih() {
+        return skorMasuk - skorKeluar;
