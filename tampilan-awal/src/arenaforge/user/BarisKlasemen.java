@@ -51,3 +51,6 @@ public class BarisKlasemen {
 
     public int getSeri() {
         return seri;
+    }
+
+    public int getKalah() {
