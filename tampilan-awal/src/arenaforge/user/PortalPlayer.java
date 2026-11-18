@@ -62,3 +62,5 @@ public class PortalPlayer {
         }
         Scene scene = new Scene(akar);
         scene.getStylesheets().add(css.toExternalForm());
+        akar.setLeft(buatMenuSamping());
+        bukaMenu(DASHBOARD);
