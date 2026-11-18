@@ -155,3 +155,5 @@ public class PortalPlayer {
         Label lblPenjelasan = label(penjelasan, "teks-redup");
         lblPenjelasan.setWrapText(true);
         VBox halaman = new VBox(6, label(judul, "judul-halaman"), lblPenjelasan);
+        halaman.getStyleClass().add("halaman");
+        return halaman;
