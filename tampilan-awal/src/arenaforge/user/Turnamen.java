@@ -208,3 +208,5 @@ public class Turnamen {
             }
             if (timSaya.equals(knockoutTerakhir.pemenang())) {
                 return knockoutTerakhir.fase().equals("Final") ? "Juara" : "Menang di " + knockoutTerakhir.fase();
+            }
+            return "Tersingkir di " + knockoutTerakhir.fase();
