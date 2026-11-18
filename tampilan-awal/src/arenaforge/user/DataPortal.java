@@ -79,3 +79,6 @@ public final class DataPortal {
             }
             kode = awalan + "-" + akhiran;
         } while (cariLomba(kode) != null);
+
+        Lomba lomba = new Lomba(kode, nama.trim(), game, kuota, 0, NAMA_PLAYER);
+        LOMBA.add(lomba);
