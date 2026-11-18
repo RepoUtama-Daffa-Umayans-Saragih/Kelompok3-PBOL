@@ -195,3 +195,5 @@ public class PortalPlayer {
     }
 
     /**
+     * Jalur turnamen dari fase grup sampai final. Tahap yang sudah dicapai menyala mengikuti
+     * urutan palet (marun, merah tua, merah), jadi makin dekat ke final makin merah.
