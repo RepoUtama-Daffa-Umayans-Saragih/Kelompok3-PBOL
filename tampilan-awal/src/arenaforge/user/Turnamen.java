@@ -35,3 +35,5 @@ public class Turnamen {
     }
 
     public void tambahGrup(String namaGrup, List<String> tim) {
+        grup.put(namaGrup, List.copyOf(tim));
+    }
