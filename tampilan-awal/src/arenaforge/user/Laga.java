@@ -8,3 +8,5 @@ import java.time.LocalDateTime;
  *
  * @param grup nama grup untuk laga fase grup, null untuk laga knockout
  */
+public record Laga(String fase, String grup, LocalDateTime waktu,
+                   String timA, String timB, Integer skorA, Integer skorB) {
