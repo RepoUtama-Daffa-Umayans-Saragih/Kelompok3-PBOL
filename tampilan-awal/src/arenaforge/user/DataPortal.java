@@ -100,3 +100,5 @@ public final class DataPortal {
                 List.of("Team Beta", "Kraken Five", "Titan Core", "Rogue Unit"),
                 "1-1", "2-0", "2-0", "2-0", "2-0", "1-1");
         isiGrup(t, "Grup D", LocalDate.of(2026, 11, 3), 3, 17,
+                List.of("Vortex Gaming", "Shadow Lynx", "Crimson Owls", "Zenith Five"),
+                "0-2", "2-0", "1-1", "2-0", "2-0", "1-1");
