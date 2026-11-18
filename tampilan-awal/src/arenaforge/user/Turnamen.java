@@ -96,3 +96,5 @@ public class Turnamen {
         return daftarLaga.stream()
                 .filter(laga -> namaGrup.equals(laga.grup()))
                 .sorted(Comparator.comparing(Laga::waktu))
+                .toList();
+    }
