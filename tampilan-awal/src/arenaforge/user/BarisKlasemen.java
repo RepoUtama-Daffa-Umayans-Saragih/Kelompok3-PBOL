@@ -27,3 +27,6 @@ public class BarisKlasemen {
             kalah++;
         }
     }
+
+    /** Fase grup: menang 3 poin, seri 1 poin. */
+    public int getPoin() {
