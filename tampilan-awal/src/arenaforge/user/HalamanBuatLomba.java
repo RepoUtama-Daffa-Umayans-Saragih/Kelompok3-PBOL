@@ -56,3 +56,6 @@ class HalamanBuatLomba {
         lblPesan.setWrapText(true);
         lblPesan.setVisible(false);
         lblPesan.setManaged(false);
+
+        halaman.getChildren().addAll(beriJarakAtas(form, 24), beriJarakAtas(btnBuat, 8), lblPesan,
+                beriJarakAtas(daftarBuatan, 28));
