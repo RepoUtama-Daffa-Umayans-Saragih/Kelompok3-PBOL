@@ -102,3 +102,5 @@
 /* ---------- Menu samping ---------- */
 
 .menu-kiri {
+    -fx-background-color: -af-permukaan;
+    -fx-border-color: -af-garis;
