@@ -98,3 +98,6 @@ public class Turnamen {
                 .sorted(Comparator.comparing(Laga::waktu))
                 .toList();
     }
+
+    /** Laga knockout satu fase, sesuai urutan di bagan (laga ke-1 dan ke-2 bertemu di fase berikutnya). */
+    public List<Laga> lagaFase(String fase) {
