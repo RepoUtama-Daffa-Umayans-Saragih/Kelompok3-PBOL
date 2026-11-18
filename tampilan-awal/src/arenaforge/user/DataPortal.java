@@ -132,3 +132,6 @@ public final class DataPortal {
                 "2-0", "0-2", "2-0", "1-1", null, null);
         isiGrup(t, "Grup B", LocalDate.of(2026, 11, 15), 2, 17,
                 List.of("Phoenix Squad", "Lava Rangers", "Ghost Unit", "Blitz Crew"),
+                "2-0", "1-1", "1-1", "2-0", null, null);
+
+        laga(t, "Semifinal", november(23, 15), "Juara Grup A", "Runner-up Grup B", null);
