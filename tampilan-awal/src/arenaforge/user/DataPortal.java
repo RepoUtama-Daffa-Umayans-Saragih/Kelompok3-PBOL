@@ -82,3 +82,5 @@ public final class DataPortal {
 
         Lomba lomba = new Lomba(kode, nama.trim(), game, kuota, 0, NAMA_PLAYER);
         LOMBA.add(lomba);
+        return lomba;
+    }
