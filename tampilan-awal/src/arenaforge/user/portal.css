@@ -303,3 +303,6 @@
 .tombol-utama:focus-visible {
     -fx-border-color: -af-merah;
 }
+
+.tombol-kedua {
+    -fx-background-color: transparent;
