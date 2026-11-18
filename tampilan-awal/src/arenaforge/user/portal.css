@@ -359,3 +359,6 @@
 }
 
 /* ---------- Jalur turnamen (motif palet: makin dekat final makin merah) ---------- */
+
+.batang-jalur {
+    -fx-min-height: 6;
