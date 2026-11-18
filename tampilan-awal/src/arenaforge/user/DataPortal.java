@@ -89,3 +89,6 @@ public final class DataPortal {
     private static Turnamen mlbbCup() {
         Turnamen t = new Turnamen("MLBB Cup 2026", "Mobile Legends",
                 "16 tim, fase grup Bo2, knockout Bo3", "Team Alpha", "Jungler", 2);
+
+        isiGrup(t, "Grup A", LocalDate.of(2026, 11, 2), 3, 13,
+                List.of("Team Alpha", "Rex Squad", "Nova Esports", "Iron Wolves"),
