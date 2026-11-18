@@ -126,3 +126,5 @@ public class Turnamen {
         List<String> knockout = faseKnockout();
         int tahap = 0;
         for (int i = 0; i < knockout.size(); i++) {
+            for (Laga laga : lagaFase(knockout.get(i))) {
+                if (laga.melibatkan(timSaya)) {
