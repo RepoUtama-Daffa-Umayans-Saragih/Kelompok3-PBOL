@@ -80,3 +80,5 @@ class HalamanJadwal {
                 label(a.turnamen().getNama() + " (" + a.turnamen().getGame() + "), " + namaFase(a.laga()), "teks-redup"));
 
         HBox baris = new HBox(16, jam, isi);
+        baris.setAlignment(Pos.CENTER_LEFT);
+        baris.getStyleClass().add("baris-agenda");
