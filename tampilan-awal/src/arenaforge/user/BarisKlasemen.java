@@ -59,3 +59,5 @@ public class BarisKlasemen {
 
     public int getSkorMasuk() {
         return skorMasuk;
+    }
+}
