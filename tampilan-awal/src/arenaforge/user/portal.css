@@ -342,3 +342,6 @@
 .pesan-info {
     -fx-text-fill: -af-teks;
 }
+
+.panel-hasil {
+    -fx-background-color: -af-permukaan;
