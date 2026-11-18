@@ -39,3 +39,5 @@ class HalamanDashboard {
                 "Halo, " + namaPlayer + ". Ini semua game dan lomba yang sedang kamu ikuti.");
 
         if (daftarTurnamen.isEmpty()) {
+            Button ikut = new Button("Masukkan kode lomba");
+            ikut.getStyleClass().add("tombol-kedua");
