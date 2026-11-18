@@ -25,3 +25,5 @@ class HalamanBuatLomba {
     private final TextField tfNama = new TextField();
     private final ComboBox<String> cbGame = new ComboBox<>();
     private final ComboBox<Integer> cbKuota = new ComboBox<>();
+    private final Label lblPesan = label("", "pesan");
+    private final VBox daftarBuatan = new VBox(8);
