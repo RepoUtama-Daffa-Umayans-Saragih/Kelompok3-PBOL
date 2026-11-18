@@ -15,3 +15,5 @@ import javafx.scene.layout.VBox;
 
 /** Menu Ikut lomba: player memasukkan kode dari panitia untuk menemukan lomba. */
 class HalamanIkutLomba {
+    private final TextField tfKode = new TextField();
+    private final Label lblPesan = label("", "pesan");
