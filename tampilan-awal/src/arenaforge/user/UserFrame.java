@@ -47,3 +47,6 @@ public class UserFrame extends JFrame {
         // JavaFX jangan ikut berhenti saat jendela ini ditutup (keluar akun),
         // karena player yang masuk lagi memakai JavaFX yang sama
         Platform.setImplicitExit(false);
+
+        lblPesan.setForeground(Color.WHITE);
+        JPanel panelPesan = new JPanel(new BorderLayout());
