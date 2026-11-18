@@ -213,3 +213,5 @@ public class Turnamen {
         }
 
         String namaGrup = grupDari(timSaya);
+        if (namaGrup == null) {
+            return "Menunggu jadwal";
