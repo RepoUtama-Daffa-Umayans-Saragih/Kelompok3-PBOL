@@ -138,3 +138,6 @@
     -fx-background-color: -af-marun;
     -fx-text-fill: -af-teks;
     -fx-font-weight: bold;
+}
+
+.menu-samping:focus-visible {
