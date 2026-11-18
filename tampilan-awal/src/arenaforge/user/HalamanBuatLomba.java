@@ -90,3 +90,6 @@ class HalamanBuatLomba {
         tfNama.clear();
         tampilkanPesan(baru.nama() + " sudah dibuat. Bagikan kodenya ke peserta.", false);
         isiDaftarBuatan(baru);
+    }
+
+    /** Daftar lomba buatan player beserta kodenya. Lomba yang baru dibuat ditandai. */
