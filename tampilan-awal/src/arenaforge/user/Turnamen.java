@@ -115,3 +115,5 @@ public class Turnamen {
 
     /** Tahapan turnamen dari awal sampai akhir: fase grup, lalu fase knockout. */
     public List<String> tahapan() {
+        List<String> daftar = new ArrayList<>();
+        daftar.add("Fase Grup");
