@@ -84,3 +84,5 @@ class HalamanDashboard {
         VBox blok = new VBox(4,
                 label(t.getNama(), "judul-lomba"),
                 label(t.getTimSaya() + " (" + t.getRoleSaya() + ")", "teks-redup"),
+                beriJarakAtas(badgeStatus(t.statusTim()), 8),
+                beriJarakAtas(jalur(t), 14),
