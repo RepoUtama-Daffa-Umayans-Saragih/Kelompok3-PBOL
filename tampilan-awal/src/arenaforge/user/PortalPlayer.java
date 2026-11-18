@@ -162,3 +162,6 @@ public class PortalPlayer {
     /** "Fase grup, Grup A" untuk laga grup, atau nama fase knockout seperti "Semifinal". */
     static String namaFase(Laga laga) {
         return laga.faseGrup() ? "Fase grup, " + laga.grup() : laga.fase();
+    }
+
+    /** Status tim sebagai label: lolos (merah tua), masih di grup (bingkai), atau tersingkir (abu). */
