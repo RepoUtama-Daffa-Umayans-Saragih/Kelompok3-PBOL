@@ -153,7 +153,7 @@ public class LoginDialog extends JDialog {
             pfPassword.requestFocusInWindow();
             return;
         }
-        peran = "Panitia";
+        peran = player ? "Player" : "Panitia";
         dispose();
     }
 }
