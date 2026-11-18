@@ -201,3 +201,6 @@ public class PortalPlayer {
     static HBox jalur(Turnamen t) {
         List<String> tahapan = t.tahapan();
         int sekarang = t.tahapSekarang();
+
+        HBox jalur = new HBox(4);
+        for (int i = 0; i < tahapan.size(); i++) {
