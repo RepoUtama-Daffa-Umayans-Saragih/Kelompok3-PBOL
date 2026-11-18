@@ -103,3 +103,5 @@ public class Turnamen {
     public List<Laga> lagaFase(String fase) {
         return daftarLaga.stream()
                 .filter(laga -> !laga.faseGrup() && laga.fase().equals(fase))
+                .toList();
+    }
