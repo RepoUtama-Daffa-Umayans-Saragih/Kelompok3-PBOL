@@ -217,3 +217,5 @@ public class Turnamen {
             return "Menunggu jadwal";
         }
         if (barisKlasemen(timSaya).getMain() == 0) {
+            return "Fase grup, belum main di " + namaGrup; // peringkat tanpa laga belum berarti apa-apa
+        }
