@@ -82,3 +82,6 @@ public class Turnamen {
     public boolean isTimTerdaftar(String tim) {
         return grupDari(tim) != null;
     }
+
+    public String grupDari(String tim) {
+        for (Map.Entry<String, List<String>> entri : grup.entrySet()) {
