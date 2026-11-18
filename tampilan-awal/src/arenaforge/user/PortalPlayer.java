@@ -26,3 +26,5 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 
 /**
+ * Portal Player (JavaFX) yang ditempel ke jendela Swing lewat JFXPanel.
+ * Kiri: menu samping (Dashboard, Jadwal, Ikut lomba, Buat lomba). Kanan: isi menu yang dipilih.
