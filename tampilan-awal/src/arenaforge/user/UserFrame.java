@@ -65,3 +65,5 @@ public class UserFrame extends JFrame {
         // Scene JavaFX wajib dibuat di JavaFX Application Thread, bukan di thread Swing
         Platform.runLater(() -> {
             try {
+                panelFx.setScene(new PortalPlayer(DataPortal.NAMA_PLAYER, DataPortal.turnamenDiikuti()).buatScene());
+                SwingUtilities.invokeLater(() -> tumpukan.show(isi, "portal"));
