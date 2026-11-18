@@ -99,3 +99,6 @@ public class UserFrame extends JFrame {
         header.add(kanan, BorderLayout.EAST);
         return header;
     }
+
+    private void tampilkanGagal(Exception ex) {
+        String sebab = String.valueOf(ex).replace("&", "&amp;").replace("<", "&lt;");
