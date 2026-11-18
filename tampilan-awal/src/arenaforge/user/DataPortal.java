@@ -65,3 +65,5 @@ public final class DataPortal {
 
     /** Membuat lomba baru milik player dengan kode unik, mis. "MLBB-7Q2K". */
     public static Lomba buatLomba(String nama, String game, int kuota) {
+        String awalan = switch (game) {
+            case "Mobile Legends" -> "MLBB";
