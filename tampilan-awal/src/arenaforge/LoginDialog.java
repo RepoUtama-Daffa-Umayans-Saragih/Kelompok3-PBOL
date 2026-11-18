@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 
 /**
  * Layar pertama aplikasi (JDialog modal).
- * Panitia masuk dengan username + password, penonton bisa langsung masuk.
+ * Panitia dan player masuk dengan username + password, penonton bisa langsung masuk.
  */
 public class LoginDialog extends JDialog {
     // Akun sementara sebelum ada tabel user di database
