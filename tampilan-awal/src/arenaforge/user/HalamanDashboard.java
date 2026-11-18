@@ -64,3 +64,5 @@ class HalamanDashboard {
     }
 
     private VBox kartuGame(String game, List<Turnamen> daftar) {
+        VBox kartu = new VBox(4, label(game, "judul-kartu"), label(daftar.size() + " lomba diikuti", "teks-redup"));
+        for (Turnamen t : daftar) {
