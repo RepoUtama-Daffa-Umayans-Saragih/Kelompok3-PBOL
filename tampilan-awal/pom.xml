@@ -21,3 +21,5 @@
     <dependencies>
         <!-- Kontrol JavaFX: Button, TabPane, ScrollPane, dll. -->
         <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
