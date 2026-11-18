@@ -45,3 +45,5 @@ class HalamanIkutLomba {
                 isian,
                 lblPesan,
                 label("Kode demo untuk mencoba: LIGA-KAMPUS (masih buka) atau TKN-RANKED (kuota penuh).", "catatan"),
+                beriJarakAtas(wadahHasil, 16));
+        return halaman;
