@@ -26,3 +26,6 @@ class HalamanJadwal {
 
     /** Satu laga beserta lomba asalnya. */
     private record Agenda(Turnamen turnamen, Laga laga) {
+    }
+
+    private final List<Turnamen> daftarTurnamen;
