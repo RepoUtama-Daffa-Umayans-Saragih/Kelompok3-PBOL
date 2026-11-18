@@ -36,3 +36,5 @@
     <build>
         <!-- Struktur folder lama dipertahankan: semua kode ada di src/ -->
         <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
