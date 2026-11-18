@@ -298,3 +298,6 @@
 
 .tombol-utama:armed {
     -fx-background-color: -af-permukaan-terang;
+}
+
+.tombol-utama:focus-visible {
