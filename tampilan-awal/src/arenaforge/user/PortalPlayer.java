@@ -75,3 +75,5 @@ public class PortalPlayer {
             tombol.setToggleGroup(grup);
             tombol.setMaxWidth(Double.MAX_VALUE);
             tombol.getStyleClass().add("menu-samping");
+            tombol.setOnAction(e -> bukaMenu(nama));
+            menu.put(nama, tombol);
