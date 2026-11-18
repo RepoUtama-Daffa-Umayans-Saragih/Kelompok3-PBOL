@@ -79,3 +79,5 @@ public class PortalPlayer {
             menu.put(nama, tombol);
             samping.getChildren().add(tombol);
         }
+        // Klik menu yang sedang aktif tidak boleh membuat semua menu tidak terpilih
+        grup.selectedToggleProperty().addListener((obs, lama, baru) -> {
