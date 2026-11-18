@@ -201,3 +201,6 @@ public class Turnamen {
                 }
             }
         }
+
+        if (knockoutTerakhir != null) {
+            if (!knockoutTerakhir.selesai()) {
