@@ -44,3 +44,5 @@
     -fx-background-color: -af-hitam;
     /* Segoe UI: font sistem Windows, sama dengan bagian Swing, jadi satu suara huruf */
     -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+}
