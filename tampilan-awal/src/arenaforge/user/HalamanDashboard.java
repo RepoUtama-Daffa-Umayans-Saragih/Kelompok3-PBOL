@@ -68,3 +68,5 @@ class HalamanDashboard {
         for (Turnamen t : daftar) {
             kartu.getChildren().add(beriJarakAtas(blokLomba(t), 14));
         }
+        kartu.setPrefWidth(LEBAR_KARTU);
+        kartu.setMaxHeight(Double.MAX_VALUE);
