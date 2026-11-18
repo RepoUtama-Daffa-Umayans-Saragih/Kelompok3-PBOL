@@ -85,3 +85,6 @@ class HalamanBuatLomba {
             tfNama.requestFocus();
             return;
         }
+
+        Lomba baru = DataPortal.buatLomba(nama, cbGame.getValue(), cbKuota.getValue());
+        tfNama.clear();
