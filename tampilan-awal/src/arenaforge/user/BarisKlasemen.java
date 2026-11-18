@@ -12,3 +12,6 @@ public class BarisKlasemen {
 
     public BarisKlasemen(String tim) {
         this.tim = tim;
+    }
+
+    /** Menambahkan hasil satu laga dari sisi tim ini. */
