@@ -47,3 +47,5 @@ class HalamanJadwal {
                 "Semua laga timmu yang belum dimainkan, urut dari yang paling dekat.");
 
         if (agenda.isEmpty()) {
+            halaman.getChildren().add(beriJarakAtas(kosong("Belum ada laga terjadwal untuk timmu.",
+                    "Jadwal muncul di sini setelah panitia menyusun pertandingan."), 24));
