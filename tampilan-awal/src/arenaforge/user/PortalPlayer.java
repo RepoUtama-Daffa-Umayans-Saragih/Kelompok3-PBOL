@@ -128,3 +128,6 @@ public class PortalPlayer {
     private static LocalDateTime waktuBerikutnya(Turnamen t) {
         Laga laga = t.lagaBerikutnya();
         return laga == null ? null : laga.waktu();
+    }
+
+    // ---- Komponen kecil yang dipakai semua halaman ----
