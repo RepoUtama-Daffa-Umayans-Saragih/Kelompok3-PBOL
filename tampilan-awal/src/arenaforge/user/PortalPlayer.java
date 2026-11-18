@@ -108,3 +108,6 @@ public class PortalPlayer {
         samping.getStyleClass().add("menu-kiri");
         return samping;
     }
+
+    /** Menampilkan isi satu menu di sebelah kanan dan menandai menunya di samping. */
+    void bukaMenu(String nama) {
