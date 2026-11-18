@@ -88,3 +88,5 @@ class HalamanDashboard {
                 beriJarakAtas(jalur(t), 14),
                 beriJarakAtas(label("Laga berikutnya", "label-kecil"), 14),
                 teksBerikut);
+        blok.getStyleClass().add("blok-lomba");
+        return blok;
