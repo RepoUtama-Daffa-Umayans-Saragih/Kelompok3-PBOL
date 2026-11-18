@@ -204,3 +204,5 @@
 }
 
 .banner-tim {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
