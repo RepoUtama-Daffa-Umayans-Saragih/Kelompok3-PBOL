@@ -144,3 +144,5 @@ public class PortalPlayer {
     }
 
     static ScrollPane gulir(Node isi) {
+        ScrollPane gulir = new ScrollPane(isi);
+        gulir.setFitToWidth(true);
