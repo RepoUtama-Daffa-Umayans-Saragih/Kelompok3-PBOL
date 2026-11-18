@@ -5,3 +5,5 @@ public class BarisKlasemen {
     private final String tim;
     private int main;
     private int menang;
+    private int seri;
+    private int kalah;
