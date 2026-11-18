@@ -111,3 +111,5 @@ public class PortalPlayer {
 
     /** Menampilkan isi satu menu di sebelah kanan dan menandai menunya di samping. */
     void bukaMenu(String nama) {
+        menu.get(nama).setSelected(true);
+        if (nama.equals(menuAktif)) {
