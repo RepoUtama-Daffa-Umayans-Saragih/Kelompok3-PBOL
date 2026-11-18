@@ -92,3 +92,6 @@ class HalamanIkutLomba {
         panel.getStyleClass().add("panel-hasil");
         panel.setMaxWidth(560);
         return panel;
+    }
+
+    /** Pesan di bawah kolom kode. galat = true untuk kesalahan, false untuk info biasa; null menyembunyikan. */
