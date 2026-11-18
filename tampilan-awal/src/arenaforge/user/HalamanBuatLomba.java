@@ -107,3 +107,6 @@ class HalamanBuatLomba {
         admin.setWrapText(true);
         daftarBuatan.getChildren().add(beriJarakAtas(admin, 4));
     }
+
+    private HBox barisBuatan(Lomba lomba, boolean baruDibuat) {
+        VBox info = new VBox(2,
