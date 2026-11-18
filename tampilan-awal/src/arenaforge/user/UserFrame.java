@@ -45,3 +45,5 @@ public class UserFrame extends JFrame {
         // Membuat JFXPanel sekaligus menyalakan JavaFX
         JFXPanel panelFx = new JFXPanel();
         // JavaFX jangan ikut berhenti saat jendela ini ditutup (keluar akun),
+        // karena player yang masuk lagi memakai JavaFX yang sama
+        Platform.setImplicitExit(false);
