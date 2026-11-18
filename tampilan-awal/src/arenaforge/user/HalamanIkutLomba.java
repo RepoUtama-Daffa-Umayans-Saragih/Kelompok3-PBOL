@@ -35,3 +35,6 @@ class HalamanIkutLomba {
 
         HBox isian = new HBox(10, tfKode, btnCek);
         isian.setAlignment(Pos.CENTER_LEFT);
+
+        lblPesan.setWrapText(true);
+        lblPesan.setVisible(false);
