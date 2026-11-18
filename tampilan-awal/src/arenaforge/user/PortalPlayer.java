@@ -188,3 +188,5 @@ public class PortalPlayer {
     /** Pesan untuk bagian yang belum ada isinya: apa sebabnya dan apa langkah berikutnya. */
     static VBox kosong(String judul, String saran) {
         Label lblSaran = label(saran, "teks-redup");
+        lblSaran.setWrapText(true);
+        VBox kosong = new VBox(4, label(judul, "kosong-judul"), lblSaran);
