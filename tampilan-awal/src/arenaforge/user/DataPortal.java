@@ -14,3 +14,6 @@ import java.util.Locale;
 public final class DataPortal {
     public static final String ID_PLAYER = "P01";
     public static final String NAMA_PLAYER = "Viter";
+
+    /** Urutan laga setengah kompetisi untuk grup 4 tim: 6 laga dalam 3 matchday. */
+    private static final int[][] PASANGAN_GRUP = {{0, 1}, {2, 3}, {0, 2}, {1, 3}, {0, 3}, {1, 2}};
