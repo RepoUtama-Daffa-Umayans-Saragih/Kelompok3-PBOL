@@ -32,3 +32,6 @@ class HalamanIkutLomba {
         Button btnCek = new Button("Cek kode");
         btnCek.getStyleClass().add("tombol-utama");
         btnCek.setOnAction(e -> periksaKode());
+
+        HBox isian = new HBox(10, tfKode, btnCek);
+        isian.setAlignment(Pos.CENTER_LEFT);
