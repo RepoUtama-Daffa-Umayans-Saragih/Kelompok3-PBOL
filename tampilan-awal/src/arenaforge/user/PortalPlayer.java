@@ -51,3 +51,5 @@ public class PortalPlayer {
         // Turnamen dengan laga terdekat tampil paling depan
         this.daftarTurnamen = new ArrayList<>(daftarTurnamen);
         this.daftarTurnamen.sort(Comparator.comparing(PortalPlayer::waktuBerikutnya,
+                Comparator.nullsLast(Comparator.naturalOrder())));
+    }
