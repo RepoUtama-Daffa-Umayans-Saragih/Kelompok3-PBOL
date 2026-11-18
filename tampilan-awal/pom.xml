@@ -12,3 +12,5 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- JavaFX 21 (LTS) jalan di JDK 17 sampai JDK 25 -->
+        <maven.compiler.release>17</maven.compiler.release>
