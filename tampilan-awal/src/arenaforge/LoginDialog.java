@@ -68,6 +68,8 @@ public class LoginDialog extends JDialog {
         JPanel pilihanPeran = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
         pilihanPeran.add(rbPanitia);
         pilihanPeran.add(Box.createHorizontalStrut(12));
+        pilihanPeran.add(rbPlayer);
+        pilihanPeran.add(Box.createHorizontalStrut(12));
         pilihanPeran.add(rbPenonton);
 
         // GridLayout 4 baris x 2 kolom: label di kiri, input di kanan
