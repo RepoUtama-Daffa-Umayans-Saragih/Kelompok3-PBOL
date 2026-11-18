@@ -26,3 +26,5 @@ public final class DataPortal {
 
     /** Semua lomba yang punya kode. Lomba dari menu Buat lomba ditambahkan ke sini. */
     private static final List<Lomba> LOMBA = new ArrayList<>(List.of(
+            new Lomba("MLBB-CUP26", "MLBB Cup 2026", "Mobile Legends", 16, 16, "Panitia ArenaForge"),
+            new Lomba("FF-SHOW26", "FF Showdown 2026", "Free Fire", 8, 8, "Panitia ArenaForge"),
