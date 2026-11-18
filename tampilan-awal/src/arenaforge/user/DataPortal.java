@@ -12,3 +12,5 @@ import java.util.Locale;
  * Player demo: Viter (P01), ikut satu turnamen Mobile Legends dan satu Free Fire.
  */
 public final class DataPortal {
+    public static final String ID_PLAYER = "P01";
+    public static final String NAMA_PLAYER = "Viter";
