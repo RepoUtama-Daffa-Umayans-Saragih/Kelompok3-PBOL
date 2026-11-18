@@ -88,3 +88,5 @@ class HalamanIkutLomba {
                 label(lomba.nama(), "judul-kartu"),
                 label(lomba.game() + ", diselenggarakan " + lomba.penyelenggara(), "teks-redup"),
                 label(lomba.terdaftar() + " dari " + lomba.kuota() + " peserta sudah terdaftar", "teks-isi"),
+                beriJarakAtas(langkah, 12));
+        panel.getStyleClass().add("panel-hasil");
