@@ -106,7 +106,7 @@ public class LoginDialog extends JDialog {
         tombol.add(btnBatal);
         tombol.add(btnMasuk);
 
-        JLabel petunjuk = Tema.label("Akun demo panitia: admin / admin", Font.PLAIN, 11f);
+        JLabel petunjuk = Tema.label("Akun demo: panitia admin / admin, player player / player", Font.PLAIN, 11f);
         petunjuk.setForeground(Tema.TEKS_REDUP);
 
         JPanel bawah = new JPanel(new BorderLayout());
