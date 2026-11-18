@@ -126,3 +126,5 @@
 
 .menu-samping:hover {
     -fx-background-color: -af-permukaan-terang;
+    -fx-text-fill: -af-teks;
+}
