@@ -52,3 +52,6 @@ class HalamanIkutLomba {
     private void periksaKode() {
         wadahHasil.getChildren().clear();
         String kode = tfKode.getText().trim();
+
+        if (kode.isEmpty()) {
+            tampilkanPesan("Kode lomba wajib diisi.", true);
