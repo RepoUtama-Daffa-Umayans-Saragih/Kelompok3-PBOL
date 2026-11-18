@@ -85,3 +85,5 @@ public class Turnamen {
 
     public String grupDari(String tim) {
         for (Map.Entry<String, List<String>> entri : grup.entrySet()) {
+            if (entri.getValue().contains(tim)) {
+                return entri.getKey();
