@@ -392,3 +392,6 @@
     -fx-border-radius: 10;
     -fx-padding: 18 20 18 20;
 }
+
+.kosong-judul {
+    -fx-font-size: 14px;
