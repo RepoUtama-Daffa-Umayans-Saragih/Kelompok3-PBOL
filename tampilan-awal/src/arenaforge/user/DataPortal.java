@@ -111,3 +111,6 @@ public final class DataPortal {
         laga(t, "Semifinal", november(21, 15), "Team Alpha", "Team Beta", null);
         laga(t, "Semifinal", november(21, 19), "Team Omega", "Kraken Five", null);
         laga(t, "Final", november(22, 19), "Pemenang SF1", "Pemenang SF2", null);
+
+        t.tambahAnggota(new Anggota(NAMA_PLAYER, "Jungler", true));
+        t.tambahAnggota(new Anggota("Raka", "Roamer", true));
