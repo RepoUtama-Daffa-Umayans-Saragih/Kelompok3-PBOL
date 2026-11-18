@@ -60,3 +60,5 @@ public final class DataPortal {
                 hasil.add(0, lomba);
             }
         }
+        return hasil;
+    }
