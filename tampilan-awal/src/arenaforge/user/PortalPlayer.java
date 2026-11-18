@@ -39,3 +39,6 @@ public class PortalPlayer {
     // Penulisan jam gaya Indonesia: "pukul 17.00"
     static final DateTimeFormatter WAKTU_PANJANG = DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy, 'pukul' HH.mm", INDONESIA);
     static final DateTimeFormatter WAKTU_PENDEK = DateTimeFormatter.ofPattern("EEE d MMM, HH.mm", INDONESIA);
+
+    private final String namaPlayer;
+    private final List<Turnamen> daftarTurnamen;
