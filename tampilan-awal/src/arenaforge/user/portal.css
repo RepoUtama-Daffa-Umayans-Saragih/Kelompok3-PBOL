@@ -14,3 +14,6 @@
  * abu #B8B8B8 di latar gelap 10.3:1. Merah tua di latar gelap hanya 3.1:1, jadi dipakai
  * untuk garis dan bingkai saja, tidak untuk teks.
  */
+
+.root {
+    -af-hitam: #000000;
