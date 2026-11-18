@@ -77,3 +77,6 @@ public class Turnamen {
     public List<Anggota> getRoster() {
         return Collections.unmodifiableList(roster);
     }
+
+    /** False untuk placeholder seperti "Pemenang SF1" yang belum jadi tim sungguhan. */
+    public boolean isTimTerdaftar(String tim) {
