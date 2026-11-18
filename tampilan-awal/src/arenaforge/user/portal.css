@@ -220,3 +220,5 @@
 
 .kartu-turnamen {
     -fx-background-color: -af-permukaan;
+    -fx-background-radius: 10;
+    -fx-border-color: -af-marun;
