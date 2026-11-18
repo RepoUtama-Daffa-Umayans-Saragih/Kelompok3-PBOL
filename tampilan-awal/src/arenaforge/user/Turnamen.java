@@ -141,3 +141,6 @@ public class Turnamen {
                 .filter(laga -> !laga.selesai() && laga.melibatkan(timSaya))
                 .sorted(Comparator.comparing(Laga::waktu))
                 .toList();
+    }
+
+    /** Laga tim si player yang paling dekat dan belum dimainkan, atau null. */
