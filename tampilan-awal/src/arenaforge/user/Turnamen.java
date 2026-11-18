@@ -117,3 +117,5 @@ public class Turnamen {
     public List<String> tahapan() {
         List<String> daftar = new ArrayList<>();
         daftar.add("Fase Grup");
+        daftar.addAll(faseKnockout());
+        return daftar;
