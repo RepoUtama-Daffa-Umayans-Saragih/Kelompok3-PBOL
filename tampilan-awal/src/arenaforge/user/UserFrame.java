@@ -74,3 +74,5 @@ public class UserFrame extends JFrame {
         });
 
         setSize(1120, 760);
+        setMinimumSize(new Dimension(920, 600));
+        setLocationRelativeTo(null);
