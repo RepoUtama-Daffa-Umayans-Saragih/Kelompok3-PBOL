@@ -29,3 +29,6 @@ class HalamanJadwal {
     }
 
     private final List<Turnamen> daftarTurnamen;
+
+    HalamanJadwal(List<Turnamen> daftarTurnamen) {
+        this.daftarTurnamen = daftarTurnamen;
