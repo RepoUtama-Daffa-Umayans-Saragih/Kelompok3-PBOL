@@ -39,3 +39,6 @@ class HalamanBuatLomba {
         cbGame.getItems().setAll(DataSementara.GAME);
         cbGame.getSelectionModel().selectFirst();
         cbKuota.getItems().setAll(4, 8, 16);
+        cbKuota.getSelectionModel().select(Integer.valueOf(8));
+
+        // GridPane 3 baris x 2 kolom: label di kiri, isian di kanan
