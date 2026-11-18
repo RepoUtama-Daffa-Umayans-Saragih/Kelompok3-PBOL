@@ -62,6 +62,7 @@ public class LoginDialog extends JDialog {
     private JPanel buatForm() {
         ButtonGroup grupPeran = new ButtonGroup();
         grupPeran.add(rbPanitia);
+        grupPeran.add(rbPlayer);
         grupPeran.add(rbPenonton);
 
         JPanel pilihanPeran = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
