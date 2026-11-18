@@ -10,3 +10,6 @@ import java.time.LocalDateTime;
  */
 public record Laga(String fase, String grup, LocalDateTime waktu,
                    String timA, String timB, Integer skorA, Integer skorB) {
+
+    public boolean selesai() {
+        return skorA != null && skorB != null;
