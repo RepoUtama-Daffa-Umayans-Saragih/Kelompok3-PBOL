@@ -52,3 +52,6 @@ public class UserFrame extends JFrame {
         JPanel panelPesan = new JPanel(new BorderLayout());
         panelPesan.setBackground(Tema.HITAM);
         panelPesan.setBorder(Tema.padding(24, 24, 24, 24));
+        panelPesan.add(lblPesan, BorderLayout.CENTER);
+
+        // CardLayout: pesan "memuat" tampil dulu, lalu diganti JavaFX setelah Scene siap
