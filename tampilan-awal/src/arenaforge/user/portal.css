@@ -88,3 +88,6 @@
     -fx-background-color: transparent;
     -fx-border-color: transparent;
 }
+
+.scroll-bar .thumb {
+    -fx-background-color: -af-marun;
