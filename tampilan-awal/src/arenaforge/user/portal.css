@@ -173,3 +173,5 @@
     -fx-font-weight: bold;
     -fx-padding: 3 9 3 9;
     -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
