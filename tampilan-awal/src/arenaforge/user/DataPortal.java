@@ -125,3 +125,6 @@ public final class DataPortal {
     /** 8 tim, 2 grup. Fase grup masih berjalan, tinggal satu matchday. */
     private static Turnamen ffShowdown() {
         Turnamen t = new Turnamen("FF Showdown 2026", "Free Fire",
+                "8 tim, fase grup Bo2, knockout Bo3", "Phoenix Squad", "Rusher", 2);
+
+        isiGrup(t, "Grup A", LocalDate.of(2026, 11, 15), 2, 13,
