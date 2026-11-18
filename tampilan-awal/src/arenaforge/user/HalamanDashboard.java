@@ -75,3 +75,5 @@ class HalamanDashboard {
     }
 
     private VBox blokLomba(Turnamen t) {
+        Laga berikut = t.lagaBerikutnya();
+        Label teksBerikut = berikut == null
