@@ -41,3 +41,5 @@ class HalamanIkutLomba {
         lblPesan.setManaged(false);
 
         halaman.getChildren().addAll(
+                beriJarakAtas(lblKode, 24),
+                isian,
