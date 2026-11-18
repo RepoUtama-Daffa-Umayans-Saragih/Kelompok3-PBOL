@@ -46,3 +46,5 @@ class HalamanBuatLomba {
         form.setHgap(16);
         form.setVgap(12);
         tambahIsian(form, 0, "Nama lomba", tfNama);
+        tambahIsian(form, 1, "Game", cbGame);
+        tambahIsian(form, 2, "Jumlah peserta", cbKuota);
