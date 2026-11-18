@@ -131,3 +131,6 @@
 
 .menu-samping:armed {
     -fx-background-color: -af-hitam;
+}
+
+/* Menu yang sedang dibuka: blok marun, seperti kotak tebal di sketsa */
