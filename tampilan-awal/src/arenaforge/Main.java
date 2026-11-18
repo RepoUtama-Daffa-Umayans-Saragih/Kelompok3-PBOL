@@ -1,5 +1,6 @@
 package arenaforge;
 
+import arenaforge.user.UserFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
