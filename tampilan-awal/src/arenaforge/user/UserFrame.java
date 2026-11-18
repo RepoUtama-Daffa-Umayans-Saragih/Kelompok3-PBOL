@@ -86,3 +86,5 @@ public class UserFrame extends JFrame {
 
         JPanel kanan = new JPanel();
         kanan.setLayout(new BoxLayout(kanan, BoxLayout.X_AXIS));
+        kanan.setOpaque(false);
+        kanan.add(lblPlayer);
