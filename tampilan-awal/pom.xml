@@ -57,3 +57,5 @@
                 <version>3.3.1</version>
             </plugin>
             <!-- Jalankan aplikasi: mvnw javafx:run -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
