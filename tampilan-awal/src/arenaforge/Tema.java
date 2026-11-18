@@ -11,11 +11,8 @@ import javax.swing.border.Border;
 
 /** Warna dan helper tampilan yang dipakai di semua layar. */
 public final class Tema {
-    public static final Color HEADER = new Color(0x1E2A44);
-    public static final Color AKSEN = new Color(0xF2A541);
-    public static final Color SIDEBAR = new Color(0xEEF1F6);
-    public static final Color GARIS = new Color(0xD5DAE3);
-    public static final Color TEKS_REDUP = new Color(0x6B7280);
+    // Palet desain ArenaForge (sama dengan portal.css untuk bagian JavaFX)
+    public static final Color HITAM = new Color(0x000000);
 
     private Tema() {
     }
