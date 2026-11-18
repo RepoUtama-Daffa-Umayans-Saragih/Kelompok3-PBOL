@@ -48,3 +48,6 @@ public class Turnamen {
 
     public String getNama() {
         return nama;
+    }
+
+    public String getGame() {
