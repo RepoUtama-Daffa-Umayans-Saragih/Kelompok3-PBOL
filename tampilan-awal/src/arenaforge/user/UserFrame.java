@@ -26,3 +26,5 @@ import javax.swing.SwingUtilities;
  * sedangkan isi halamannya (PortalPlayer) dibuat dengan JavaFX dan ditempel lewat JFXPanel.
  */
 public class UserFrame extends JFrame {
+    private final CardLayout tumpukan = new CardLayout();
+    private final JPanel isi = new JPanel(tumpukan);
