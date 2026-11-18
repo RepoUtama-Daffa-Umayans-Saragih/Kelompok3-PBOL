@@ -93,3 +93,6 @@
     -fx-background-color: -af-marun;
     -fx-background-radius: 4;
 }
+
+.scroll-bar .thumb:hover,
+.scroll-bar .thumb:pressed {
