@@ -26,3 +26,6 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
     public String lawan(String tim) {
         return tim.equals(timA) ? timB : timA;
     }
+
+    /** Nama tim pemenang, atau null kalau laga belum selesai atau hasilnya seri. */
+    public String pemenang() {
