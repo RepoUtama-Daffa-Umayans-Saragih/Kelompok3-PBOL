@@ -71,3 +71,5 @@ class HalamanIkutLomba {
         if (lomba.penuh()) {
             tampilkanPesan("Kuota " + lomba.nama() + " sudah penuh (" + lomba.terdaftar() + " dari "
                     + lomba.kuota() + " peserta).", true);
+            return;
+        }
