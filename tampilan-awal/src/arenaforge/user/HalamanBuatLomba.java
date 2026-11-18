@@ -134,3 +134,6 @@ class HalamanBuatLomba {
         }
         baris.setMaxWidth(760);
         return baris;
+    }
+
+    private void tampilkanPesan(String teks, boolean galat) {
