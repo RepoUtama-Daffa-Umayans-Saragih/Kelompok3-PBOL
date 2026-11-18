@@ -30,3 +30,6 @@ public final class DataPortal {
             new Lomba("FF-SHOW26", "FF Showdown 2026", "Free Fire", 8, 8, "Panitia ArenaForge"),
             new Lomba("LIGA-KAMPUS", "Liga Kampus MLBB", "Mobile Legends", 16, 9, "Panitia ArenaForge"),
             new Lomba("TKN-RANKED", "Tekken Ranked Night", "Tekken", 8, 8, "Panitia ArenaForge")));
+
+    private DataPortal() {
+    }
