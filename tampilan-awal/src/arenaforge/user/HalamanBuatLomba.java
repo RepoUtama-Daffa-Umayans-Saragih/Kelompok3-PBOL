@@ -141,3 +141,5 @@ class HalamanBuatLomba {
         lblPesan.setVisible(true);
         lblPesan.setManaged(true);
         lblPesan.getStyleClass().removeAll("pesan-galat", "pesan-info");
+        lblPesan.getStyleClass().add(galat ? "pesan-galat" : "pesan-info");
+    }
