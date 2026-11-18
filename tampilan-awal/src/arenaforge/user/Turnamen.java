@@ -183,3 +183,6 @@ public class Turnamen {
             }
         }
         return -1;
+    }
+
+    /** Baris klasemen tim, atau null kalau tim tidak ada di grup mana pun. */
