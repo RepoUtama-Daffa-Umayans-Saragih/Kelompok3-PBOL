@@ -24,3 +24,5 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
     }
 
     public String lawan(String tim) {
+        return tim.equals(timA) ? timB : timA;
+    }
