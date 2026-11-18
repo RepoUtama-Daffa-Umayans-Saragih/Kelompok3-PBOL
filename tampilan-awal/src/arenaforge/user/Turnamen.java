@@ -53,3 +53,6 @@ public class Turnamen {
     public String getGame() {
         return game;
     }
+
+    public String getFormat() {
+        return format;
