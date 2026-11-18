@@ -80,3 +80,5 @@ public class Turnamen {
 
     /** False untuk placeholder seperti "Pemenang SF1" yang belum jadi tim sungguhan. */
     public boolean isTimTerdaftar(String tim) {
+        return grupDari(tim) != null;
+    }
