@@ -84,3 +84,6 @@ public final class DataPortal {
         LOMBA.add(lomba);
         return lomba;
     }
+
+    /** 16 tim, 4 grup. Fase grup dan perempat final selesai, semifinal belum dimainkan. */
+    private static Turnamen mlbbCup() {
