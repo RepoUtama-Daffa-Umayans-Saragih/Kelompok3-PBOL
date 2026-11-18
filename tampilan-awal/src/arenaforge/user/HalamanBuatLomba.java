@@ -68,3 +68,6 @@ class HalamanBuatLomba {
         label.setLabelFor(isian);
         form.add(label, 0, baris);
         form.add(isian, 1, baris);
+    }
+
+    private void buatLomba() {
