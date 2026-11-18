@@ -59,3 +59,5 @@ class HalamanIkutLomba {
             return;
         }
         Lomba lomba = DataPortal.cariLomba(kode);
+        if (lomba == null) {
+            tampilkanPesan("Kode " + kode.toUpperCase(Locale.ROOT) + " tidak ditemukan. Periksa lagi huruf dan "
