@@ -51,3 +51,6 @@ class HalamanJadwal {
                     "Jadwal muncul di sini setelah panitia menyusun pertandingan."), 24));
             return halaman;
         }
+
+        Agenda pertama = agenda.get(0);
+        halaman.getChildren().add(beriJarakAtas(bannerLaga(pertama.laga(), "Laga terdekat",
