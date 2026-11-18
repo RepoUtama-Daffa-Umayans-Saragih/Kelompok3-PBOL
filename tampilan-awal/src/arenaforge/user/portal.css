@@ -52,3 +52,5 @@
 }
 
 .teks-redup {
+    -fx-text-fill: -af-teks-redup;
+}
