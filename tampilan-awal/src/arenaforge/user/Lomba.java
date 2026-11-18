@@ -5,3 +5,6 @@ package arenaforge.user;
  * dan menu Buat lomba (lomba baru dari player).
  */
 public record Lomba(String kode, String nama, String game, int kuota, int terdaftar, String penyelenggara) {
+
+    public boolean penuh() {
+        return terdaftar >= kuota;
