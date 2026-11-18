@@ -32,3 +32,6 @@ class HalamanJadwal {
 
     HalamanJadwal(List<Turnamen> daftarTurnamen) {
         this.daftarTurnamen = daftarTurnamen;
+    }
+
+    Node buat() {
