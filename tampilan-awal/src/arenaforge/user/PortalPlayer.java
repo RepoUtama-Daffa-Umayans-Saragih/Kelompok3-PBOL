@@ -134,3 +134,5 @@ public class PortalPlayer {
 
     static Label label(String teks, String... kelas) {
         Label label = new Label(teks);
+        label.getStyleClass().addAll(kelas);
+        return label;
