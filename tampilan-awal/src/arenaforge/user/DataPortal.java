@@ -130,3 +130,5 @@ public final class DataPortal {
         isiGrup(t, "Grup A", LocalDate.of(2026, 11, 15), 2, 13,
                 List.of("Garuda Strike", "Night Owls", "Red Hawks", "Sky Breakers"),
                 "2-0", "0-2", "2-0", "1-1", null, null);
+        isiGrup(t, "Grup B", LocalDate.of(2026, 11, 15), 2, 17,
+                List.of("Phoenix Squad", "Lava Rangers", "Ghost Unit", "Blitz Crew"),
