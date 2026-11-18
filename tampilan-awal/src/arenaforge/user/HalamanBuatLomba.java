@@ -83,3 +83,5 @@ class HalamanBuatLomba {
         if (pesan != null) {
             tampilkanPesan(pesan, true);
             tfNama.requestFocus();
+            return;
+        }
