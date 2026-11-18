@@ -61,3 +61,6 @@ class HalamanBuatLomba {
                 beriJarakAtas(daftarBuatan, 28));
         isiDaftarBuatan(null);
         return halaman;
+    }
+
+    private static void tambahIsian(GridPane form, int baris, String judul, Region isian) {
