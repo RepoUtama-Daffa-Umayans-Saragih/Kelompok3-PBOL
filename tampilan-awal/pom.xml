@@ -7,3 +7,5 @@
     <groupId>arenaforge</groupId>
     <artifactId>arenaforge</artifactId>
     <version>0.1.0</version>
+    <name>ArenaForge</name>
+    <description>Game Tournament Manager (Swing + JavaFX)</description>
