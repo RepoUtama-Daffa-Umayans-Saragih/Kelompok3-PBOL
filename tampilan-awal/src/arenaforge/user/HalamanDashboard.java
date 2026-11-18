@@ -54,3 +54,6 @@ class HalamanDashboard {
         for (Turnamen t : daftarTurnamen) {
             perGame.computeIfAbsent(t.getGame(), game -> new ArrayList<>()).add(t);
         }
+
+        // TilePane: semua kartu sama tinggi, jadi barisnya rata
+        TilePane kartu = new TilePane(16, 16);
