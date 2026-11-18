@@ -227,3 +227,4 @@ public class PortalPlayer {
     private static int tingkatNyala(int indeks, int jumlah) {
         return jumlah <= 1 ? 2 : (int) Math.round(indeks * 2.0 / (jumlah - 1));
     }
+}
