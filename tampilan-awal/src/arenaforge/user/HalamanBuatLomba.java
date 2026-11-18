@@ -77,3 +77,5 @@ class HalamanBuatLomba {
             pesan = "Nama lomba wajib diisi.";
         } else if (nama.length() < 3) {
             pesan = "Nama lomba minimal 3 huruf.";
+        } else if (DataPortal.namaLombaDipakai(nama)) {
+            pesan = "Nama \"" + nama + "\" sudah dipakai lomba lain. Pakai nama lain.";
