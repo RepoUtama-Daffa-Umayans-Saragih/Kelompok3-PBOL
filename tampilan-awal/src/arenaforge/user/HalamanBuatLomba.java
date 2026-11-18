@@ -21,3 +21,5 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 
 /** Menu Buat lomba: player membuat lomba sendiri dan mendapat kode untuk dibagikan. */
+class HalamanBuatLomba {
+    private final TextField tfNama = new TextField();
