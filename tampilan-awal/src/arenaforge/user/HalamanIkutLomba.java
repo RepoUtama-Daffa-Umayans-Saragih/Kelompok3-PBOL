@@ -86,3 +86,5 @@ class HalamanIkutLomba {
         VBox panel = new VBox(4,
                 label("Kode cocok", "label-kecil"),
                 label(lomba.nama(), "judul-kartu"),
+                label(lomba.game() + ", diselenggarakan " + lomba.penyelenggara(), "teks-redup"),
+                label(lomba.terdaftar() + " dari " + lomba.kuota() + " peserta sudah terdaftar", "teks-isi"),
