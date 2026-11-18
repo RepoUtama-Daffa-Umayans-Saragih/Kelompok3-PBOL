@@ -57,3 +57,5 @@ class HalamanJadwal {
                 pertama.turnamen().getNama() + ", " + namaFase(pertama.laga())), 24));
 
         if (agenda.size() > 1) {
+            halaman.getChildren().add(beriJarakAtas(label("Setelah itu", "judul-bagian"), 28));
+            LocalDate tanggalSebelumnya = null;
