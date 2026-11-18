@@ -85,3 +85,5 @@ public class PortalPlayer {
                 lama.setSelected(true);
             }
         });
+        // Panah atas/bawah langsung membuka menu sebelah, jadi posisi fokus selalu
+        // terlihat lewat blok marun menu yang terpilih
