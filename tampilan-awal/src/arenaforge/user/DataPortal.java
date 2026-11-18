@@ -142,3 +142,5 @@ public final class DataPortal {
         t.tambahAnggota(new Anggota("Gilang", "Sniper", true));
         t.tambahAnggota(new Anggota("Putri", "Support", true));
         t.tambahAnggota(new Anggota("Yoga", "IGL", true));
+        t.tambahAnggota(new Anggota("Rendi", "Rusher", false));
+        t.tambahAnggota(new Anggota("Wulan", "Support", false));
