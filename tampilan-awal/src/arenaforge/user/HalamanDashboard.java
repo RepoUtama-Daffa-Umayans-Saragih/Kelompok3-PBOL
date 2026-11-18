@@ -23,3 +23,6 @@ import javafx.scene.layout.VBox;
 /** Menu Dashboard: satu kartu per game, berisi lomba yang diikuti player di game itu. */
 class HalamanDashboard {
     private static final double LEBAR_KARTU = 384;
+
+    private final String namaPlayer;
+    private final List<Turnamen> daftarTurnamen;
