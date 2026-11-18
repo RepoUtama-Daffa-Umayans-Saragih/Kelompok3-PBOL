@@ -8,3 +8,5 @@ import java.util.List;
 import java.util.Locale;
 
 /**
+ * Data contoh untuk Portal Player selama belum ada database.
+ * Player demo: Viter (P01), ikut satu turnamen Mobile Legends dan satu Free Fire.
