@@ -23,3 +23,6 @@ import javafx.scene.layout.VBox;
 class HalamanJadwal {
     private static final DateTimeFormatter TANGGAL = DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy", INDONESIA);
     private static final DateTimeFormatter JAM = DateTimeFormatter.ofPattern("HH.mm");
+
+    /** Satu laga beserta lomba asalnya. */
+    private record Agenda(Turnamen turnamen, Laga laga) {
