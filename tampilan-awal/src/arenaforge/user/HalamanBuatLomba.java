@@ -93,3 +93,5 @@ class HalamanBuatLomba {
     }
 
     /** Daftar lomba buatan player beserta kodenya. Lomba yang baru dibuat ditandai. */
+    private void isiDaftarBuatan(Lomba baru) {
+        List<Lomba> buatan = DataPortal.lombaBuatanSaya();
