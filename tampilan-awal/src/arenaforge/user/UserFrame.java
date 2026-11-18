@@ -55,3 +55,5 @@ public class UserFrame extends JFrame {
         panelPesan.add(lblPesan, BorderLayout.CENTER);
 
         // CardLayout: pesan "memuat" tampil dulu, lalu diganti JavaFX setelah Scene siap
+        isi.add(panelPesan, "pesan");
+        isi.add(panelFx, "portal");
