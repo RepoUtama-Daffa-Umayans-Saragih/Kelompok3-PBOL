@@ -51,3 +51,6 @@ class HalamanBuatLomba {
 
         Button btnBuat = new Button("Buat lomba");
         btnBuat.getStyleClass().add("tombol-utama");
+        btnBuat.setOnAction(e -> buatLomba());
+
+        lblPesan.setWrapText(true);
