@@ -179,3 +179,5 @@ public class Turnamen {
         List<BarisKlasemen> daftar = klasemen(namaGrup);
         for (int i = 0; i < daftar.size(); i++) {
             if (daftar.get(i).getTim().equals(tim)) {
+                return i + 1;
+            }
