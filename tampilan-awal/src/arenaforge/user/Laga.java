@@ -16,3 +16,5 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
     }
 
     public boolean faseGrup() {
+        return grup != null;
+    }
