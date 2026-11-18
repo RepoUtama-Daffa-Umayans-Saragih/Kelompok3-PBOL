@@ -134,3 +134,6 @@ public class Turnamen {
         }
         return tahap;
     }
+
+    /** Laga tim si player yang belum dimainkan, urut dari yang paling dekat. */
+    public List<Laga> lagaBelumMain() {
