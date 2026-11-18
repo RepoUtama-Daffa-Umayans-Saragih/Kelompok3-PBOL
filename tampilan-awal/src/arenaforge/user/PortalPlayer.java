@@ -179,3 +179,5 @@ public class PortalPlayer {
 
         VBox banner = new VBox(6,
                 label(judul + ": " + keterangan, "banner-label"),
+                tim,
+                label(WAKTU_PANJANG.format(laga.waktu()), "banner-waktu"));
