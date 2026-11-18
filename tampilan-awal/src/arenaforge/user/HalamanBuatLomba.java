@@ -71,3 +71,5 @@ class HalamanBuatLomba {
     }
 
     private void buatLomba() {
+        String nama = tfNama.getText().trim();
+        String pesan = null;
