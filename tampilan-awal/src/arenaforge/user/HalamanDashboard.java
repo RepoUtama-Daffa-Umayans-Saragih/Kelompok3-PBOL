@@ -72,3 +72,6 @@ class HalamanDashboard {
         kartu.setMaxHeight(Double.MAX_VALUE);
         kartu.getStyleClass().add("kartu-turnamen");
         return kartu;
+    }
+
+    private VBox blokLomba(Turnamen t) {
