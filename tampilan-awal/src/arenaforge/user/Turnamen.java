@@ -64,3 +64,6 @@ public class Turnamen {
 
     public String getRoleSaya() {
         return roleSaya;
+    }
+
+    public int getLolosPerGrup() {
