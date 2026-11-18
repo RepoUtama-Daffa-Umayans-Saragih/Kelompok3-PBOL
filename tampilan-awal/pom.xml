@@ -14,3 +14,5 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- JavaFX 21 (LTS) jalan di JDK 17 sampai JDK 25 -->
         <maven.compiler.release>17</maven.compiler.release>
+        <javafx.version>21.0.13.1</javafx.version>
+        <main.class>arenaforge.Main</main.class>
