@@ -97,3 +97,5 @@ public class PortalPlayer {
                 bukaMenu(urutan.get(berikut));
                 menu.get(urutan.get(berikut)).requestFocus();
                 e.consume();
+            }
+        });
