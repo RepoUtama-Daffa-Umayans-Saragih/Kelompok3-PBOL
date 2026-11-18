@@ -149,3 +149,5 @@ public final class DataPortal {
 
     /**
      * Mendaftarkan grup 4 tim beserta 6 laganya. Dua laga per matchday (jam dan jam+2),
+     * matchday berikutnya berjarak beberapa hari. Skor ditulis "2-0"; null = belum dimainkan.
+     */
