@@ -199,3 +199,5 @@ public class Turnamen {
                 if (laga.melibatkan(timSaya)) {
                     knockoutTerakhir = laga;
                 }
+            }
+        }
