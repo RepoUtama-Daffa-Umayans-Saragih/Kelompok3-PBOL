@@ -97,3 +97,5 @@ public class UserFrame extends JFrame {
                 BorderFactory.createMatteBorder(0, 0, 2, 0, Tema.MARUN),
                 Tema.padding(12, 16, 12, 16)));
         header.add(kanan, BorderLayout.EAST);
+        return header;
+    }
