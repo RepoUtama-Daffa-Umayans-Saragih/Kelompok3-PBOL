@@ -175,3 +175,5 @@ public class Turnamen {
         String namaGrup = grupDari(tim);
         if (namaGrup == null) {
             return -1;
+        }
+        List<BarisKlasemen> daftar = klasemen(namaGrup);
