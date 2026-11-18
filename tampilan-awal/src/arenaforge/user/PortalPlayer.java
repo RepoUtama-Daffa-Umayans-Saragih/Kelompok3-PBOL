@@ -183,3 +183,6 @@ public class PortalPlayer {
                 label(WAKTU_PANJANG.format(laga.waktu()), "banner-waktu"));
         banner.getStyleClass().add("banner-laga");
         return banner;
+    }
+
+    /** Pesan untuk bagian yang belum ada isinya: apa sebabnya dan apa langkah berikutnya. */
