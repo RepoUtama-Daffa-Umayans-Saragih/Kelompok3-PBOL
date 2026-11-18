@@ -79,3 +79,6 @@ class HalamanDashboard {
         Label teksBerikut = berikut == null
                 ? label("Belum ada jadwal laga berikutnya.", "teks-redup")
                 : label("vs " + berikut.lawan(t.getTimSaya()) + ", " + namaFase(berikut)
+                        + "\n" + WAKTU_PENDEK.format(berikut.waktu()), "teks-isi");
+
+        VBox blok = new VBox(4,
