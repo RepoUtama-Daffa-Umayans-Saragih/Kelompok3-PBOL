@@ -192,3 +192,6 @@ public class PortalPlayer {
         VBox kosong = new VBox(4, label(judul, "kosong-judul"), lblSaran);
         kosong.getStyleClass().add("kosong");
         return kosong;
+    }
+
+    /**
