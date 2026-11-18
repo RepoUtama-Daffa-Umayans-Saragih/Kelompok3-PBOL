@@ -234,3 +234,5 @@
 
 /* Satu lomba di dalam kartu game, dipisah garis tipis dari judul game */
 .blok-lomba {
+    -fx-border-color: -af-garis;
+    -fx-border-width: 1 0 0 0;
