@@ -121,3 +121,5 @@ public class PortalPlayer {
             case IKUT_LOMBA -> new HalamanIkutLomba().buat();
             case BUAT_LOMBA -> new HalamanBuatLomba().buat();
             default -> new HalamanDashboard(namaPlayer, daftarTurnamen, () -> bukaMenu(IKUT_LOMBA)).buat();
+        };
+        akar.setCenter(gulir(isi));
