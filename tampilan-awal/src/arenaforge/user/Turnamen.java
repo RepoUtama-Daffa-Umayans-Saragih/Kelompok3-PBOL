@@ -59,3 +59,5 @@ public class Turnamen {
     }
 
     public String getTimSaya() {
+        return timSaya;
+    }
