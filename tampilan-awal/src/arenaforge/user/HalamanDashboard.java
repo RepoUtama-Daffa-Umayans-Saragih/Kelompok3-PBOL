@@ -77,3 +77,5 @@ class HalamanDashboard {
     private VBox blokLomba(Turnamen t) {
         Laga berikut = t.lagaBerikutnya();
         Label teksBerikut = berikut == null
+                ? label("Belum ada jadwal laga berikutnya.", "teks-redup")
+                : label("vs " + berikut.lawan(t.getTimSaya()) + ", " + namaFase(berikut)
