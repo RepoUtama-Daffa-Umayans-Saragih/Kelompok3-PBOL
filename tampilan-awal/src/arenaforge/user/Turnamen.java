@@ -17,3 +17,5 @@ public class Turnamen {
 
     private final String nama;
     private final String game;
+    private final String format;
+    private final String timSaya;
