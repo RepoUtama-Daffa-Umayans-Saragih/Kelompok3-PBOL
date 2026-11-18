@@ -206,3 +206,6 @@ public class PortalPlayer {
         for (int i = 0; i < tahapan.size(); i++) {
             Region batang = new Region();
             batang.getStyleClass().addAll("batang-jalur",
+                    i <= sekarang ? "nyala-" + tingkatNyala(i, tahapan.size()) : "padam");
+
+            Label nama = label(tahapan.get(i).equals("Fase Grup") ? "Grup" : tahapan.get(i), "label-jalur");
