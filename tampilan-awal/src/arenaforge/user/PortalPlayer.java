@@ -146,3 +146,5 @@ public class PortalPlayer {
     static ScrollPane gulir(Node isi) {
         ScrollPane gulir = new ScrollPane(isi);
         gulir.setFitToWidth(true);
+        gulir.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+        return gulir;
