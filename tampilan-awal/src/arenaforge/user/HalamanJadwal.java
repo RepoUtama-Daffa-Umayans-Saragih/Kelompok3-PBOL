@@ -69,3 +69,6 @@ class HalamanJadwal {
             }
         }
         return halaman;
+    }
+
+    private HBox barisAgenda(Agenda a) {
