@@ -98,3 +98,7 @@
 .scroll-bar .thumb:pressed {
     -fx-background-color: -af-merah-tua;
 }
+
+/* ---------- Menu samping ---------- */
+
+.menu-kiri {
