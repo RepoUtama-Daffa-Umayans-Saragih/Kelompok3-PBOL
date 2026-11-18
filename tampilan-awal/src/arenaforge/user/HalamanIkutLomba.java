@@ -50,3 +50,5 @@ class HalamanIkutLomba {
     }
 
     private void periksaKode() {
+        wadahHasil.getChildren().clear();
+        String kode = tfKode.getText().trim();
