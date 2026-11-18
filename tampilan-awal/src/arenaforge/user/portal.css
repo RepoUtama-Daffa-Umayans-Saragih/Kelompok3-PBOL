@@ -251,3 +251,6 @@
     -fx-background-radius: 6;
     -fx-padding: 12 16 12 16;
 }
+
+.baris-agenda.baru {
+    -fx-border-color: -af-merah-tua;
