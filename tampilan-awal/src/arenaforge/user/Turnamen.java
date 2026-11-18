@@ -30,3 +30,5 @@ public class Turnamen {
         this.game = game;
         this.format = format;
         this.timSaya = timSaya;
+        this.roleSaya = roleSaya;
+        this.lolosPerGrup = lolosPerGrup;
