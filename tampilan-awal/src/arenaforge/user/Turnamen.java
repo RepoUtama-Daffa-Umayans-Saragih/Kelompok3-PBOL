@@ -144,3 +144,5 @@ public class Turnamen {
     }
 
     /** Laga tim si player yang paling dekat dan belum dimainkan, atau null. */
+    public Laga lagaBerikutnya() {
+        List<Laga> belumMain = lagaBelumMain();
