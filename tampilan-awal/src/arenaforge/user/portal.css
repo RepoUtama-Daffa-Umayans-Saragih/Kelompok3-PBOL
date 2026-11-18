@@ -306,3 +306,5 @@
 
 .tombol-kedua {
     -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 6;
