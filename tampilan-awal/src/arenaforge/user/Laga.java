@@ -36,3 +36,5 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
     }
 
     /** Hasil dari sisi satu tim: "M" (menang), "S" (seri), "K" (kalah), atau null kalau belum main. */
+    public String hasilUntuk(String tim) {
+        if (!selesai()) {
