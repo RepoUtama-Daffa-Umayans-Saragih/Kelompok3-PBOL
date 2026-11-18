@@ -57,3 +57,5 @@ class HalamanDashboard {
 
         // TilePane: semua kartu sama tinggi, jadi barisnya rata
         TilePane kartu = new TilePane(16, 16);
+        kartu.setTileAlignment(Pos.TOP_LEFT);
+        perGame.forEach((game, daftar) -> kartu.getChildren().add(kartuGame(game, daftar)));
