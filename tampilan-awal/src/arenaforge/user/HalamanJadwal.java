@@ -49,3 +49,5 @@ class HalamanJadwal {
         if (agenda.isEmpty()) {
             halaman.getChildren().add(beriJarakAtas(kosong("Belum ada laga terjadwal untuk timmu.",
                     "Jadwal muncul di sini setelah panitia menyusun pertandingan."), 24));
+            return halaman;
+        }
