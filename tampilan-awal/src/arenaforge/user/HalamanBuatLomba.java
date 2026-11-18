@@ -30,3 +30,5 @@ class HalamanBuatLomba {
 
     Node buat() {
         VBox halaman = kepalaHalaman("Buat lomba",
+                "Buat lomba sendiri. Setelah dibuat, kamu dapat kode yang bisa dibagikan ke peserta "
+                        + "lewat menu Ikut lomba.");
