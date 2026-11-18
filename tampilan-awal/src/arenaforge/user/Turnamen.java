@@ -190,3 +190,6 @@ public class Turnamen {
         int posisi = peringkat(tim);
         return posisi < 1 ? null : klasemen(grupDari(tim)).get(posisi - 1);
     }
+
+    /** Status tim si player, mis. "Lolos ke Semifinal" atau "Fase grup, peringkat 1 di Grup B". */
+    public String statusTim() {
