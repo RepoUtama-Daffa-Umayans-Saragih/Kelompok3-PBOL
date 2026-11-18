@@ -35,3 +35,5 @@ class HalamanBuatLomba {
 
         tfNama.setPromptText("Contoh: Turnamen Antar Kelas");
         tfNama.setPrefColumnCount(24);
+        tfNama.setOnAction(e -> buatLomba()); // Enter di kolom nama
+        cbGame.getItems().setAll(DataSementara.GAME);
