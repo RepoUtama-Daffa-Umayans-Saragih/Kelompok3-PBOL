@@ -191,3 +191,6 @@
 }
 
 /* ---------- Blok laga terdekat (titik fokus layar) ---------- */
+
+.banner-laga {
+    -fx-background-color: -af-marun;
