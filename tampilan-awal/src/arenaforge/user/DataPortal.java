@@ -107,3 +107,5 @@ public final class DataPortal {
         laga(t, "Perempat Final", november(14, 13), "Team Alpha", "Storm Raiders", "2-1");
         laga(t, "Perempat Final", november(14, 16), "Team Beta", "Crimson Owls", "2-0");
         laga(t, "Perempat Final", november(15, 13), "Team Omega", "Rex Squad", "2-0");
+        laga(t, "Perempat Final", november(15, 16), "Shadow Lynx", "Kraken Five", "1-2");
+        laga(t, "Semifinal", november(21, 15), "Team Alpha", "Team Beta", null);
