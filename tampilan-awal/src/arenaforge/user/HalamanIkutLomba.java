@@ -76,3 +76,6 @@ class HalamanIkutLomba {
 
         tampilkanPesan(null, false);
         wadahHasil.getChildren().add(panelCocok(lomba));
+    }
+
+    private VBox panelCocok(Lomba lomba) {
