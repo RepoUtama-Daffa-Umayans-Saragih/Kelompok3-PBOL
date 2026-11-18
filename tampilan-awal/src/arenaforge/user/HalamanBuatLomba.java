@@ -75,3 +75,5 @@ class HalamanBuatLomba {
         String pesan = null;
         if (nama.isEmpty()) {
             pesan = "Nama lomba wajib diisi.";
+        } else if (nama.length() < 3) {
+            pesan = "Nama lomba minimal 3 huruf.";
