@@ -21,3 +21,5 @@ import javafx.scene.layout.VBox;
 
 /** Menu Jadwal: semua laga timmu yang belum dimainkan, dari yang paling dekat. */
 class HalamanJadwal {
+    private static final DateTimeFormatter TANGGAL = DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy", INDONESIA);
+    private static final DateTimeFormatter JAM = DateTimeFormatter.ofPattern("HH.mm");
