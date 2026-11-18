@@ -8,3 +8,5 @@ public record Lomba(String kode, String nama, String game, int kuota, int terdaf
 
     public boolean penuh() {
         return terdaftar >= kuota;
+    }
+}
