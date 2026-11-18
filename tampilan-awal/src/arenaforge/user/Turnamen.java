@@ -151,3 +151,5 @@ public class Turnamen {
 
     /** Klasemen satu grup, diurutkan dari poin, lalu selisih skor, lalu skor masuk. */
     public List<BarisKlasemen> klasemen(String namaGrup) {
+        Map<String, BarisKlasemen> baris = new LinkedHashMap<>();
+        for (String tim : grup.get(namaGrup)) {
