@@ -75,3 +75,5 @@ public class Turnamen {
     }
 
     public List<Anggota> getRoster() {
+        return Collections.unmodifiableList(roster);
+    }
