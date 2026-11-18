@@ -66,3 +66,6 @@ public class PortalPlayer {
         bukaMenu(DASHBOARD);
         return scene;
     }
+
+    private VBox buatMenuSamping() {
+        ToggleGroup grup = new ToggleGroup();
