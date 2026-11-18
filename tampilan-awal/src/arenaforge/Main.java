@@ -29,5 +29,6 @@ public class Main {
             new UserFrame().setVisible(true);
         } else {
             new MainFrame(peran).setVisible(true);
+        }
     }
 }
