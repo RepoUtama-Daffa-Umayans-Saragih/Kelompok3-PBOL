@@ -120,3 +120,6 @@ public final class DataPortal {
         t.tambahAnggota(new Anggota("Fajar", "Gold Laner", false));
         t.tambahAnggota(new Anggota("Nadia", "Roamer", false));
         return t;
+    }
+
+    /** 8 tim, 2 grup. Fase grup masih berjalan, tinggal satu matchday. */
