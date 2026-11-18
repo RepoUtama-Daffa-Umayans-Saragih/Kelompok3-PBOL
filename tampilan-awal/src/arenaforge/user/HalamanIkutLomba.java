@@ -30,3 +30,5 @@ class HalamanIkutLomba {
         tfKode.setOnAction(e -> periksaKode()); // Enter di kolom kode
 
         Button btnCek = new Button("Cek kode");
+        btnCek.getStyleClass().add("tombol-utama");
+        btnCek.setOnAction(e -> periksaKode());
