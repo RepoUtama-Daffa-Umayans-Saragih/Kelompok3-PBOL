@@ -32,3 +32,6 @@ class HalamanBuatLomba {
         VBox halaman = kepalaHalaman("Buat lomba",
                 "Buat lomba sendiri. Setelah dibuat, kamu dapat kode yang bisa dibagikan ke peserta "
                         + "lewat menu Ikut lomba.");
+
+        tfNama.setPromptText("Contoh: Turnamen Antar Kelas");
+        tfNama.setPrefColumnCount(24);
