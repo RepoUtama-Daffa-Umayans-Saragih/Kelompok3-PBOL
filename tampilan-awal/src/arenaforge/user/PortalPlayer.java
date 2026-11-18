@@ -104,3 +104,5 @@ public class PortalPlayer {
         VBox.setVgrow(dorong, Priority.ALWAYS);
         Label catatan = label("Data contoh, belum diambil dari database.", "catatan");
         catatan.setWrapText(true);
+        samping.getChildren().addAll(dorong, catatan);
+        samping.getStyleClass().add("menu-kiri");
