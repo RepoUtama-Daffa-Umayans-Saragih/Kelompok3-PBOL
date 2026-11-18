@@ -111,3 +111,5 @@
 }
 
 .menu-samping {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
