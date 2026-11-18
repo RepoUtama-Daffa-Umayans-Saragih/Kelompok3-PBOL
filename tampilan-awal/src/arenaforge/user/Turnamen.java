@@ -108,3 +108,5 @@ public class Turnamen {
 
     /** Fase knockout yang dipakai turnamen ini, urut dari awal. */
     public List<String> faseKnockout() {
+        return URUTAN_KNOCKOUT.stream()
+                .filter(fase -> !lagaFase(fase).isEmpty())
