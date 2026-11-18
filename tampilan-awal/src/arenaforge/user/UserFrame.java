@@ -50,3 +50,5 @@ public class UserFrame extends JFrame {
 
         lblPesan.setForeground(Color.WHITE);
         JPanel panelPesan = new JPanel(new BorderLayout());
+        panelPesan.setBackground(Tema.HITAM);
+        panelPesan.setBorder(Tema.padding(24, 24, 24, 24));
