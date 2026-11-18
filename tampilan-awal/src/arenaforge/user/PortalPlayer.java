@@ -99,3 +99,6 @@ public class PortalPlayer {
                 e.consume();
             }
         });
+
+        Region dorong = new Region();
+        VBox.setVgrow(dorong, Priority.ALWAYS);
