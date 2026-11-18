@@ -121,3 +121,5 @@ class HalamanBuatLomba {
             ClipboardContent isi = new ClipboardContent();
             isi.putString(lomba.kode());
             Clipboard.getSystemClipboard().setContent(isi);
+            btnSalin.setText("Kode disalin");
+        });
