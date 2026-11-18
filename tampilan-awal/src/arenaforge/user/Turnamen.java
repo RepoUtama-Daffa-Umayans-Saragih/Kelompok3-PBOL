@@ -32,3 +32,6 @@ public class Turnamen {
         this.timSaya = timSaya;
         this.roleSaya = roleSaya;
         this.lolosPerGrup = lolosPerGrup;
+    }
+
+    public void tambahGrup(String namaGrup, List<String> tim) {
