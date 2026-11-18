@@ -46,3 +46,5 @@ public class BarisKlasemen {
     }
 
     public int getMenang() {
+        return menang;
+    }
