@@ -45,3 +45,5 @@ class HalamanDashboard {
             VBox pesan = kosong("Kamu belum ikut lomba apa pun.",
                     "Minta kode lomba ke panitia, lalu masukkan di menu Ikut lomba.");
             pesan.getChildren().add(beriJarakAtas(ikut, 12));
+            halaman.getChildren().add(beriJarakAtas(pesan, 24));
+            return halaman;
