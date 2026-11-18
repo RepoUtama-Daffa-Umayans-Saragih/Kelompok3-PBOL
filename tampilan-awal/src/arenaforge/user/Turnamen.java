@@ -14,3 +14,6 @@ import java.util.Map;
 public class Turnamen {
     /** Urutan fase knockout dari awal sampai akhir. */
     private static final List<String> URUTAN_KNOCKOUT = List.of("Perempat Final", "Semifinal", "Final");
+
+    private final String nama;
+    private final String game;
