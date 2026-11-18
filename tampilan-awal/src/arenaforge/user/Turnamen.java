@@ -148,3 +148,6 @@ public class Turnamen {
         List<Laga> belumMain = lagaBelumMain();
         return belumMain.isEmpty() ? null : belumMain.get(0);
     }
+
+    /** Klasemen satu grup, diurutkan dari poin, lalu selisih skor, lalu skor masuk. */
+    public List<BarisKlasemen> klasemen(String namaGrup) {
