@@ -90,3 +90,5 @@ class HalamanDashboard {
                 teksBerikut);
         blok.getStyleClass().add("blok-lomba");
         return blok;
+    }
+}
