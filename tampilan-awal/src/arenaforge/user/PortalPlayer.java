@@ -56,3 +56,5 @@ public class PortalPlayer {
 
     /** Membuat Scene JavaFX. Wajib dipanggil di JavaFX Application Thread. */
     public Scene buatScene() {
+        URL css = PortalPlayer.class.getResource("portal.css");
+        if (css == null) {
