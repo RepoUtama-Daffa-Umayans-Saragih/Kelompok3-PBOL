@@ -169,3 +169,6 @@ public class PortalPlayer {
         String jenis = status.startsWith("Tersingkir") ? "badge-gugur"
                 : status.startsWith("Fase grup") ? "badge-grup" : "badge-lolos";
         return label(status, "badge", jenis);
+    }
+
+    /** Blok laga yang paling penting di layar: siapa lawan dan kapan mainnya. */
