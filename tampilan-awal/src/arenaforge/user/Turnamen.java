@@ -236,3 +236,4 @@ public class Turnamen {
                 .map(laga -> laga.hasilUntuk(timSaya))
                 .toList();
     }
+}
