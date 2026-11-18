@@ -54,3 +54,6 @@ class HalamanJadwal {
 
         Agenda pertama = agenda.get(0);
         halaman.getChildren().add(beriJarakAtas(bannerLaga(pertama.laga(), "Laga terdekat",
+                pertama.turnamen().getNama() + ", " + namaFase(pertama.laga())), 24));
+
+        if (agenda.size() > 1) {
