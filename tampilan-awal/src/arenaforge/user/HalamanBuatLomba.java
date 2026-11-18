@@ -103,3 +103,5 @@ class HalamanBuatLomba {
         for (Lomba lomba : buatan) {
             daftarBuatan.getChildren().add(barisBuatan(lomba, lomba.equals(baru)));
         }
+        Label admin = label("Menu admin untuk mengatur pertandingan lomba buatanmu sedang disiapkan.", "catatan");
+        admin.setWrapText(true);
