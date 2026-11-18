@@ -40,3 +40,6 @@ public class BarisKlasemen {
     public String getTim() {
         return tim;
     }
+
+    public int getMain() {
+        return main;
