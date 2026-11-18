@@ -26,3 +26,5 @@ public class Turnamen {
     private final List<Anggota> roster = new ArrayList<>();
 
     public Turnamen(String nama, String game, String format, String timSaya, String roleSaya, int lolosPerGrup) {
+        this.nama = nama;
+        this.game = game;
