@@ -130,6 +130,8 @@ public class LoginDialog extends JDialog {
             return;
         }
 
+        boolean player = rbPlayer.isSelected();
+        String usernameBenar = player ? USERNAME_PLAYER : USERNAME_PANITIA;
         String username = tfUsername.getText().trim();
         char[] password = pfPassword.getPassword();
         boolean kosong = username.isEmpty() || password.length == 0;
