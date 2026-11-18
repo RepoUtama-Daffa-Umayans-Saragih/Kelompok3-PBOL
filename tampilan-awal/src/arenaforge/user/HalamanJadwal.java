@@ -67,3 +67,5 @@ class HalamanJadwal {
                 }
                 halaman.getChildren().add(barisAgenda(a));
             }
+        }
+        return halaman;
