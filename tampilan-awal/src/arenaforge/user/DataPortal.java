@@ -146,3 +146,6 @@ public final class DataPortal {
         t.tambahAnggota(new Anggota("Wulan", "Support", false));
         return t;
     }
+
+    /**
+     * Mendaftarkan grup 4 tim beserta 6 laganya. Dua laga per matchday (jam dan jam+2),
