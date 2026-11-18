@@ -181,3 +181,5 @@ public class Turnamen {
             if (daftar.get(i).getTim().equals(tim)) {
                 return i + 1;
             }
+        }
+        return -1;
