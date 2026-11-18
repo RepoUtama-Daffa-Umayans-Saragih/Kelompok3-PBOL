@@ -222,3 +222,6 @@ public class PortalPlayer {
         }
         return jalur;
     }
+
+    /** 0 = marun, 1 = merah tua, 2 = merah. Tahap terakhir (final) selalu merah. */
+    private static int tingkatNyala(int indeks, int jumlah) {
