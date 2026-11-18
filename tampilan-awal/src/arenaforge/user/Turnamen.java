@@ -112,3 +112,6 @@ public class Turnamen {
                 .filter(fase -> !lagaFase(fase).isEmpty())
                 .toList();
     }
+
+    /** Tahapan turnamen dari awal sampai akhir: fase grup, lalu fase knockout. */
+    public List<String> tahapan() {
