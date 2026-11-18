@@ -218,3 +218,5 @@ public class PortalPlayer {
             VBox tahap = new VBox(6, batang, nama);
             tahap.setPrefWidth(0); // semua tahap dapat lebar yang sama
             HBox.setHgrow(tahap, Priority.ALWAYS);
+            jalur.getChildren().add(tahap);
+        }
