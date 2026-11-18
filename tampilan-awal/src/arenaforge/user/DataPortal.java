@@ -173,3 +173,6 @@ public final class DataPortal {
         }
         String[] bagian = skor.split("-");
         return new Integer[] {Integer.valueOf(bagian[0]), Integer.valueOf(bagian[1])};
+    }
+
+    private static LocalDateTime november(int tanggal, int jam) {
