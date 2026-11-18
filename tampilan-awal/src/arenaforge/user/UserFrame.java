@@ -63,3 +63,5 @@ public class UserFrame extends JFrame {
         add(isi, BorderLayout.CENTER);
 
         // Scene JavaFX wajib dibuat di JavaFX Application Thread, bukan di thread Swing
+        Platform.runLater(() -> {
+            try {
