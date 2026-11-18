@@ -175,3 +175,6 @@
     -fx-background-radius: 4;
     -fx-border-radius: 4;
 }
+
+.badge-lolos {
+    -fx-background-color: -af-merah-tua;
