@@ -131,3 +131,6 @@ public class PortalPlayer {
     }
 
     // ---- Komponen kecil yang dipakai semua halaman ----
+
+    static Label label(String teks, String... kelas) {
+        Label label = new Label(teks);
