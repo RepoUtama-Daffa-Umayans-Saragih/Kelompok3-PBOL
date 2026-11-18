@@ -153,3 +153,5 @@ public final class DataPortal {
      */
     private static void isiGrup(Turnamen t, String namaGrup, LocalDate mulai, int jarakHari, int jam,
                                 List<String> tim, String... skor) {
+        t.tambahGrup(namaGrup, tim);
+        for (int i = 0; i < PASANGAN_GRUP.length; i++) {
