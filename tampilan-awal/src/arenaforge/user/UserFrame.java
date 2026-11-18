@@ -34,3 +34,5 @@ public class UserFrame extends JFrame {
         super("ArenaForge - Portal Player");
 
         // Event: minta konfirmasi sebelum jendela ditutup
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
