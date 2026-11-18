@@ -26,3 +26,6 @@ class HalamanDashboard {
 
     private final String namaPlayer;
     private final List<Turnamen> daftarTurnamen;
+    private final Runnable bukaIkutLomba;
+
+    HalamanDashboard(String namaPlayer, List<Turnamen> daftarTurnamen, Runnable bukaIkutLomba) {
