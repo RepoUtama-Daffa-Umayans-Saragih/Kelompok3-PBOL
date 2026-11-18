@@ -120,3 +120,5 @@ public class UserFrame extends JFrame {
                 "Tutup Aplikasi", JOptionPane.YES_NO_OPTION);
         if (pilihan == JOptionPane.YES_OPTION) {
             System.exit(0);
+        }
+    }
