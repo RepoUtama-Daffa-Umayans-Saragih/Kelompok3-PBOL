@@ -72,3 +72,6 @@ public class Turnamen {
 
     public List<String> getNamaGrup() {
         return new ArrayList<>(grup.keySet());
+    }
+
+    public List<Anggota> getRoster() {
