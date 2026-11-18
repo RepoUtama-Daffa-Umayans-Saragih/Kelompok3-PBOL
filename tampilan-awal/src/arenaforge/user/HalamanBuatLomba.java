@@ -99,3 +99,5 @@ class HalamanBuatLomba {
         if (buatan.isEmpty()) {
             return;
         }
+        daftarBuatan.getChildren().add(label("Lomba buatanmu", "judul-bagian"));
+        for (Lomba lomba : buatan) {
