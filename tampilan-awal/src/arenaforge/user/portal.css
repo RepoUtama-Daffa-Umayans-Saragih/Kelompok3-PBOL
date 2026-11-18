@@ -301,3 +301,5 @@
 }
 
 .tombol-utama:focus-visible {
+    -fx-border-color: -af-merah;
+}
