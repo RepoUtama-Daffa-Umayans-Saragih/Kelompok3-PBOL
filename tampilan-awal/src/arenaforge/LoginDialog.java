@@ -118,6 +118,8 @@ public class LoginDialog extends JDialog {
 
     private void aturInputAkun() {
         boolean perluAkun = !rbPenonton.isSelected();
+        tfUsername.setEnabled(perluAkun);
+        pfPassword.setEnabled(perluAkun);
     }
 
     private void prosesLogin() {
