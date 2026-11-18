@@ -20,3 +20,5 @@ class HalamanIkutLomba {
     private final VBox wadahHasil = new VBox();
 
     Node buat() {
+        VBox halaman = kepalaHalaman("Ikut lomba",
+                "Masukkan kode lomba dari panitia. Kalau kodenya cocok, kamu bisa lanjut membuat tim untuk lomba itu.");
