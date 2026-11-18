@@ -70,3 +70,5 @@ class HalamanDashboard {
         }
         kartu.setPrefWidth(LEBAR_KARTU);
         kartu.setMaxHeight(Double.MAX_VALUE);
+        kartu.getStyleClass().add("kartu-turnamen");
+        return kartu;
