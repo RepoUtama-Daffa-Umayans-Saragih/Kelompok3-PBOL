@@ -327,3 +327,5 @@
 .tombol-kedua:focus-visible {
     -fx-border-color: -af-merah;
     -fx-border-width: 2;
+    -fx-padding: 6 15 6 15;
+}
