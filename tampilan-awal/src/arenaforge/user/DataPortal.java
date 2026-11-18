@@ -75,3 +75,5 @@ public final class DataPortal {
         do {
             StringBuilder akhiran = new StringBuilder();
             for (int i = 0; i < 4; i++) {
+                akhiran.append(HURUF_KODE.charAt(ACAK.nextInt(HURUF_KODE.length())));
+            }
