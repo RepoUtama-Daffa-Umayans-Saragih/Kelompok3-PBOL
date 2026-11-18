@@ -12,3 +12,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
+/** Menu Ikut lomba: player memasukkan kode dari panitia untuk menemukan lomba. */
+class HalamanIkutLomba {
