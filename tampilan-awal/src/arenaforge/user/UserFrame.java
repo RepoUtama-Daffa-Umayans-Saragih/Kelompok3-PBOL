@@ -83,3 +83,6 @@ public class UserFrame extends JFrame {
         lblPlayer.setForeground(Color.WHITE);
         JButton btnKeluarAkun = new JButton("Keluar Akun");
         btnKeluarAkun.addActionListener(e -> keluarAkun());
+
+        JPanel kanan = new JPanel();
+        kanan.setLayout(new BoxLayout(kanan, BoxLayout.X_AXIS));
