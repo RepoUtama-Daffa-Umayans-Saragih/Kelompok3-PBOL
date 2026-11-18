@@ -18,3 +18,6 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+
+/** Menu Jadwal: semua laga timmu yang belum dimainkan, dari yang paling dekat. */
+class HalamanJadwal {
