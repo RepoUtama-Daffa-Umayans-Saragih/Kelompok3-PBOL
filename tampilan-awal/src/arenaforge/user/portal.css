@@ -317,3 +317,5 @@
 }
 
 .tombol-kedua:hover {
+    -fx-background-color: -af-permukaan-terang;
+}
