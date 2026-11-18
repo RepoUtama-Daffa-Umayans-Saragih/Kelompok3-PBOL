@@ -322,3 +322,6 @@
 
 .tombol-kedua:armed {
     -fx-background-color: -af-hitam;
+}
+
+.tombol-kedua:focus-visible {
