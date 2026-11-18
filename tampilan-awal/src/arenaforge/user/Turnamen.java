@@ -155,3 +155,5 @@ public class Turnamen {
         for (String tim : grup.get(namaGrup)) {
             baris.put(tim, new BarisKlasemen(tim));
         }
+        for (Laga laga : lagaGrup(namaGrup)) {
+            if (laga.selesai()) {
