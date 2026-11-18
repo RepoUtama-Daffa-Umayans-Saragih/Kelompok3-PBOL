@@ -130,3 +130,5 @@ public class Turnamen {
                 if (laga.melibatkan(timSaya)) {
                     tahap = i + 1;
                 }
+            }
+        }
