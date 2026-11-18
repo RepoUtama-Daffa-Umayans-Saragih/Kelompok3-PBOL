@@ -161,3 +161,6 @@ public final class DataPortal {
                     tim.get(PASANGAN_GRUP[i][0]), tim.get(PASANGAN_GRUP[i][1]), hasil[0], hasil[1]));
         }
     }
+
+    private static void laga(Turnamen t, String fase, LocalDateTime waktu, String timA, String timB, String skor) {
+        Integer[] hasil = bacaSkor(skor);
