@@ -76,3 +76,6 @@ set_java_home() {
       return 1
     fi
   fi
+}
+
+# hash string like Java String::hashCode
