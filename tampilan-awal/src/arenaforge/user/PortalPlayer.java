@@ -91,3 +91,5 @@ public class PortalPlayer {
             boolean atas = e.getCode() == KeyCode.UP;
             if ((atas || e.getCode() == KeyCode.DOWN) && e.getTarget() instanceof ToggleButton tombol
                     && menu.containsValue(tombol)) {
+                List<String> urutan = new ArrayList<>(menu.keySet());
+                int berikut = Math.max(0, Math.min(urutan.size() - 1,
