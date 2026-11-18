@@ -93,3 +93,5 @@ public class UserFrame extends JFrame {
 
         JPanel header = Tema.header("ArenaForge", "Portal Player");
         // Garis marun memisahkan header Swing dari isi JavaFX yang sama-sama hitam
+        header.setBorder(BorderFactory.createCompoundBorder(
+                BorderFactory.createMatteBorder(0, 0, 2, 0, Tema.MARUN),
