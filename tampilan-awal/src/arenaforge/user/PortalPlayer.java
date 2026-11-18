@@ -204,3 +204,5 @@ public class PortalPlayer {
 
         HBox jalur = new HBox(4);
         for (int i = 0; i < tahapan.size(); i++) {
+            Region batang = new Region();
+            batang.getStyleClass().addAll("batang-jalur",
