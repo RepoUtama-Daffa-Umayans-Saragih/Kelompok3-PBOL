@@ -135,3 +135,5 @@ public final class DataPortal {
                 "2-0", "1-1", "1-1", "2-0", null, null);
 
         laga(t, "Semifinal", november(23, 15), "Juara Grup A", "Runner-up Grup B", null);
+        laga(t, "Semifinal", november(23, 19), "Juara Grup B", "Runner-up Grup A", null);
+        laga(t, "Final", november(24, 19), "Pemenang SF1", "Pemenang SF2", null);
