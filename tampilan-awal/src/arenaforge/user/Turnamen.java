@@ -110,3 +110,5 @@ public class Turnamen {
     public List<String> faseKnockout() {
         return URUTAN_KNOCKOUT.stream()
                 .filter(fase -> !lagaFase(fase).isEmpty())
+                .toList();
+    }
