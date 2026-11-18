@@ -41,3 +41,5 @@ class HalamanDashboard {
         if (daftarTurnamen.isEmpty()) {
             Button ikut = new Button("Masukkan kode lomba");
             ikut.getStyleClass().add("tombol-kedua");
+            ikut.setOnAction(e -> bukaIkutLomba.run());
+            VBox pesan = kosong("Kamu belum ikut lomba apa pun.",
