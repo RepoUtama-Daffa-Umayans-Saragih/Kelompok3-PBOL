@@ -352,3 +352,5 @@
 }
 
 /* Consolas untuk kode lomba: huruf dan angka mudah dibedakan saat dibacakan atau diketik ulang */
+.kode-lomba {
+    -fx-font-family: "Consolas";
