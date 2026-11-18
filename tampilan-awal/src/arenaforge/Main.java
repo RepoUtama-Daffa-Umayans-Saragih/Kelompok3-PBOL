@@ -20,7 +20,7 @@ public class Main {
     }
 
     /** Tampilkan dialog login, lalu buka jendela utama sesuai peran yang dipilih. */
-    static void mulai() {
+    public static void mulai() {
         String peran = new LoginDialog().tampilkan();
         if (peran == null) {
             System.exit(0);
