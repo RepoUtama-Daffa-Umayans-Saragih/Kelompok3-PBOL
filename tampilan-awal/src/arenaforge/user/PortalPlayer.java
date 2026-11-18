@@ -136,3 +136,6 @@ public class PortalPlayer {
         Label label = new Label(teks);
         label.getStyleClass().addAll(kelas);
         return label;
+    }
+
+    static <T extends Node> T beriJarakAtas(T node, double jarak) {
