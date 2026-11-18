@@ -63,3 +63,5 @@ class HalamanIkutLomba {
             tampilkanPesan("Kode " + kode.toUpperCase(Locale.ROOT) + " tidak ditemukan. Periksa lagi huruf dan "
                     + "angkanya, atau minta kode baru ke panitia.", true);
             return;
+        }
+        if (DataPortal.sudahDiikuti(lomba)) {
