@@ -67,3 +67,5 @@
 }
 
 .label-kecil {
+    -fx-text-fill: -af-teks-redup;
+    -fx-font-size: 12px;
