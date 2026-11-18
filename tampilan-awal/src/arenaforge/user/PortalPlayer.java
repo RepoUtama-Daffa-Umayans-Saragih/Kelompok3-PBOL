@@ -181,3 +181,5 @@ public class PortalPlayer {
                 label(judul + ": " + keterangan, "banner-label"),
                 tim,
                 label(WAKTU_PANJANG.format(laga.waktu()), "banner-waktu"));
+        banner.getStyleClass().add("banner-laga");
+        return banner;
