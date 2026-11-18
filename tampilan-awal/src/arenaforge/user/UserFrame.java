@@ -31,3 +31,6 @@ public class UserFrame extends JFrame {
     private final JLabel lblPesan = new JLabel("Memuat portal player...", SwingConstants.CENTER);
 
     public UserFrame() {
+        super("ArenaForge - Portal Player");
+
+        // Event: minta konfirmasi sebelum jendela ditutup
