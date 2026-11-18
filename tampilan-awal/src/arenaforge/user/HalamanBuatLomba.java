@@ -64,3 +64,5 @@ class HalamanBuatLomba {
     }
 
     private static void tambahIsian(GridPane form, int baris, String judul, Region isian) {
+        Label label = label(judul, "label-isian");
+        label.setLabelFor(isian);
