@@ -65,3 +65,5 @@ class HalamanIkutLomba {
             return;
         }
         if (DataPortal.sudahDiikuti(lomba)) {
+            tampilkanPesan("Kamu sudah ikut " + lomba.nama() + ". Perkembangannya ada di menu Dashboard.", false);
+            return;
