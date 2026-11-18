@@ -40,3 +40,6 @@ public class Turnamen {
 
     public void tambahLaga(Laga laga) {
         daftarLaga.add(laga);
+    }
+
+    public void tambahAnggota(Anggota anggota) {
