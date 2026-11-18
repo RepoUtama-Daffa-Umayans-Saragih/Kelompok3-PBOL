@@ -53,3 +53,6 @@ public class PortalPlayer {
         this.daftarTurnamen.sort(Comparator.comparing(PortalPlayer::waktuBerikutnya,
                 Comparator.nullsLast(Comparator.naturalOrder())));
     }
+
+    /** Membuat Scene JavaFX. Wajib dipanggil di JavaFX Application Thread. */
+    public Scene buatScene() {
