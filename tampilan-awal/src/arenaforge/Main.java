@@ -4,7 +4,7 @@ import arenaforge.user.UserFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
-/** Titik masuk aplikasi ArenaForge (versi Swing, tanpa framework). */
+/** Titik masuk aplikasi ArenaForge. Jendela memakai Swing, halaman Player memakai JavaFX. */
 public class Main {
 
     public static void main(String[] args) {
