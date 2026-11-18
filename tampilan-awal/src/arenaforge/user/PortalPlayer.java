@@ -117,3 +117,5 @@ public class PortalPlayer {
         }
         menuAktif = nama;
         Node isi = switch (nama) {
+            case JADWAL -> new HalamanJadwal(daftarTurnamen).buat();
+            case IKUT_LOMBA -> new HalamanIkutLomba().buat();
