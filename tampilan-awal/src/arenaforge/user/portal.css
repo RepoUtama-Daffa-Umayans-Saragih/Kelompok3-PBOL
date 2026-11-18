@@ -35,3 +35,5 @@
     -fx-base: #240000;
     -fx-background: -af-hitam;
     -fx-control-inner-background: -af-permukaan;
+    -fx-accent: -af-merah-tua;
+    -fx-focus-color: -af-merah;
