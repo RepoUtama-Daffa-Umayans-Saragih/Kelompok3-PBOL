@@ -51,3 +51,6 @@ public final class DataPortal {
     public static boolean namaLombaDipakai(String nama) {
         return LOMBA.stream().anyMatch(lomba -> lomba.nama().equalsIgnoreCase(nama.trim()));
     }
+
+    /** Lomba yang dibuat player sendiri, yang terbaru di depan. */
+    public static List<Lomba> lombaBuatanSaya() {
