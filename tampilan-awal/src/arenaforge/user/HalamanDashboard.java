@@ -33,3 +33,6 @@ class HalamanDashboard {
         this.daftarTurnamen = daftarTurnamen;
         this.bukaIkutLomba = bukaIkutLomba;
     }
+
+    Node buat() {
+        VBox halaman = kepalaHalaman("Game dan lomba yang kamu ikuti",
