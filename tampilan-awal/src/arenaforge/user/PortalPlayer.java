@@ -87,3 +87,5 @@ public class PortalPlayer {
         });
         // Panah atas/bawah langsung membuka menu sebelah, jadi posisi fokus selalu
         // terlihat lewat blok marun menu yang terpilih
+        samping.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
+            boolean atas = e.getCode() == KeyCode.UP;
