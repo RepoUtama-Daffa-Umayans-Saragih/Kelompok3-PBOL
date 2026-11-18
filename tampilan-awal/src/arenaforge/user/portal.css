@@ -293,3 +293,5 @@
 }
 
 .tombol-utama:hover {
+    -fx-background-color: -af-marun;
+}
