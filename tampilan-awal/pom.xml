@@ -25,3 +25,5 @@
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
         </dependency>
+        <!-- JFXPanel: menempelkan tampilan JavaFX di dalam jendela Swing -->
+        <dependency>
