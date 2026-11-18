@@ -106,3 +106,5 @@
     -fx-border-color: -af-garis;
     -fx-border-width: 0 1 0 0;
     -fx-padding: 20 12 20 12;
+    -fx-pref-width: 220;
+    -fx-min-width: 220;
