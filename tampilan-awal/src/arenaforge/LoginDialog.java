@@ -137,8 +137,8 @@ public class LoginDialog extends JDialog {
         String username = tfUsername.getText().trim();
         char[] password = pfPassword.getPassword();
         boolean kosong = username.isEmpty() || password.length == 0;
-        boolean cocok = username.equals(USERNAME_PANITIA)
-                && Arrays.equals(password, PASSWORD_PANITIA.toCharArray());
+        boolean cocok = username.equals(usernameBenar)
+                && Arrays.equals(password, passwordBenar.toCharArray());
         Arrays.fill(password, '\0'); // hapus salinan password dari memori
 
         if (kosong) {
