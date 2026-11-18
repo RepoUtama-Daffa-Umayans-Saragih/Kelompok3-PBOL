@@ -118,3 +118,5 @@ public final class DataPortal {
         t.tambahAnggota(new Anggota("Sasa", "Gold Laner", true));
         t.tambahAnggota(new Anggota("Bima", "EXP Laner", true));
         t.tambahAnggota(new Anggota("Fajar", "Gold Laner", false));
+        t.tambahAnggota(new Anggota("Nadia", "Roamer", false));
+        return t;
