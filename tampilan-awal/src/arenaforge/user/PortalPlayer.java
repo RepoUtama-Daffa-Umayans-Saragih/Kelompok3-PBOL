@@ -167,3 +167,5 @@ public class PortalPlayer {
     /** Status tim sebagai label: lolos (merah tua), masih di grup (bingkai), atau tersingkir (abu). */
     static Label badgeStatus(String status) {
         String jenis = status.startsWith("Tersingkir") ? "badge-gugur"
+                : status.startsWith("Fase grup") ? "badge-grup" : "badge-lolos";
+        return label(status, "badge", jenis);
