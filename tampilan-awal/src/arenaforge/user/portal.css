@@ -128,3 +128,6 @@
     -fx-background-color: -af-permukaan-terang;
     -fx-text-fill: -af-teks;
 }
+
+.menu-samping:armed {
+    -fx-background-color: -af-hitam;
