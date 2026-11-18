@@ -157,3 +157,6 @@ public class PortalPlayer {
         VBox halaman = new VBox(6, label(judul, "judul-halaman"), lblPenjelasan);
         halaman.getStyleClass().add("halaman");
         return halaman;
+    }
+
+    /** "Fase grup, Grup A" untuk laga grup, atau nama fase knockout seperti "Semifinal". */
