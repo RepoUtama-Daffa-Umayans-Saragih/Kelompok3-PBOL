@@ -86,3 +86,5 @@
 .scroll-bar:horizontal,
 .scroll-bar .track {
     -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
