@@ -319,3 +319,6 @@
 .tombol-kedua:hover {
     -fx-background-color: -af-permukaan-terang;
 }
+
+.tombol-kedua:armed {
+    -fx-background-color: -af-hitam;
