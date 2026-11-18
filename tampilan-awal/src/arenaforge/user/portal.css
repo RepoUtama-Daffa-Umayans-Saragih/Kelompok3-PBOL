@@ -46,3 +46,6 @@
     -fx-font-family: "Segoe UI";
     -fx-font-size: 13px;
 }
+
+.label {
+    -fx-text-fill: -af-teks;
