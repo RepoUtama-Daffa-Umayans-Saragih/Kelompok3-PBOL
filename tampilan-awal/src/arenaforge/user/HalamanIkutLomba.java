@@ -57,3 +57,5 @@ class HalamanIkutLomba {
             tampilkanPesan("Kode lomba wajib diisi.", true);
             tfKode.requestFocus();
             return;
+        }
+        Lomba lomba = DataPortal.cariLomba(kode);
