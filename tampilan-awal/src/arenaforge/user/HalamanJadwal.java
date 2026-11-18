@@ -77,3 +77,6 @@ class HalamanJadwal {
 
         VBox isi = new VBox(2,
                 label(a.laga().timA() + " vs " + a.laga().timB(), "laga-agenda"),
+                label(a.turnamen().getNama() + " (" + a.turnamen().getGame() + "), " + namaFase(a.laga()), "teks-redup"));
+
+        HBox baris = new HBox(16, jam, isi);
