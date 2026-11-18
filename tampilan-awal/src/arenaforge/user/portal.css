@@ -123,3 +123,6 @@
     -fx-padding: 9 12 9 12;
     -fx-cursor: hand;
 }
+
+.menu-samping:hover {
+    -fx-background-color: -af-permukaan-terang;
