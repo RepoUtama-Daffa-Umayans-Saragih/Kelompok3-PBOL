@@ -52,3 +52,5 @@ class HalamanDashboard {
         // Kelompokkan lomba per game; urutan mengikuti laga terdekat
         Map<String, List<Turnamen>> perGame = new LinkedHashMap<>();
         for (Turnamen t : daftarTurnamen) {
+            perGame.computeIfAbsent(t.getGame(), game -> new ArrayList<>()).add(t);
+        }
