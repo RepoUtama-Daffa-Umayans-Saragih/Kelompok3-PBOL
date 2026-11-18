@@ -59,3 +59,5 @@ class HalamanBuatLomba {
 
         halaman.getChildren().addAll(beriJarakAtas(form, 24), beriJarakAtas(btnBuat, 8), lblPesan,
                 beriJarakAtas(daftarBuatan, 28));
+        isiDaftarBuatan(null);
+        return halaman;
