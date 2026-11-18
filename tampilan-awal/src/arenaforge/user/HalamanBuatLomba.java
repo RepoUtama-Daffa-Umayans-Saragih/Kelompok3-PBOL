@@ -37,3 +37,5 @@ class HalamanBuatLomba {
         tfNama.setPrefColumnCount(24);
         tfNama.setOnAction(e -> buatLomba()); // Enter di kolom nama
         cbGame.getItems().setAll(DataSementara.GAME);
+        cbGame.getSelectionModel().selectFirst();
+        cbKuota.getItems().setAll(4, 8, 16);
