@@ -51,3 +51,5 @@ public class Turnamen {
     }
 
     public String getGame() {
+        return game;
+    }
