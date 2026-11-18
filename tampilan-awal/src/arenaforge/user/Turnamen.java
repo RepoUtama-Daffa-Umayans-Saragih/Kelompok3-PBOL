@@ -219,3 +219,5 @@ public class Turnamen {
         if (barisKlasemen(timSaya).getMain() == 0) {
             return "Fase grup, belum main di " + namaGrup; // peringkat tanpa laga belum berarti apa-apa
         }
+        int posisi = peringkat(timSaya);
+        List<Laga> lagaDiGrup = lagaGrup(namaGrup);
