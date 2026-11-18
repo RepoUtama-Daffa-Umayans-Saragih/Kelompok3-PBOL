@@ -115,3 +115,5 @@ public class PortalPlayer {
         if (nama.equals(menuAktif)) {
             return;
         }
+        menuAktif = nama;
+        Node isi = switch (nama) {
