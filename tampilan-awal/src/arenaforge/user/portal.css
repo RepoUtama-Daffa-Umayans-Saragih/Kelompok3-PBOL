@@ -372,3 +372,5 @@
 .padam   { -fx-background-color: -af-padam; }
 
 .label-jalur {
+    -fx-font-size: 11px;
+}
