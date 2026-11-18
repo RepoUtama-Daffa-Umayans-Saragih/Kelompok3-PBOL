@@ -340,3 +340,5 @@
 }
 
 .pesan-info {
+    -fx-text-fill: -af-teks;
+}
