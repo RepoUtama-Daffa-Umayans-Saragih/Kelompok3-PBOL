@@ -81,3 +81,5 @@ public class PortalPlayer {
         }
         // Klik menu yang sedang aktif tidak boleh membuat semua menu tidak terpilih
         grup.selectedToggleProperty().addListener((obs, lama, baru) -> {
+            if (baru == null && lama != null) {
+                lama.setSelected(true);
