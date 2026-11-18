@@ -209,3 +209,5 @@ public class PortalPlayer {
                     i <= sekarang ? "nyala-" + tingkatNyala(i, tahapan.size()) : "padam");
 
             Label nama = label(tahapan.get(i).equals("Fase Grup") ? "Grup" : tahapan.get(i), "label-jalur");
+            if (i == sekarang) {
+                nama.getStyleClass().add("sekarang");
