@@ -30,6 +30,7 @@ public class LoginDialog extends JDialog {
     private static final String PASSWORD_PLAYER = "player";
 
     private final JRadioButton rbPanitia = new JRadioButton("Panitia", true);
+    private final JRadioButton rbPlayer = new JRadioButton("Player");
     private final JRadioButton rbPenonton = new JRadioButton("Penonton");
     private final JTextField tfUsername = new JTextField(16);
     private final JPasswordField pfPassword = new JPasswordField(16);
