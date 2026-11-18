@@ -225,3 +225,5 @@ public class Turnamen {
         if (grupSelesai && posisi > lolosPerGrup) {
             return "Tersingkir di fase grup";
         }
+        return "Fase grup, peringkat " + posisi + " di " + namaGrup;
+    }
