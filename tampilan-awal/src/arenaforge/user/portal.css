@@ -91,3 +91,5 @@
 
 .scroll-bar .thumb {
     -fx-background-color: -af-marun;
+    -fx-background-radius: 4;
+}
