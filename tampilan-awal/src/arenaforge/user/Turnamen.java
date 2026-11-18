@@ -119,3 +119,6 @@ public class Turnamen {
         daftar.add("Fase Grup");
         daftar.addAll(faseKnockout());
         return daftar;
+    }
+
+    /** Indeks tahapan tempat tim si player berada sekarang (0 = fase grup). */
