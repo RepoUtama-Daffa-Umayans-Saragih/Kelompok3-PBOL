@@ -121,3 +121,5 @@
     -fx-font-size: 14px;
     -fx-alignment: center-left;
     -fx-padding: 9 12 9 12;
+    -fx-cursor: hand;
+}
