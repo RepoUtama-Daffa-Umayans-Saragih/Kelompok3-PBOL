@@ -117,3 +117,5 @@ class HalamanBuatLomba {
         Label kode = label(lomba.kode(), "kode-lomba");
         Button btnSalin = new Button("Salin kode");
         btnSalin.getStyleClass().add("tombol-kedua");
+        btnSalin.setOnAction(e -> {
+            ClipboardContent isi = new ClipboardContent();
