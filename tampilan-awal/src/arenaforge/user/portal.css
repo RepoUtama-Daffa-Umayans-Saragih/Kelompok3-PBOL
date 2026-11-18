@@ -136,3 +136,5 @@
 /* Menu yang sedang dibuka: blok marun, seperti kotak tebal di sketsa */
 .menu-samping:selected {
     -fx-background-color: -af-marun;
+    -fx-text-fill: -af-teks;
+    -fx-font-weight: bold;
