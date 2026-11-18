@@ -90,3 +90,5 @@ class HalamanIkutLomba {
                 label(lomba.terdaftar() + " dari " + lomba.kuota() + " peserta sudah terdaftar", "teks-isi"),
                 beriJarakAtas(langkah, 12));
         panel.getStyleClass().add("panel-hasil");
+        panel.setMaxWidth(560);
+        return panel;
