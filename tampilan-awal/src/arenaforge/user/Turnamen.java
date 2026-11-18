@@ -210,3 +210,6 @@ public class Turnamen {
                 return knockoutTerakhir.fase().equals("Final") ? "Juara" : "Menang di " + knockoutTerakhir.fase();
             }
             return "Tersingkir di " + knockoutTerakhir.fase();
+        }
+
+        String namaGrup = grupDari(timSaya);
