@@ -15,6 +15,9 @@ public final class Tema {
     public static final Color HITAM = new Color(0x000000);
     public static final Color MARUN = new Color(0x840000);
     public static final Color MERAH_TUA = new Color(0xBD0000);
+    public static final Color MERAH = new Color(0xFF0000);
+
+    public static final Color HEADER = HITAM;
 
     private Tema() {
     }
