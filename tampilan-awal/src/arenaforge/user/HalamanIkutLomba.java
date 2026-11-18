@@ -38,3 +38,6 @@ class HalamanIkutLomba {
 
         lblPesan.setWrapText(true);
         lblPesan.setVisible(false);
+        lblPesan.setManaged(false);
+
+        halaman.getChildren().addAll(
