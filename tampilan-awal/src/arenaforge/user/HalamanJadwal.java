@@ -82,3 +82,5 @@ class HalamanJadwal {
         HBox baris = new HBox(16, jam, isi);
         baris.setAlignment(Pos.CENTER_LEFT);
         baris.getStyleClass().add("baris-agenda");
+        return baris;
+    }
