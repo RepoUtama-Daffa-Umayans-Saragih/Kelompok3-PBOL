@@ -5,3 +5,5 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>arenaforge</groupId>
+    <artifactId>arenaforge</artifactId>
+    <version>0.1.0</version>
