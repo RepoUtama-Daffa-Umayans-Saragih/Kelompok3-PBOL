@@ -115,3 +115,5 @@ class HalamanBuatLomba {
                         "teks-redup"));
 
         Label kode = label(lomba.kode(), "kode-lomba");
+        Button btnSalin = new Button("Salin kode");
+        btnSalin.getStyleClass().add("tombol-kedua");
