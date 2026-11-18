@@ -42,3 +42,5 @@ class HalamanBuatLomba {
         cbKuota.getSelectionModel().select(Integer.valueOf(8));
 
         // GridPane 3 baris x 2 kolom: label di kiri, isian di kanan
+        GridPane form = new GridPane();
+        form.setHgap(16);
