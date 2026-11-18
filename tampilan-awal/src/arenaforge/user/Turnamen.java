@@ -168,3 +168,6 @@ public class Turnamen {
                 .thenComparingInt(BarisKlasemen::getSkorMasuk)
                 .reversed());
         return hasil;
+    }
+
+    /** Peringkat tim di grupnya, mulai dari 1. Hasilnya -1 kalau tim tidak ada di grup mana pun. */
