@@ -128,3 +128,5 @@ public class Turnamen {
         for (int i = 0; i < knockout.size(); i++) {
             for (Laga laga : lagaFase(knockout.get(i))) {
                 if (laga.melibatkan(timSaya)) {
+                    tahap = i + 1;
+                }
