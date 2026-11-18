@@ -104,3 +104,6 @@ public class UserFrame extends JFrame {
         String sebab = String.valueOf(ex).replace("&", "&amp;").replace("<", "&lt;");
         lblPesan.setText("<html><div style='text-align:center'>Portal player gagal dimuat.<br>" + sebab
                 + "<br><br>Keluar akun lalu masuk lagi. Kalau masih gagal, kirim pesan ini ke panitia.</div></html>");
+    }
+
+    private void keluarAkun() {
