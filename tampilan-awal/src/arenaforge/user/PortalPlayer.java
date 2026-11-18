@@ -58,3 +58,5 @@ public class PortalPlayer {
     public Scene buatScene() {
         URL css = PortalPlayer.class.getResource("portal.css");
         if (css == null) {
+            throw new IllegalStateException("File tema portal.css tidak ditemukan");
+        }
