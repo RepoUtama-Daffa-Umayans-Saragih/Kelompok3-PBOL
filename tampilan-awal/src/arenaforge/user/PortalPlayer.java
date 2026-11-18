@@ -220,3 +220,5 @@ public class PortalPlayer {
             HBox.setHgrow(tahap, Priority.ALWAYS);
             jalur.getChildren().add(tahap);
         }
+        return jalur;
+    }
