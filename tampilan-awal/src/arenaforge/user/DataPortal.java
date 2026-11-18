@@ -176,3 +176,5 @@ public final class DataPortal {
     }
 
     private static LocalDateTime november(int tanggal, int jam) {
+        return LocalDateTime.of(2026, 11, tanggal, jam, 0);
+    }
