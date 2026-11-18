@@ -25,3 +25,5 @@ public class BarisKlasemen {
             seri++;
         } else {
             kalah++;
+        }
+    }
