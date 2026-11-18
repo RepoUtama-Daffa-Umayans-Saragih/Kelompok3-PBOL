@@ -45,3 +45,6 @@ public class Turnamen {
     public void tambahAnggota(Anggota anggota) {
         roster.add(anggota);
     }
+
+    public String getNama() {
+        return nama;
