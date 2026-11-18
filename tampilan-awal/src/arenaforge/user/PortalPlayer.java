@@ -190,3 +190,5 @@ public class PortalPlayer {
         Label lblSaran = label(saran, "teks-redup");
         lblSaran.setWrapText(true);
         VBox kosong = new VBox(4, label(judul, "kosong-judul"), lblSaran);
+        kosong.getStyleClass().add("kosong");
+        return kosong;
