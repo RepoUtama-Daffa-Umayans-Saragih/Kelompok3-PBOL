@@ -269,3 +269,6 @@
 }
 
 /* ---------- Form ---------- */
+
+.label-isian {
+    -fx-font-weight: bold;
