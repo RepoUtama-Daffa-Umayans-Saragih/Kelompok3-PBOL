@@ -159,3 +159,5 @@ public final class DataPortal {
             Integer[] hasil = bacaSkor(skor[i]);
             t.tambahLaga(new Laga("Fase Grup", namaGrup, waktu,
                     tim.get(PASANGAN_GRUP[i][0]), tim.get(PASANGAN_GRUP[i][1]), hasil[0], hasil[1]));
+        }
+    }
