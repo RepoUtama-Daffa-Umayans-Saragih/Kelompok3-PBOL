@@ -23,3 +23,5 @@ import javafx.scene.layout.VBox;
 /** Menu Buat lomba: player membuat lomba sendiri dan mendapat kode untuk dibagikan. */
 class HalamanBuatLomba {
     private final TextField tfNama = new TextField();
+    private final ComboBox<String> cbGame = new ComboBox<>();
+    private final ComboBox<Integer> cbKuota = new ComboBox<>();
