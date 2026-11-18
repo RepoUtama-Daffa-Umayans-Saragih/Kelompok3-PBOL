@@ -89,3 +89,5 @@ public class PortalPlayer {
         // terlihat lewat blok marun menu yang terpilih
         samping.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
             boolean atas = e.getCode() == KeyCode.UP;
+            if ((atas || e.getCode() == KeyCode.DOWN) && e.getTarget() instanceof ToggleButton tombol
+                    && menu.containsValue(tombol)) {
