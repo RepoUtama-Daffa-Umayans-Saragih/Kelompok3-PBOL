@@ -69,3 +69,5 @@ public class UserFrame extends JFrame {
                 SwingUtilities.invokeLater(() -> tumpukan.show(isi, "portal"));
             } catch (RuntimeException ex) {
                 ex.printStackTrace();
+                SwingUtilities.invokeLater(() -> tampilkanGagal(ex));
+            }
