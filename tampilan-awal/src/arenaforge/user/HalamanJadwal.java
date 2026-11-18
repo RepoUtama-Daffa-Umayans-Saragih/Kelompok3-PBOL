@@ -65,3 +65,5 @@ class HalamanJadwal {
                     halaman.getChildren().add(beriJarakAtas(label(TANGGAL.format(tanggal), "judul-seksi"), 10));
                     tanggalSebelumnya = tanggal;
                 }
+                halaman.getChildren().add(barisAgenda(a));
+            }
