@@ -46,3 +46,4 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
         }
         return pemenang.equals(tim) ? "M" : "K";
     }
+}
