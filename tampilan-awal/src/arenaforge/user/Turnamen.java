@@ -67,3 +67,5 @@ public class Turnamen {
     }
 
     public int getLolosPerGrup() {
+        return lolosPerGrup;
+    }
