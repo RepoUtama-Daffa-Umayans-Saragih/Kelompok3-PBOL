@@ -19,3 +19,5 @@ public class Turnamen {
     private final String game;
     private final String format;
     private final String timSaya;
+    private final String roleSaya;
+    private final int lolosPerGrup;
