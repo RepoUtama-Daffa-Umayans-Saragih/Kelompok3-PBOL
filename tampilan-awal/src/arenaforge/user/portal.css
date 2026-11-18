@@ -181,3 +181,5 @@
 }
 
 .badge-grup {
+    -fx-background-color: transparent;
+    -fx-border-color: -af-merah-tua;
