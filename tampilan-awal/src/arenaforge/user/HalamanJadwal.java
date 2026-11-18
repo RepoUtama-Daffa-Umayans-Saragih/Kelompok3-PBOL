@@ -39,3 +39,5 @@ class HalamanJadwal {
         for (Turnamen t : daftarTurnamen) {
             for (Laga laga : t.lagaBelumMain()) {
                 agenda.add(new Agenda(t, laga));
+            }
+        }
