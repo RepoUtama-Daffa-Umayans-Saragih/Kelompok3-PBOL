@@ -41,3 +41,6 @@ class HalamanJadwal {
                 agenda.add(new Agenda(t, laga));
             }
         }
+        agenda.sort(Comparator.comparing(a -> a.laga().waktu()));
+
+        VBox halaman = kepalaHalaman("Jadwal terdekat",
