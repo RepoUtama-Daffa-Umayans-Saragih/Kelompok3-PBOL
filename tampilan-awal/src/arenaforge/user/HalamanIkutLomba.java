@@ -17,3 +17,6 @@ import javafx.scene.layout.VBox;
 class HalamanIkutLomba {
     private final TextField tfKode = new TextField();
     private final Label lblPesan = label("", "pesan");
+    private final VBox wadahHasil = new VBox();
+
+    Node buat() {
