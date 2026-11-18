@@ -36,3 +36,6 @@ public final class DataPortal {
 
     public static List<Turnamen> turnamenDiikuti() {
         return DIIKUTI;
+    }
+
+    /** Lomba dengan kode ini (huruf besar/kecil tidak dibedakan), atau null kalau tidak ada. */
