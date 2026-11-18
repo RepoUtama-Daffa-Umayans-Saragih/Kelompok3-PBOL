@@ -335,3 +335,5 @@
 }
 
 /* Merah di latar hitam 5.25:1, lolos untuk teks biasa */
+.pesan-galat {
+    -fx-text-fill: -af-merah;
