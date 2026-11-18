@@ -9,3 +9,6 @@ public class BarisKlasemen {
     private int kalah;
     private int skorMasuk;
     private int skorKeluar;
+
+    public BarisKlasemen(String tim) {
+        this.tim = tim;
