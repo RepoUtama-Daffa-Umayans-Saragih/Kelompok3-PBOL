@@ -290,3 +290,6 @@
     -fx-font-weight: bold;
     -fx-padding: 7 18 7 18;
     -fx-cursor: hand;
+}
+
+.tombol-utama:hover {
