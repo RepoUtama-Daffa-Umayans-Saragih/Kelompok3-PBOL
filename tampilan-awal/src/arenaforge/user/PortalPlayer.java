@@ -102,3 +102,5 @@ public class PortalPlayer {
 
         Region dorong = new Region();
         VBox.setVgrow(dorong, Priority.ALWAYS);
+        Label catatan = label("Data contoh, belum diambil dari database.", "catatan");
+        catatan.setWrapText(true);
