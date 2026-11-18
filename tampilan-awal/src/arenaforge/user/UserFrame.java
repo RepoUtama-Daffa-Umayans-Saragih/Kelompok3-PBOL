@@ -79,3 +79,5 @@ public class UserFrame extends JFrame {
     }
 
     private JPanel buatHeader() {
+        JLabel lblPlayer = new JLabel("Masuk sebagai: " + DataPortal.NAMA_PLAYER + " (" + DataPortal.ID_PLAYER + ")");
+        lblPlayer.setForeground(Color.WHITE);
