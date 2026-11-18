@@ -59,3 +59,5 @@ class HalamanDashboard {
         TilePane kartu = new TilePane(16, 16);
         kartu.setTileAlignment(Pos.TOP_LEFT);
         perGame.forEach((game, daftar) -> kartu.getChildren().add(kartuGame(game, daftar)));
+        halaman.getChildren().add(beriJarakAtas(kartu, 24));
+        return halaman;
