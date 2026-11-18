@@ -73,3 +73,5 @@ public final class DataPortal {
         };
         String kode;
         do {
+            StringBuilder akhiran = new StringBuilder();
+            for (int i = 0; i < 4; i++) {
