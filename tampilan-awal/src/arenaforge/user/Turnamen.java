@@ -159,3 +159,5 @@ public class Turnamen {
             if (laga.selesai()) {
                 baris.get(laga.timA()).catat(laga.skorA(), laga.skorB());
                 baris.get(laga.timB()).catat(laga.skorB(), laga.skorA());
+            }
+        }
