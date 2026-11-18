@@ -87,6 +87,7 @@ public class LoginDialog extends JDialog {
         // Event: penonton tidak perlu mengisi username/password
         rbPanitia.addItemListener(e -> aturInputAkun());
         rbPlayer.addItemListener(e -> aturInputAkun());
+        rbPenonton.addItemListener(e -> aturInputAkun());
 
         // Event: tampilkan atau sembunyikan isi password
         cbTampilkanPassword.addItemListener(e ->
