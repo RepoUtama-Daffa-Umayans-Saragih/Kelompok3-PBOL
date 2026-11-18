@@ -62,3 +62,6 @@ public final class DataPortal {
         }
         return hasil;
     }
+
+    /** Membuat lomba baru milik player dengan kode unik, mis. "MLBB-7Q2K". */
+    public static Lomba buatLomba(String nama, String game, int kuota) {
