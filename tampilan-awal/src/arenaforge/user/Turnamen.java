@@ -161,3 +161,6 @@ public class Turnamen {
                 baris.get(laga.timB()).catat(laga.skorB(), laga.skorA());
             }
         }
+
+        List<BarisKlasemen> hasil = new ArrayList<>(baris.values());
+        hasil.sort(Comparator.comparingInt(BarisKlasemen::getPoin)
