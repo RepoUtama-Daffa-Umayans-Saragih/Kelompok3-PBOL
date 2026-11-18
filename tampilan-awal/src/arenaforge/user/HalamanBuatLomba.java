@@ -123,3 +123,6 @@ class HalamanBuatLomba {
             Clipboard.getSystemClipboard().setContent(isi);
             btnSalin.setText("Kode disalin");
         });
+
+        Region dorong = new Region();
+        HBox.setHgrow(dorong, Priority.ALWAYS);
