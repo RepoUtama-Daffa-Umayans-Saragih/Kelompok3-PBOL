@@ -69,3 +69,5 @@ public final class DataPortal {
             case "Mobile Legends" -> "MLBB";
             case "Free Fire" -> "FF";
             case "Tekken" -> "TKN";
+            default -> "LOMBA";
+        };
