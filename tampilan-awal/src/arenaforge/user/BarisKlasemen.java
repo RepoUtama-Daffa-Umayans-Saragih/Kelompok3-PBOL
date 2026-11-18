@@ -35,3 +35,6 @@ public class BarisKlasemen {
 
     public int getSelisih() {
         return skorMasuk - skorKeluar;
+    }
+
+    public String getTim() {
