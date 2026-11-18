@@ -95,3 +95,5 @@ public class PortalPlayer {
                 int berikut = Math.max(0, Math.min(urutan.size() - 1,
                         urutan.indexOf(tombol.getText()) + (atas ? -1 : 1)));
                 bukaMenu(urutan.get(berikut));
+                menu.get(urutan.get(berikut)).requestFocus();
+                e.consume();
