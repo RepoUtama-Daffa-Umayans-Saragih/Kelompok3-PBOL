@@ -44,3 +44,5 @@ class HalamanBuatLomba {
         // GridPane 3 baris x 2 kolom: label di kiri, isian di kanan
         GridPane form = new GridPane();
         form.setHgap(16);
+        form.setVgap(12);
+        tambahIsian(form, 0, "Nama lomba", tfNama);
