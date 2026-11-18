@@ -60,3 +60,6 @@ public class UserFrame extends JFrame {
         tumpukan.show(isi, "pesan");
 
         add(buatHeader(), BorderLayout.NORTH);
+        add(isi, BorderLayout.CENTER);
+
+        // Scene JavaFX wajib dibuat di JavaFX Application Thread, bukan di thread Swing
