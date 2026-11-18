@@ -155,3 +155,5 @@ public final class DataPortal {
                                 List<String> tim, String... skor) {
         t.tambahGrup(namaGrup, tim);
         for (int i = 0; i < PASANGAN_GRUP.length; i++) {
+            LocalDateTime waktu = mulai.plusDays((long) (i / 2) * jarakHari).atTime(jam + (i % 2) * 2, 0);
+            Integer[] hasil = bacaSkor(skor[i]);
