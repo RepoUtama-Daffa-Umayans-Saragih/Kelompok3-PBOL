@@ -48,3 +48,6 @@ public class BarisKlasemen {
     public int getMenang() {
         return menang;
     }
+
+    public int getSeri() {
+        return seri;
