@@ -197,3 +197,5 @@ public class Turnamen {
         for (String fase : faseKnockout()) {
             for (Laga laga : lagaFase(fase)) {
                 if (laga.melibatkan(timSaya)) {
+                    knockoutTerakhir = laga;
+                }
