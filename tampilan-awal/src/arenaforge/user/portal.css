@@ -314,3 +314,6 @@
     -fx-text-fill: -af-teks;
     -fx-padding: 7 16 7 16;
     -fx-cursor: hand;
+}
+
+.tombol-kedua:hover {
