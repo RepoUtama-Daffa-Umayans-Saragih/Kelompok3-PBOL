@@ -59,3 +59,5 @@ class HalamanJadwal {
         if (agenda.size() > 1) {
             halaman.getChildren().add(beriJarakAtas(label("Setelah itu", "judul-bagian"), 28));
             LocalDate tanggalSebelumnya = null;
+            for (Agenda a : agenda.subList(1, agenda.size())) {
+                LocalDate tanggal = a.laga().waktu().toLocalDate();
