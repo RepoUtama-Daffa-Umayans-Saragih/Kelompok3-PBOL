@@ -44,3 +44,6 @@ class HalamanJadwal {
         agenda.sort(Comparator.comparing(a -> a.laga().waktu()));
 
         VBox halaman = kepalaHalaman("Jadwal terdekat",
+                "Semua laga timmu yang belum dimainkan, urut dari yang paling dekat.");
+
+        if (agenda.isEmpty()) {
