@@ -119,3 +119,5 @@ class HalamanBuatLomba {
         btnSalin.getStyleClass().add("tombol-kedua");
         btnSalin.setOnAction(e -> {
             ClipboardContent isi = new ClipboardContent();
+            isi.putString(lomba.kode());
+            Clipboard.getSystemClipboard().setContent(isi);
