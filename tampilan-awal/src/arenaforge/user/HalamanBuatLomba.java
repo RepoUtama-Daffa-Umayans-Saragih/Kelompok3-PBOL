@@ -97,3 +97,5 @@ class HalamanBuatLomba {
         List<Lomba> buatan = DataPortal.lombaBuatanSaya();
         daftarBuatan.getChildren().clear();
         if (buatan.isEmpty()) {
+            return;
+        }
