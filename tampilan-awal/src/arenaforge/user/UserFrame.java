@@ -111,3 +111,5 @@ public class UserFrame extends JFrame {
                 "Keluar Akun", JOptionPane.YES_NO_OPTION);
         if (pilihan == JOptionPane.YES_OPTION) {
             dispose();
+            Main.mulai();
+        }
