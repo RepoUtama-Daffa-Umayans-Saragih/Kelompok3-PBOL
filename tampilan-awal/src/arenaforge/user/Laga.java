@@ -42,3 +42,5 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
         }
         String pemenang = pemenang();
         if (pemenang == null) {
+            return "S";
+        }
