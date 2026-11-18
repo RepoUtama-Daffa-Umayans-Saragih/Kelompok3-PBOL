@@ -33,3 +33,6 @@ public final class DataPortal {
 
     private DataPortal() {
     }
+
+    public static List<Turnamen> turnamenDiikuti() {
+        return DIIKUTI;
