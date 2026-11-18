@@ -67,3 +67,5 @@ public class UserFrame extends JFrame {
             try {
                 panelFx.setScene(new PortalPlayer(DataPortal.NAMA_PLAYER, DataPortal.turnamenDiikuti()).buatScene());
                 SwingUtilities.invokeLater(() -> tumpukan.show(isi, "portal"));
+            } catch (RuntimeException ex) {
+                ex.printStackTrace();
