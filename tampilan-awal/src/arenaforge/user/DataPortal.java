@@ -157,3 +157,5 @@ public final class DataPortal {
         for (int i = 0; i < PASANGAN_GRUP.length; i++) {
             LocalDateTime waktu = mulai.plusDays((long) (i / 2) * jarakHari).atTime(jam + (i % 2) * 2, 0);
             Integer[] hasil = bacaSkor(skor[i]);
+            t.tambahLaga(new Laga("Fase Grup", namaGrup, waktu,
+                    tim.get(PASANGAN_GRUP[i][0]), tim.get(PASANGAN_GRUP[i][1]), hasil[0], hasil[1]));
