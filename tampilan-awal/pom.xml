@@ -9,3 +9,6 @@
     <version>0.1.0</version>
     <name>ArenaForge</name>
     <description>Game Tournament Manager (Swing + JavaFX)</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
