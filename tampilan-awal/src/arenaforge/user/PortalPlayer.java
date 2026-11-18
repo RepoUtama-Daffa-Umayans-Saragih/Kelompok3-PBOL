@@ -73,3 +73,5 @@ public class PortalPlayer {
         for (String nama : List.of(DASHBOARD, JADWAL, IKUT_LOMBA, BUAT_LOMBA)) {
             ToggleButton tombol = new ToggleButton(nama);
             tombol.setToggleGroup(grup);
+            tombol.setMaxWidth(Double.MAX_VALUE);
+            tombol.getStyleClass().add("menu-samping");
