@@ -123,3 +123,5 @@ public final class DataPortal {
     }
 
     /** 8 tim, 2 grup. Fase grup masih berjalan, tinggal satu matchday. */
+    private static Turnamen ffShowdown() {
+        Turnamen t = new Turnamen("FF Showdown 2026", "Free Fire",
