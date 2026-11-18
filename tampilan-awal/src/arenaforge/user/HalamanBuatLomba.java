@@ -110,3 +110,5 @@ class HalamanBuatLomba {
 
     private HBox barisBuatan(Lomba lomba, boolean baruDibuat) {
         VBox info = new VBox(2,
+                label(lomba.nama() + (baruDibuat ? " (baru dibuat)" : ""), "laga-agenda"),
+                label(lomba.game() + ", " + lomba.terdaftar() + " dari " + lomba.kuota() + " peserta terdaftar",
