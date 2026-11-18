@@ -213,3 +213,6 @@ public class PortalPlayer {
                 nama.getStyleClass().add("sekarang");
             } else if (i > sekarang) {
                 nama.getStyleClass().add("belum");
+            }
+
+            VBox tahap = new VBox(6, batang, nama);
