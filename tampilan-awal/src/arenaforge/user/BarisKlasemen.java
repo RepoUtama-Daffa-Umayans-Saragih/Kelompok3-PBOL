@@ -38,3 +38,5 @@ public class BarisKlasemen {
     }
 
     public String getTim() {
+        return tim;
+    }
