@@ -13,3 +13,6 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
 
     public boolean selesai() {
         return skorA != null && skorB != null;
+    }
+
+    public boolean faseGrup() {
