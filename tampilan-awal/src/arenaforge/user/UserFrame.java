@@ -40,3 +40,6 @@ public class UserFrame extends JFrame {
             public void windowClosing(WindowEvent e) {
                 konfirmasiTutup();
             }
+        });
+
+        // Membuat JFXPanel sekaligus menyalakan JavaFX
