@@ -67,3 +67,5 @@ public final class DataPortal {
     public static Lomba buatLomba(String nama, String game, int kuota) {
         String awalan = switch (game) {
             case "Mobile Legends" -> "MLBB";
+            case "Free Fire" -> "FF";
+            case "Tekken" -> "TKN";
