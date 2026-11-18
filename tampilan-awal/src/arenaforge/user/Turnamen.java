@@ -61,3 +61,6 @@ public class Turnamen {
     public String getTimSaya() {
         return timSaya;
     }
+
+    public String getRoleSaya() {
+        return roleSaya;
