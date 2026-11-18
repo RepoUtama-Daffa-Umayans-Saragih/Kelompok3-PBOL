@@ -43,3 +43,5 @@ public class Turnamen {
     }
 
     public void tambahAnggota(Anggota anggota) {
+        roster.add(anggota);
+    }
