@@ -17,3 +17,6 @@ public final class DataPortal {
 
     /** Urutan laga setengah kompetisi untuk grup 4 tim: 6 laga dalam 3 matchday. */
     private static final int[][] PASANGAN_GRUP = {{0, 1}, {2, 3}, {0, 2}, {1, 3}, {0, 3}, {1, 2}};
+
+    /** Huruf untuk kode lomba, tanpa 0/O dan 1/I supaya tidak tertukar saat diketik. */
+    private static final String HURUF_KODE = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
