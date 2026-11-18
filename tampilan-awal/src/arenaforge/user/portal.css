@@ -249,3 +249,5 @@
 .baris-agenda {
     -fx-background-color: -af-permukaan;
     -fx-background-radius: 6;
+    -fx-padding: 12 16 12 16;
+}
