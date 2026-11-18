@@ -43,3 +43,5 @@ class HalamanDashboard {
             ikut.getStyleClass().add("tombol-kedua");
             ikut.setOnAction(e -> bukaIkutLomba.run());
             VBox pesan = kosong("Kamu belum ikut lomba apa pun.",
+                    "Minta kode lomba ke panitia, lalu masukkan di menu Ikut lomba.");
+            pesan.getChildren().add(beriJarakAtas(ikut, 12));
