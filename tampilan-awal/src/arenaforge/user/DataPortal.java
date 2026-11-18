@@ -58,3 +58,5 @@ public final class DataPortal {
         for (Lomba lomba : LOMBA) {
             if (lomba.penyelenggara().equals(NAMA_PLAYER)) {
                 hasil.add(0, lomba);
+            }
+        }
