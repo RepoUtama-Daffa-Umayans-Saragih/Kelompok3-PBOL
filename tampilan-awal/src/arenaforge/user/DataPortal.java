@@ -171,3 +171,5 @@ public final class DataPortal {
         if (skor == null) {
             return new Integer[] {null, null};
         }
+        String[] bagian = skor.split("-");
+        return new Integer[] {Integer.valueOf(bagian[0]), Integer.valueOf(bagian[1])};
