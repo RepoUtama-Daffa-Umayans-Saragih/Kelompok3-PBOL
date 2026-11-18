@@ -39,3 +39,5 @@ public final class DataPortal {
     }
 
     /** Lomba dengan kode ini (huruf besar/kecil tidak dibedakan), atau null kalau tidak ada. */
+    public static Lomba cariLomba(String kode) {
+        String dicari = kode.trim().toUpperCase(Locale.ROOT);
