@@ -21,3 +21,5 @@ public class BarisKlasemen {
         skorKeluar += skorLawan;
         if (skorSendiri > skorLawan) {
             menang++;
+        } else if (skorSendiri == skorLawan) {
+            seri++;
