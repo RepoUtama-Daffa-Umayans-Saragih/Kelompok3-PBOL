@@ -137,3 +137,5 @@ class HalamanBuatLomba {
     }
 
     private void tampilkanPesan(String teks, boolean galat) {
+        lblPesan.setText(teks);
+        lblPesan.setVisible(true);
