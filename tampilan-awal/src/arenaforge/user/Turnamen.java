@@ -21,3 +21,5 @@ public class Turnamen {
     private final String timSaya;
     private final String roleSaya;
     private final int lolosPerGrup;
+    private final Map<String, List<String>> grup = new LinkedHashMap<>();
+    private final List<Laga> daftarLaga = new ArrayList<>();
