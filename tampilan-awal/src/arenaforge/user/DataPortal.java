@@ -20,3 +20,6 @@ public final class DataPortal {
 
     /** Huruf untuk kode lomba, tanpa 0/O dan 1/I supaya tidak tertukar saat diketik. */
     private static final String HURUF_KODE = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    private static final SecureRandom ACAK = new SecureRandom();
+
+    private static final List<Turnamen> DIIKUTI = List.of(mlbbCup(), ffShowdown());
