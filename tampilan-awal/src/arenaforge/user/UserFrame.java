@@ -71,3 +71,6 @@ public class UserFrame extends JFrame {
                 ex.printStackTrace();
                 SwingUtilities.invokeLater(() -> tampilkanGagal(ex));
             }
+        });
+
+        setSize(1120, 760);
