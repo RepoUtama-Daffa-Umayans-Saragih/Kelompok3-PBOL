@@ -128,3 +128,5 @@ public final class DataPortal {
                 "8 tim, fase grup Bo2, knockout Bo3", "Phoenix Squad", "Rusher", 2);
 
         isiGrup(t, "Grup A", LocalDate.of(2026, 11, 15), 2, 13,
+                List.of("Garuda Strike", "Night Owls", "Red Hawks", "Sky Breakers"),
+                "2-0", "0-2", "2-0", "1-1", null, null);
