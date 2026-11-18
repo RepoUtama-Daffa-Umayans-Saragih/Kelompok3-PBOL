@@ -31,3 +31,5 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
     public String pemenang() {
         if (!selesai() || skorA.equals(skorB)) {
             return null;
+        }
+        return skorA > skorB ? timA : timB;
