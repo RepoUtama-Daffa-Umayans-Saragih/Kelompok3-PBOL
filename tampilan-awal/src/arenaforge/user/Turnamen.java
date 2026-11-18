@@ -227,3 +227,6 @@ public class Turnamen {
         }
         return "Fase grup, peringkat " + posisi + " di " + namaGrup;
     }
+
+    /** Hasil laga tim si player yang sudah selesai, urut waktu: "M", "S", atau "K". */
+    public List<String> performaTim() {
