@@ -126,3 +126,5 @@ class HalamanBuatLomba {
 
         Region dorong = new Region();
         HBox.setHgrow(dorong, Priority.ALWAYS);
+        HBox baris = new HBox(16, info, dorong, kode, btnSalin);
+        baris.setAlignment(Pos.CENTER_LEFT);
