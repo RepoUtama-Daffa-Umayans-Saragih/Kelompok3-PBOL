@@ -159,3 +159,6 @@
     -fx-font-size: 17px;
     -fx-font-weight: bold;
 }
+
+.judul-seksi {
+    -fx-text-fill: -af-teks-redup;
