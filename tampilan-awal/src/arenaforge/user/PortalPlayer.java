@@ -139,3 +139,5 @@ public class PortalPlayer {
     }
 
     static <T extends Node> T beriJarakAtas(T node, double jarak) {
+        VBox.setMargin(node, new Insets(jarak, 0, 0, 0));
+        return node;
