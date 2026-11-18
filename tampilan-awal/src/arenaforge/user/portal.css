@@ -54,3 +54,6 @@
 .teks-redup {
     -fx-text-fill: -af-teks-redup;
 }
+
+.teks-isi {
+    -fx-text-fill: -af-teks;
