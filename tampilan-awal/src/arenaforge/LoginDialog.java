@@ -53,7 +53,7 @@ public class LoginDialog extends JDialog {
         setLocationRelativeTo(null);
     }
 
-    /** Tampilkan dialog dan tunggu sampai ditutup. Hasilnya "Panitia", "Penonton", atau null. */
+    /** Tampilkan dialog dan tunggu sampai ditutup. Hasilnya "Panitia", "Player", "Penonton", atau null. */
     public String tampilkan() {
         setVisible(true);
         return peran;
