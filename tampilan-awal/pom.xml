@@ -65,3 +65,5 @@
                     <mainClass>${main.class}</mainClass>
                 </configuration>
             </plugin>
+        </plugins>
+    </build>
