@@ -69,3 +69,6 @@ public class Turnamen {
     public int getLolosPerGrup() {
         return lolosPerGrup;
     }
+
+    public List<String> getNamaGrup() {
+        return new ArrayList<>(grup.keySet());
