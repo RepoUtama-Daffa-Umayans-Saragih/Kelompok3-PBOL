@@ -54,3 +54,5 @@ class HalamanBuatLomba {
         btnBuat.setOnAction(e -> buatLomba());
 
         lblPesan.setWrapText(true);
+        lblPesan.setVisible(false);
+        lblPesan.setManaged(false);
