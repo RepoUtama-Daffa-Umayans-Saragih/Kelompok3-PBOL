@@ -116,11 +116,8 @@ public class LoginDialog extends JDialog {
         return bawah;
     }
 
-    private void aturInputPanitia() {
-        boolean panitia = rbPanitia.isSelected();
-        tfUsername.setEnabled(panitia);
-        pfPassword.setEnabled(panitia);
-        cbTampilkanPassword.setEnabled(panitia);
+    private void aturInputAkun() {
+        boolean perluAkun = !rbPenonton.isSelected();
     }
 
     private void prosesLogin() {
