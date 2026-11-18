@@ -91,3 +91,6 @@ public class Turnamen {
         }
         return null;
     }
+
+    public List<Laga> lagaGrup(String namaGrup) {
+        return daftarLaga.stream()
