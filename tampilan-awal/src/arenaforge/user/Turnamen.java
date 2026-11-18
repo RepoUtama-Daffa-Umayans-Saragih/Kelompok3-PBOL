@@ -173,3 +173,5 @@ public class Turnamen {
     /** Peringkat tim di grupnya, mulai dari 1. Hasilnya -1 kalau tim tidak ada di grup mana pun. */
     public int peringkat(String tim) {
         String namaGrup = grupDari(tim);
+        if (namaGrup == null) {
+            return -1;
