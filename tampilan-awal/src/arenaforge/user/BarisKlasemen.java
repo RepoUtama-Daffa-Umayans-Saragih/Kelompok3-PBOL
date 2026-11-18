@@ -43,3 +43,6 @@ public class BarisKlasemen {
 
     public int getMain() {
         return main;
+    }
+
+    public int getMenang() {
