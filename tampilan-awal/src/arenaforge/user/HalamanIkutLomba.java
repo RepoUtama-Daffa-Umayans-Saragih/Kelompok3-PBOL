@@ -27,3 +27,6 @@ class HalamanIkutLomba {
         lblKode.setLabelFor(tfKode);
         tfKode.setPromptText("Contoh: LIGA-KAMPUS");
         tfKode.setPrefColumnCount(18);
+        tfKode.setOnAction(e -> periksaKode()); // Enter di kolom kode
+
+        Button btnCek = new Button("Cek kode");
