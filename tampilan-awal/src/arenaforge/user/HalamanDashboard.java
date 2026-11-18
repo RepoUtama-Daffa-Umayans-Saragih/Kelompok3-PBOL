@@ -61,3 +61,6 @@ class HalamanDashboard {
         perGame.forEach((game, daftar) -> kartu.getChildren().add(kartuGame(game, daftar)));
         halaman.getChildren().add(beriJarakAtas(kartu, 24));
         return halaman;
+    }
+
+    private VBox kartuGame(String game, List<Turnamen> daftar) {
