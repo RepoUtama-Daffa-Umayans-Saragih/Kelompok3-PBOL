@@ -55,3 +55,5 @@ class HalamanIkutLomba {
 
         if (kode.isEmpty()) {
             tampilkanPesan("Kode lomba wajib diisi.", true);
+            tfKode.requestFocus();
+            return;
