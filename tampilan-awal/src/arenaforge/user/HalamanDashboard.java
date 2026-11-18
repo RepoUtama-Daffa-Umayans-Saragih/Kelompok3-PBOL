@@ -47,3 +47,6 @@ class HalamanDashboard {
             pesan.getChildren().add(beriJarakAtas(ikut, 12));
             halaman.getChildren().add(beriJarakAtas(pesan, 24));
             return halaman;
+        }
+
+        // Kelompokkan lomba per game; urutan mengikuti laga terdekat
