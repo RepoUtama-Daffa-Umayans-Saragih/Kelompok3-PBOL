@@ -106,3 +106,5 @@ public class PortalPlayer {
         catatan.setWrapText(true);
         samping.getChildren().addAll(dorong, catatan);
         samping.getStyleClass().add("menu-kiri");
+        return samping;
+    }
