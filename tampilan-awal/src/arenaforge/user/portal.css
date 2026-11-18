@@ -149,3 +149,6 @@
 .halaman {
     -fx-padding: 28 32 36 32;
 }
+
+.judul-halaman {
+    -fx-font-size: 26px;
