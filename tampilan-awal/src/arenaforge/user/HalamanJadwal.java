@@ -61,3 +61,5 @@ class HalamanJadwal {
             LocalDate tanggalSebelumnya = null;
             for (Agenda a : agenda.subList(1, agenda.size())) {
                 LocalDate tanggal = a.laga().waktu().toLocalDate();
+                if (!tanggal.equals(tanggalSebelumnya)) {
+                    halaman.getChildren().add(beriJarakAtas(label(TANGGAL.format(tanggal), "judul-seksi"), 10));
