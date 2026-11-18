@@ -73,3 +73,5 @@ class HalamanBuatLomba {
     private void buatLomba() {
         String nama = tfNama.getText().trim();
         String pesan = null;
+        if (nama.isEmpty()) {
+            pesan = "Nama lomba wajib diisi.";
