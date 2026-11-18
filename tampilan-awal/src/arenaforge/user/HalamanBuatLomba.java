@@ -27,3 +27,6 @@ class HalamanBuatLomba {
     private final ComboBox<Integer> cbKuota = new ComboBox<>();
     private final Label lblPesan = label("", "pesan");
     private final VBox daftarBuatan = new VBox(8);
+
+    Node buat() {
+        VBox halaman = kepalaHalaman("Buat lomba",
