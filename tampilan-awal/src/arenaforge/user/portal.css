@@ -247,3 +247,5 @@
 /* ---------- Jadwal dan daftar lomba buatan ---------- */
 
 .baris-agenda {
+    -fx-background-color: -af-permukaan;
+    -fx-background-radius: 6;
