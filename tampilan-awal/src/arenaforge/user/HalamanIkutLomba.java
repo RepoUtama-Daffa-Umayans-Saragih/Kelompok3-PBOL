@@ -25,3 +25,5 @@ class HalamanIkutLomba {
 
         Label lblKode = label("Kode lomba", "label-isian");
         lblKode.setLabelFor(tfKode);
+        tfKode.setPromptText("Contoh: LIGA-KAMPUS");
+        tfKode.setPrefColumnCount(18);
