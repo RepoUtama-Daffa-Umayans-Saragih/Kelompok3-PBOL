@@ -86,3 +86,5 @@ class HalamanDashboard {
                 label(t.getTimSaya() + " (" + t.getRoleSaya() + ")", "teks-redup"),
                 beriJarakAtas(badgeStatus(t.statusTim()), 8),
                 beriJarakAtas(jalur(t), 14),
+                beriJarakAtas(label("Laga berikutnya", "label-kecil"), 14),
+                teksBerikut);
