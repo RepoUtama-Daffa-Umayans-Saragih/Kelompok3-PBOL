@@ -17,3 +17,5 @@ public class BarisKlasemen {
     /** Menambahkan hasil satu laga dari sisi tim ini. */
     void catat(int skorSendiri, int skorLawan) {
         main++;
+        skorMasuk += skorSendiri;
+        skorKeluar += skorLawan;
