@@ -21,3 +21,6 @@ public record Laga(String fase, String grup, LocalDateTime waktu,
 
     public boolean melibatkan(String tim) {
         return tim.equals(timA) || tim.equals(timB);
+    }
+
+    public String lawan(String tim) {
