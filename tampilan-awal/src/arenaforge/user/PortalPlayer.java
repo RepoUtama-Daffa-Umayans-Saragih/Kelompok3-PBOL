@@ -148,3 +148,6 @@ public class PortalPlayer {
         gulir.setFitToWidth(true);
         gulir.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
         return gulir;
+    }
+
+    /** Judul halaman dan satu kalimat penjelasan di bawahnya. */
