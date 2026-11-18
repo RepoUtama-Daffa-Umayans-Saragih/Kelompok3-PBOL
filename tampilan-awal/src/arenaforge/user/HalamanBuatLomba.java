@@ -81,3 +81,5 @@ class HalamanBuatLomba {
             pesan = "Nama \"" + nama + "\" sudah dipakai lomba lain. Pakai nama lain.";
         }
         if (pesan != null) {
+            tampilkanPesan(pesan, true);
+            tfNama.requestFocus();
