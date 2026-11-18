@@ -186,3 +186,5 @@ public class Turnamen {
     }
 
     /** Baris klasemen tim, atau null kalau tim tidak ada di grup mana pun. */
+    public BarisKlasemen barisKlasemen(String tim) {
+        int posisi = peringkat(tim);
