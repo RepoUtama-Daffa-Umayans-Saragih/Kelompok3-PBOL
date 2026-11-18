@@ -30,3 +30,5 @@ import javafx.scene.layout.VBox;
  * Kiri: menu samping (Dashboard, Jadwal, Ikut lomba, Buat lomba). Kanan: isi menu yang dipilih.
  */
 public class PortalPlayer {
+    static final String DASHBOARD = "Dashboard";
+    static final String JADWAL = "Jadwal";
