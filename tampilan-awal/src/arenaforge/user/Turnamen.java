@@ -166,3 +166,5 @@ public class Turnamen {
         hasil.sort(Comparator.comparingInt(BarisKlasemen::getPoin)
                 .thenComparingInt(BarisKlasemen::getSelisih)
                 .thenComparingInt(BarisKlasemen::getSkorMasuk)
+                .reversed());
+        return hasil;
