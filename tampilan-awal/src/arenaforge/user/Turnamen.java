@@ -221,3 +221,5 @@ public class Turnamen {
         }
         int posisi = peringkat(timSaya);
         List<Laga> lagaDiGrup = lagaGrup(namaGrup);
+        boolean grupSelesai = !lagaDiGrup.isEmpty() && lagaDiGrup.stream().allMatch(Laga::selesai);
+        if (grupSelesai && posisi > lolosPerGrup) {
