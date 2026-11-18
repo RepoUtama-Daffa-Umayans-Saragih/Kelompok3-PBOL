@@ -11,3 +11,5 @@ import java.awt.event.WindowEvent;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javax.swing.BorderFactory;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
