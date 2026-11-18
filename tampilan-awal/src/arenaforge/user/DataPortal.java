@@ -23,3 +23,6 @@ public final class DataPortal {
     private static final SecureRandom ACAK = new SecureRandom();
 
     private static final List<Turnamen> DIIKUTI = List.of(mlbbCup(), ffShowdown());
+
+    /** Semua lomba yang punya kode. Lomba dari menu Buat lomba ditambahkan ke sini. */
+    private static final List<Lomba> LOMBA = new ArrayList<>(List.of(
