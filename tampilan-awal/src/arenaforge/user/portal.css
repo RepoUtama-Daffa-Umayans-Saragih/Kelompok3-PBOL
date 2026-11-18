@@ -312,3 +312,5 @@
     -fx-border-width: 1;
     -fx-border-radius: 6;
     -fx-text-fill: -af-teks;
+    -fx-padding: 7 16 7 16;
+    -fx-cursor: hand;
