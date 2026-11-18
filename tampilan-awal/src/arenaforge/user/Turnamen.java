@@ -204,3 +204,5 @@ public class Turnamen {
 
         if (knockoutTerakhir != null) {
             if (!knockoutTerakhir.selesai()) {
+                return "Lolos ke " + knockoutTerakhir.fase();
+            }
