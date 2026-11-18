@@ -113,3 +113,6 @@ public class UserFrame extends JFrame {
             dispose();
             Main.mulai();
         }
+    }
+
+    private void konfirmasiTutup() {
