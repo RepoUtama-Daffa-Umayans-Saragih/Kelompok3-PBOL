@@ -84,3 +84,5 @@ class HalamanIkutLomba {
         langkah.setWrapText(true);
 
         VBox panel = new VBox(4,
+                label("Kode cocok", "label-kecil"),
+                label(lomba.nama(), "judul-kartu"),
