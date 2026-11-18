@@ -132,3 +132,5 @@ class HalamanBuatLomba {
         if (baruDibuat) {
             baris.getStyleClass().add("baru");
         }
+        baris.setMaxWidth(760);
+        return baris;
