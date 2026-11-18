@@ -118,3 +118,5 @@ public class UserFrame extends JFrame {
     private void konfirmasiTutup() {
         int pilihan = JOptionPane.showConfirmDialog(this, "Tutup aplikasi ArenaForge?",
                 "Tutup Aplikasi", JOptionPane.YES_NO_OPTION);
+        if (pilihan == JOptionPane.YES_OPTION) {
+            System.exit(0);
