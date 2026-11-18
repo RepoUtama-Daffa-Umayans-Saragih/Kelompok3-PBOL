@@ -26,6 +26,8 @@ public class LoginDialog extends JDialog {
     // Akun sementara sebelum ada tabel user di database
     private static final String USERNAME_PANITIA = "admin";
     private static final String PASSWORD_PANITIA = "admin";
+    private static final String USERNAME_PLAYER = "player";
+    private static final String PASSWORD_PLAYER = "player";
 
     private final JRadioButton rbPanitia = new JRadioButton("Panitia", true);
     private final JRadioButton rbPenonton = new JRadioButton("Penonton");
