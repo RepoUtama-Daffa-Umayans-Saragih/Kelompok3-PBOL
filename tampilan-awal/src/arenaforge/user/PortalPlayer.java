@@ -49,3 +49,5 @@ public class PortalPlayer {
     public PortalPlayer(String namaPlayer, List<Turnamen> daftarTurnamen) {
         this.namaPlayer = namaPlayer;
         // Turnamen dengan laga terdekat tampil paling depan
+        this.daftarTurnamen = new ArrayList<>(daftarTurnamen);
+        this.daftarTurnamen.sort(Comparator.comparing(PortalPlayer::waktuBerikutnya,
