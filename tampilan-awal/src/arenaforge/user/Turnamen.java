@@ -232,3 +232,5 @@ public class Turnamen {
     public List<String> performaTim() {
         return daftarLaga.stream()
                 .filter(laga -> laga.selesai() && laga.melibatkan(timSaya))
+                .sorted(Comparator.comparing(Laga::waktu))
+                .map(laga -> laga.hasilUntuk(timSaya))
