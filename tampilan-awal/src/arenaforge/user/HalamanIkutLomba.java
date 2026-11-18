@@ -43,3 +43,5 @@ class HalamanIkutLomba {
         halaman.getChildren().addAll(
                 beriJarakAtas(lblKode, 24),
                 isian,
+                lblPesan,
+                label("Kode demo untuk mencoba: LIGA-KAMPUS (masih buka) atau TKN-RANKED (kuota penuh).", "catatan"),
