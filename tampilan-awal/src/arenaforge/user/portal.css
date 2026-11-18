@@ -79,3 +79,5 @@
 .scroll-pane > .corner {
     -fx-background-color: transparent;
     -fx-background-insets: 0;
+    -fx-padding: 0;
+}
