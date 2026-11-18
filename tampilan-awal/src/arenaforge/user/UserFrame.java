@@ -22,3 +22,5 @@ import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
 /**
+ * Jendela untuk peran Player. Bingkai, header, dan dialog memakai Swing,
+ * sedangkan isi halamannya (PortalPlayer) dibuat dengan JavaFX dan ditempel lewat JFXPanel.
