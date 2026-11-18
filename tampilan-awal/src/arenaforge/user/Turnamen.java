@@ -94,3 +94,5 @@ public class Turnamen {
 
     public List<Laga> lagaGrup(String namaGrup) {
         return daftarLaga.stream()
+                .filter(laga -> namaGrup.equals(laga.grup()))
+                .sorted(Comparator.comparing(Laga::waktu))
