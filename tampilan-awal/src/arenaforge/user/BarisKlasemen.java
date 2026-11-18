@@ -7,3 +7,5 @@ public class BarisKlasemen {
     private int menang;
     private int seri;
     private int kalah;
+    private int skorMasuk;
+    private int skorKeluar;
