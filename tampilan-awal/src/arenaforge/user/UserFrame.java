@@ -28,3 +28,6 @@ import javax.swing.SwingUtilities;
 public class UserFrame extends JFrame {
     private final CardLayout tumpukan = new CardLayout();
     private final JPanel isi = new JPanel(tumpukan);
+    private final JLabel lblPesan = new JLabel("Memuat portal player...", SwingConstants.CENTER);
+
+    public UserFrame() {
