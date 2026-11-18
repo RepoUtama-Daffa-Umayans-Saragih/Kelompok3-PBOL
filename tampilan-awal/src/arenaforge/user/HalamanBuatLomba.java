@@ -130,3 +130,5 @@ class HalamanBuatLomba {
         baris.setAlignment(Pos.CENTER_LEFT);
         baris.getStyleClass().add("baris-agenda");
         if (baruDibuat) {
+            baris.getStyleClass().add("baru");
+        }
