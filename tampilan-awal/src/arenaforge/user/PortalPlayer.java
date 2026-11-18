@@ -60,3 +60,5 @@ public class PortalPlayer {
         if (css == null) {
             throw new IllegalStateException("File tema portal.css tidak ditemukan");
         }
+        Scene scene = new Scene(akar);
+        scene.getStylesheets().add(css.toExternalForm());
