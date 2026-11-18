@@ -34,3 +34,6 @@ public class PortalPlayer {
     static final String JADWAL = "Jadwal";
     static final String IKUT_LOMBA = "Ikut lomba";
     static final String BUAT_LOMBA = "Buat lomba";
+
+    static final Locale INDONESIA = Locale.forLanguageTag("id-ID");
+    // Penulisan jam gaya Indonesia: "pukul 17.00"
