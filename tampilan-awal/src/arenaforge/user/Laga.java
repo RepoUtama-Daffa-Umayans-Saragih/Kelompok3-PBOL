@@ -1,0 +1,49 @@
+package arenaforge.user;
+
+import java.time.LocalDateTime;
+
+/**
+ * Satu pertandingan antara dua tim. Skor null berarti laga belum dimainkan.
+ * Nama tim boleh berupa placeholder (mis. "Pemenang SF1") kalau lawannya belum ditentukan.
+ *
+ * @param grup nama grup untuk laga fase grup, null untuk laga knockout
+ */
+public record Laga(String fase, String grup, LocalDateTime waktu,
+                   String timA, String timB, Integer skorA, Integer skorB) {
+
+    public boolean selesai() {
+        return skorA != null && skorB != null;
+    }
+
+    public boolean faseGrup() {
+        return grup != null;
+    }
+
+    public boolean melibatkan(String tim) {
+        return tim.equals(timA) || tim.equals(timB);
+    }
+
+    public String lawan(String tim) {
+        return tim.equals(timA) ? timB : timA;
+    }
+
+    /** Nama tim pemenang, atau null kalau laga belum selesai atau hasilnya seri. */
+    public String pemenang() {
+        if (!selesai() || skorA.equals(skorB)) {
+            return null;
+        }
+        return skorA > skorB ? timA : timB;
+    }
+
+    /** Hasil dari sisi satu tim: "M" (menang), "S" (seri), "K" (kalah), atau null kalau belum main. */
+    public String hasilUntuk(String tim) {
+        if (!selesai()) {
+            return null;
+        }
+        String pemenang = pemenang();
+        if (pemenang == null) {
+            return "S";
+        }
+        return pemenang.equals(tim) ? "M" : "K";
+    }
+}

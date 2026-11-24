@@ -1,0 +1,3 @@
+# Akhir baris skrip Maven Wrapper: mvnw dijalankan bash (LF), mvnw.cmd dijalankan Windows (CRLF)
+mvnw text eol=lf
+*.cmd text eol=crlf
