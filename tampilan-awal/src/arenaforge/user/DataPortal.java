@@ -1,5 +1,7 @@
 package arenaforge.user;
 
+import arenaforge.DataSementara;
+import arenaforge.model.Game;
 import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -65,12 +67,8 @@ public final class DataPortal {
 
     /** Membuat lomba baru milik player dengan kode unik, mis. "MLBB-7Q2K". */
     public static Lomba buatLomba(String nama, String game, int kuota) {
-        String awalan = switch (game) {
-            case "Mobile Legends" -> "MLBB";
-            case "Free Fire" -> "FF";
-            case "Tekken" -> "TKN";
-            default -> "LOMBA";
-        };
+        Game dipilih = DataSementara.cariGame(game);
+        String awalan = dipilih == null ? "LOMBA" : dipilih.awalanKode();
         String kode;
         do {
             StringBuilder akhiran = new StringBuilder();

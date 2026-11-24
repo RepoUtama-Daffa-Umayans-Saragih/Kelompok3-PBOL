@@ -2,25 +2,29 @@ package arenaforge.user;
 
 import static arenaforge.user.PortalPlayer.INDONESIA;
 import static arenaforge.user.PortalPlayer.bannerLaga;
-import static arenaforge.user.PortalPlayer.beriJarakAtas;
-import static arenaforge.user.PortalPlayer.kepalaHalaman;
+import static arenaforge.user.PortalPlayer.jarak;
+import static arenaforge.user.PortalPlayer.judulBagian;
+import static arenaforge.user.PortalPlayer.kiri;
 import static arenaforge.user.PortalPlayer.kosong;
-import static arenaforge.user.PortalPlayer.label;
 import static arenaforge.user.PortalPlayer.namaFase;
 
+import arenaforge.Tema;
+import arenaforge.ui.Kartu;
+import arenaforge.ui.PanelGulir;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 /** Menu Jadwal: semua laga timmu yang belum dimainkan, dari yang paling dekat. */
-class HalamanJadwal {
+class HalamanJadwal extends PanelGulir {
     private static final DateTimeFormatter TANGGAL = DateTimeFormatter.ofPattern("EEEE, d MMMM yyyy", INDONESIA);
     private static final DateTimeFormatter JAM = DateTimeFormatter.ofPattern("HH.mm");
 
@@ -28,13 +32,8 @@ class HalamanJadwal {
     private record Agenda(Turnamen turnamen, Laga laga) {
     }
 
-    private final List<Turnamen> daftarTurnamen;
-
     HalamanJadwal(List<Turnamen> daftarTurnamen) {
-        this.daftarTurnamen = daftarTurnamen;
-    }
-
-    Node buat() {
+        super(new BorderLayout());
         List<Agenda> agenda = new ArrayList<>();
         for (Turnamen t : daftarTurnamen) {
             for (Laga laga : t.lagaBelumMain()) {
@@ -43,45 +42,54 @@ class HalamanJadwal {
         }
         agenda.sort(Comparator.comparing(a -> a.laga().waktu()));
 
-        VBox halaman = kepalaHalaman("Jadwal terdekat",
+        PanelGulir halaman = PortalPlayer.halaman("Jadwal terdekat",
                 "Semua laga timmu yang belum dimainkan, urut dari yang paling dekat.");
+        add(halaman, BorderLayout.CENTER);
 
         if (agenda.isEmpty()) {
-            halaman.getChildren().add(beriJarakAtas(kosong("Belum ada laga terjadwal untuk timmu.",
-                    "Jadwal muncul di sini setelah panitia menyusun pertandingan."), 24));
-            return halaman;
+            halaman.add(jarak(24));
+            halaman.add(kosong("Belum ada laga terjadwal untuk timmu.",
+                    "Jadwal muncul di sini setelah panitia menyusun pertandingan."));
+            return;
         }
 
         Agenda pertama = agenda.get(0);
-        halaman.getChildren().add(beriJarakAtas(bannerLaga(pertama.laga(), "Laga terdekat",
-                pertama.turnamen().getNama() + ", " + namaFase(pertama.laga())), 24));
+        halaman.add(jarak(24));
+        halaman.add(bannerLaga(pertama.laga(), "Laga terdekat",
+                pertama.turnamen().getNama() + ", " + namaFase(pertama.laga())));
 
         if (agenda.size() > 1) {
-            halaman.getChildren().add(beriJarakAtas(label("Setelah itu", "judul-bagian"), 28));
+            halaman.add(jarak(28));
+            halaman.add(judulBagian("Setelah itu"));
             LocalDate tanggalSebelumnya = null;
             for (Agenda a : agenda.subList(1, agenda.size())) {
                 LocalDate tanggal = a.laga().waktu().toLocalDate();
                 if (!tanggal.equals(tanggalSebelumnya)) {
-                    halaman.getChildren().add(beriJarakAtas(label(TANGGAL.format(tanggal), "judul-seksi"), 10));
+                    halaman.add(jarak(14));
+                    halaman.add(kiri(Tema.redup(TANGGAL.format(tanggal), Font.BOLD, 12f)));
+                    halaman.add(jarak(6));
                     tanggalSebelumnya = tanggal;
                 }
-                halaman.getChildren().add(barisAgenda(a));
+                halaman.add(barisAgenda(a));
+                halaman.add(jarak(6));
             }
         }
-        return halaman;
     }
 
-    private HBox barisAgenda(Agenda a) {
-        Label jam = label(JAM.format(a.laga().waktu()), "jam-agenda");
-        jam.setMinWidth(64);
+    private JPanel barisAgenda(Agenda a) {
+        JLabel jam = Tema.label(JAM.format(a.laga().waktu()), Font.BOLD, 18f);
+        jam.setPreferredSize(new Dimension(64, 24));
 
-        VBox isi = new VBox(2,
-                label(a.laga().timA() + " vs " + a.laga().timB(), "laga-agenda"),
-                label(a.turnamen().getNama() + " (" + a.turnamen().getGame() + "), " + namaFase(a.laga()), "teks-redup"));
+        JPanel isi = new JPanel(new java.awt.GridLayout(2, 1, 0, 2));
+        isi.setOpaque(false);
+        isi.add(Tema.label(a.laga().timA() + " vs " + a.laga().timB(), Font.BOLD, 14f));
+        isi.add(Tema.redup(a.turnamen().getNama() + " (" + a.turnamen().getGame() + "), " + namaFase(a.laga())));
 
-        HBox baris = new HBox(16, jam, isi);
-        baris.setAlignment(Pos.CENTER_LEFT);
-        baris.getStyleClass().add("baris-agenda");
-        return baris;
+        Kartu baris = new Kartu(new BorderLayout(16, 0)).warna(Tema.PERMUKAAN, null).lengkung(12);
+        baris.setBorder(Tema.padding(12, 16, 12, 16));
+        baris.add(jam, BorderLayout.WEST);
+        baris.add(isi, BorderLayout.CENTER);
+        baris.setMaximumSize(new Dimension(Integer.MAX_VALUE, baris.getPreferredSize().height));
+        return kiri(baris);
     }
 }

@@ -1,61 +1,74 @@
 package arenaforge.user;
 
-import static arenaforge.user.PortalPlayer.beriJarakAtas;
-import static arenaforge.user.PortalPlayer.kepalaHalaman;
-import static arenaforge.user.PortalPlayer.label;
+import static arenaforge.user.PortalPlayer.jarak;
+import static arenaforge.user.PortalPlayer.kiri;
+import static arenaforge.user.PortalPlayer.labelKecil;
 
+import arenaforge.Tema;
+import arenaforge.ui.Isian;
+import arenaforge.ui.Kartu;
+import arenaforge.ui.PanelGulir;
+import arenaforge.ui.TeksBungkus;
+import arenaforge.ui.Tombol;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.util.Locale;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /** Menu Ikut lomba: player memasukkan kode dari panitia untuk menemukan lomba. */
-class HalamanIkutLomba {
-    private final TextField tfKode = new TextField();
-    private final Label lblPesan = label("", "pesan");
-    private final VBox wadahHasil = new VBox();
+class HalamanIkutLomba extends PanelGulir {
+    private final JTextField tfKode = Isian.teks(18);
+    private final JPanel wadahPesan = new JPanel(new BorderLayout());
+    private final JPanel wadahHasil = new JPanel(new BorderLayout());
 
-    Node buat() {
-        VBox halaman = kepalaHalaman("Ikut lomba",
+    HalamanIkutLomba() {
+        super(new BorderLayout());
+        PanelGulir halaman = PortalPlayer.halaman("Ikut lomba",
                 "Masukkan kode lomba dari panitia. Kalau kodenya cocok, kamu bisa lanjut membuat tim untuk lomba itu.");
+        add(halaman, BorderLayout.CENTER);
 
-        Label lblKode = label("Kode lomba", "label-isian");
+        JLabel lblKode = Tema.label("Kode lomba", Font.BOLD, 13f);
         lblKode.setLabelFor(tfKode);
-        tfKode.setPromptText("Contoh: LIGA-KAMPUS");
-        tfKode.setPrefColumnCount(18);
-        tfKode.setOnAction(e -> periksaKode()); // Enter di kolom kode
+        Tombol btnCek = new Tombol("Cek kode", Tombol.Jenis.UTAMA);
+        // Event: tombol dan tombol Enter di kolom kode sama-sama memeriksa kode
+        btnCek.addActionListener(e -> periksaKode());
+        tfKode.addActionListener(e -> periksaKode());
 
-        Button btnCek = new Button("Cek kode");
-        btnCek.getStyleClass().add("tombol-utama");
-        btnCek.setOnAction(e -> periksaKode());
+        JPanel isian = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        isian.setOpaque(false);
+        isian.add(tfKode);
+        isian.add(javax.swing.Box.createHorizontalStrut(10));
+        isian.add(btnCek);
+        isian.setMaximumSize(new Dimension(Integer.MAX_VALUE, isian.getPreferredSize().height));
 
-        HBox isian = new HBox(10, tfKode, btnCek);
-        isian.setAlignment(Pos.CENTER_LEFT);
+        wadahPesan.setOpaque(false);
+        wadahHasil.setOpaque(false);
 
-        lblPesan.setWrapText(true);
-        lblPesan.setVisible(false);
-        lblPesan.setManaged(false);
-
-        halaman.getChildren().addAll(
-                beriJarakAtas(lblKode, 24),
-                isian,
-                lblPesan,
-                label("Kode demo untuk mencoba: LIGA-KAMPUS (masih buka) atau TKN-RANKED (kuota penuh).", "catatan"),
-                beriJarakAtas(wadahHasil, 16));
-        return halaman;
+        halaman.add(jarak(24));
+        halaman.add(kiri(lblKode));
+        halaman.add(jarak(6));
+        halaman.add(kiri(isian));
+        halaman.add(jarak(6));
+        halaman.add(kiri(wadahPesan));
+        halaman.add(jarak(4));
+        halaman.add(kiri(new TeksBungkus(
+                "Kode demo untuk mencoba: LIGA-KAMPUS (masih buka) atau TKN-RANKED (kuota penuh).", 12f, Tema.TEKS_REDUP)));
+        halaman.add(jarak(16));
+        halaman.add(kiri(wadahHasil));
     }
 
     private void periksaKode() {
-        wadahHasil.getChildren().clear();
+        wadahHasil.removeAll();
         String kode = tfKode.getText().trim();
 
         if (kode.isEmpty()) {
             tampilkanPesan("Kode lomba wajib diisi.", true);
-            tfKode.requestFocus();
+            tfKode.requestFocusInWindow();
             return;
         }
         Lomba lomba = DataPortal.cariLomba(kode);
@@ -75,32 +88,41 @@ class HalamanIkutLomba {
         }
 
         tampilkanPesan(null, false);
-        wadahHasil.getChildren().add(panelCocok(lomba));
+        wadahHasil.add(panelCocok(lomba), BorderLayout.NORTH);
+        wadahHasil.revalidate();
+        wadahHasil.repaint();
     }
 
-    private VBox panelCocok(Lomba lomba) {
-        Label langkah = label("Langkah berikutnya: buat tim untuk lomba ini. Halaman buat tim sedang disiapkan.",
-                "teks-redup");
-        langkah.setWrapText(true);
+    private Kartu panelCocok(Lomba lomba) {
+        JPanel isi = new JPanel();
+        isi.setLayout(new BoxLayout(isi, BoxLayout.Y_AXIS));
+        isi.setOpaque(false);
+        isi.add(kiri(Tema.redup("Kode cocok", Font.BOLD, 12f)));
+        isi.add(jarak(4));
+        isi.add(kiri(Tema.label(lomba.nama(), Font.BOLD, 20f)));
+        isi.add(jarak(4));
+        isi.add(kiri(Tema.redup(lomba.game() + ", diselenggarakan " + lomba.penyelenggara())));
+        isi.add(jarak(4));
+        isi.add(kiri(Tema.label(lomba.terdaftar() + " dari " + lomba.kuota() + " peserta sudah terdaftar", Font.PLAIN, 13f)));
+        isi.add(jarak(12));
+        isi.add(kiri(new TeksBungkus("Langkah berikutnya: buat tim untuk lomba ini. Halaman buat tim sedang disiapkan.",
+                13f, Tema.TEKS_REDUP, 500)));
 
-        VBox panel = new VBox(4,
-                label("Kode cocok", "label-kecil"),
-                label(lomba.nama(), "judul-kartu"),
-                label(lomba.game() + ", diselenggarakan " + lomba.penyelenggara(), "teks-redup"),
-                label(lomba.terdaftar() + " dari " + lomba.kuota() + " peserta sudah terdaftar", "teks-isi"),
-                beriJarakAtas(langkah, 12));
-        panel.getStyleClass().add("panel-hasil");
-        panel.setMaxWidth(560);
+        Kartu panel = new Kartu(new BorderLayout()).warna(Tema.PERMUKAAN, Tema.MARUN);
+        panel.add(isi, BorderLayout.CENTER);
+        panel.setMaximumSize(new Dimension(560, Integer.MAX_VALUE));
         return panel;
     }
 
     /** Pesan di bawah kolom kode. galat = true untuk kesalahan, false untuk info biasa; null menyembunyikan. */
     private void tampilkanPesan(String teks, boolean galat) {
-        boolean ada = teks != null;
-        lblPesan.setText(ada ? teks : "");
-        lblPesan.setVisible(ada);
-        lblPesan.setManaged(ada);
-        lblPesan.getStyleClass().removeAll("pesan-galat", "pesan-info");
-        lblPesan.getStyleClass().add(galat ? "pesan-galat" : "pesan-info");
+        wadahPesan.removeAll();
+        if (teks != null) {
+            wadahPesan.add(new TeksBungkus(teks, 13f, galat ? Tema.MERAH : Tema.TEKS), BorderLayout.CENTER);
+        }
+        wadahPesan.revalidate();
+        wadahPesan.repaint();
+        wadahHasil.revalidate();
+        wadahHasil.repaint();
     }
 }

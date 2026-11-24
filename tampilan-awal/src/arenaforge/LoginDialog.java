@@ -1,18 +1,19 @@
 package arenaforge;
 
+import arenaforge.ui.FormDialog;
+import arenaforge.ui.Formulir;
+import arenaforge.ui.IkonPilihan;
+import arenaforge.ui.Isian;
+import arenaforge.ui.Pesan;
+import arenaforge.ui.TeksBungkus;
+import arenaforge.ui.Tombol;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.Frame;
-import java.awt.GridLayout;
 import java.util.Arrays;
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
-import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JRadioButton;
@@ -22,35 +23,29 @@ import javax.swing.JTextField;
  * Layar pertama aplikasi (JDialog modal).
  * Panitia dan player masuk dengan username + password, penonton bisa langsung masuk.
  */
-public class LoginDialog extends JDialog {
+public class LoginDialog extends FormDialog {
     // Akun sementara sebelum ada tabel user di database
     private static final String USERNAME_PANITIA = "admin";
     private static final String PASSWORD_PANITIA = "admin";
     private static final String USERNAME_PLAYER = "player";
     private static final String PASSWORD_PLAYER = "player";
 
-    private final JRadioButton rbPanitia = new JRadioButton("Panitia", true);
-    private final JRadioButton rbPlayer = new JRadioButton("Player");
-    private final JRadioButton rbPenonton = new JRadioButton("Penonton");
-    private final JTextField tfUsername = new JTextField(16);
-    private final JPasswordField pfPassword = new JPasswordField(16);
-    private final JCheckBox cbTampilkanPassword = new JCheckBox("Tampilkan password");
+    private final JRadioButton rbPanitia = IkonPilihan.gayai(new JRadioButton("Panitia", true), true);
+    private final JRadioButton rbPlayer = IkonPilihan.gayai(new JRadioButton("Player"), true);
+    private final JRadioButton rbPenonton = IkonPilihan.gayai(new JRadioButton("Penonton"), true);
+    private final JTextField tfUsername = Isian.teks(16);
+    private final JPasswordField pfPassword = Isian.sandi(16);
+    private final JCheckBox cbTampilkanPassword = IkonPilihan.gayai(new JCheckBox("Tampilkan password"), false);
     private final char echoChar = pfPassword.getEchoChar();
 
     private String peran; // tetap null kalau dialog ditutup tanpa login
 
     public LoginDialog() {
-        super((Frame) null, "ArenaForge - Masuk", true);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setLayout(new BorderLayout());
-
+        super((Frame) null, "ArenaForge - Masuk");
         add(Tema.header("ArenaForge", "Game Tournament Manager"), BorderLayout.NORTH);
         add(buatForm(), BorderLayout.CENTER);
         add(buatTombol(), BorderLayout.SOUTH);
-
-        pack();
-        setResizable(false);
-        setLocationRelativeTo(null);
+        selesaiDisusun();
     }
 
     /** Tampilkan dialog dan tunggu sampai ditutup. Hasilnya "Panitia", "Player", "Penonton", atau null. */
@@ -66,23 +61,23 @@ public class LoginDialog extends JDialog {
         grupPeran.add(rbPenonton);
 
         JPanel pilihanPeran = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
+        pilihanPeran.setOpaque(false);
         pilihanPeran.add(rbPanitia);
-        pilihanPeran.add(Box.createHorizontalStrut(12));
+        pilihanPeran.add(Box.createHorizontalStrut(14));
         pilihanPeran.add(rbPlayer);
-        pilihanPeran.add(Box.createHorizontalStrut(12));
+        pilihanPeran.add(Box.createHorizontalStrut(14));
         pilihanPeran.add(rbPenonton);
 
-        // GridLayout 4 baris x 2 kolom: label di kiri, input di kanan
-        JPanel form = new JPanel(new GridLayout(4, 2, 8, 8));
-        form.setBorder(Tema.padding(16, 16, 8, 16));
-        form.add(new JLabel("Masuk sebagai"));
-        form.add(pilihanPeran);
-        form.add(new JLabel("Username"));
-        form.add(tfUsername);
-        form.add(new JLabel("Password"));
-        form.add(pfPassword);
-        form.add(new JLabel());
-        form.add(cbTampilkanPassword);
+        // Formulir dua kolom: label di kiri, input di kanan
+        Formulir form = new Formulir()
+                .tambah("Masuk sebagai", pilihanPeran)
+                .tambah("Username", tfUsername)
+                .tambah("Password", pfPassword)
+                .tambah("", cbTampilkanPassword);
+        JPanel isi = new JPanel(new BorderLayout());
+        isi.setOpaque(false);
+        isi.setBorder(Tema.padding(18, 20, 6, 20));
+        isi.add(form, BorderLayout.CENTER);
 
         // Event: penonton tidak perlu mengisi username/password
         rbPanitia.addItemListener(e -> aturInputAkun());
@@ -92,27 +87,27 @@ public class LoginDialog extends JDialog {
         // Event: tampilkan atau sembunyikan isi password
         cbTampilkanPassword.addItemListener(e ->
                 pfPassword.setEchoChar(cbTampilkanPassword.isSelected() ? (char) 0 : echoChar));
-        return form;
+        return isi;
     }
 
     private JPanel buatTombol() {
-        JButton btnMasuk = new JButton("Masuk");
-        JButton btnBatal = new JButton("Batal");
+        Tombol btnMasuk = new Tombol("Masuk", Tombol.Jenis.UTAMA);
+        Tombol btnBatal = new Tombol("Batal", Tombol.Jenis.KEDUA);
         btnMasuk.addActionListener(e -> prosesLogin());
         btnBatal.addActionListener(e -> dispose());
         getRootPane().setDefaultButton(btnMasuk); // tekan Enter = klik Masuk
 
         JPanel tombol = new JPanel(new FlowLayout(FlowLayout.RIGHT, 8, 0));
+        tombol.setOpaque(false);
         tombol.add(btnBatal);
         tombol.add(btnMasuk);
 
-        JLabel petunjuk = Tema.label("Akun demo: panitia admin / admin, player player / player", Font.PLAIN, 11f);
-        petunjuk.setForeground(Tema.TEKS_REDUP);
-
-        JPanel bawah = new JPanel(new BorderLayout());
-        bawah.setBorder(Tema.padding(8, 16, 16, 16));
-        bawah.add(petunjuk, BorderLayout.WEST);
-        bawah.add(tombol, BorderLayout.EAST);
+        JPanel bawah = new JPanel(new BorderLayout(0, 10));
+        bawah.setOpaque(false);
+        bawah.setBorder(Tema.padding(8, 20, 18, 20));
+        bawah.add(new TeksBungkus("Akun demo: panitia admin / admin, player player / player. Penonton langsung masuk.",
+                12f, Tema.TEKS_REDUP, 360), BorderLayout.NORTH);
+        bawah.add(tombol, BorderLayout.SOUTH);
         return bawah;
     }
 
@@ -142,13 +137,11 @@ public class LoginDialog extends JDialog {
         Arrays.fill(password, '\0'); // hapus salinan password dari memori
 
         if (kosong) {
-            JOptionPane.showMessageDialog(this, "Username dan password wajib diisi.",
-                    "Login", JOptionPane.WARNING_MESSAGE);
+            Pesan.peringatan(this, "Login", "Username dan password wajib diisi.");
             return;
         }
         if (!cocok) {
-            JOptionPane.showMessageDialog(this, "Username atau password salah.",
-                    "Login", JOptionPane.ERROR_MESSAGE);
+            Pesan.galat(this, "Login", "Username atau password salah.");
             pfPassword.setText("");
             pfPassword.requestFocusInWindow();
             return;

@@ -2,33 +2,20 @@ package arenaforge.user;
 
 import arenaforge.Main;
 import arenaforge.Tema;
+import arenaforge.ui.Pesan;
+import arenaforge.ui.Tombol;
 import java.awt.BorderLayout;
-import java.awt.CardLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import javafx.application.Platform;
-import javafx.embed.swing.JFXPanel;
-import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
 
-/**
- * Jendela untuk peran Player. Bingkai, header, dan dialog memakai Swing,
- * sedangkan isi halamannya (PortalPlayer) dibuat dengan JavaFX dan ditempel lewat JFXPanel.
- */
+/** Jendela untuk peran Player: header di atas, lalu PortalPlayer sebagai isinya. Semuanya Swing. */
 public class UserFrame extends JFrame {
-    private final CardLayout tumpukan = new CardLayout();
-    private final JPanel isi = new JPanel(tumpukan);
-    private final JLabel lblPesan = new JLabel("Memuat portal player...", SwingConstants.CENTER);
 
     public UserFrame() {
         super("ArenaForge - Portal Player");
@@ -42,36 +29,9 @@ public class UserFrame extends JFrame {
             }
         });
 
-        // Membuat JFXPanel sekaligus menyalakan JavaFX
-        JFXPanel panelFx = new JFXPanel();
-        // JavaFX jangan ikut berhenti saat jendela ini ditutup (keluar akun),
-        // karena player yang masuk lagi memakai JavaFX yang sama
-        Platform.setImplicitExit(false);
-
-        lblPesan.setForeground(Color.WHITE);
-        JPanel panelPesan = new JPanel(new BorderLayout());
-        panelPesan.setBackground(Tema.HITAM);
-        panelPesan.setBorder(Tema.padding(24, 24, 24, 24));
-        panelPesan.add(lblPesan, BorderLayout.CENTER);
-
-        // CardLayout: pesan "memuat" tampil dulu, lalu diganti JavaFX setelah Scene siap
-        isi.add(panelPesan, "pesan");
-        isi.add(panelFx, "portal");
-        tumpukan.show(isi, "pesan");
-
+        getContentPane().setBackground(Tema.HITAM);
         add(buatHeader(), BorderLayout.NORTH);
-        add(isi, BorderLayout.CENTER);
-
-        // Scene JavaFX wajib dibuat di JavaFX Application Thread, bukan di thread Swing
-        Platform.runLater(() -> {
-            try {
-                panelFx.setScene(new PortalPlayer(DataPortal.NAMA_PLAYER, DataPortal.turnamenDiikuti()).buatScene());
-                SwingUtilities.invokeLater(() -> tumpukan.show(isi, "portal"));
-            } catch (RuntimeException ex) {
-                ex.printStackTrace();
-                SwingUtilities.invokeLater(() -> tampilkanGagal(ex));
-            }
-        });
+        add(new PortalPlayer(DataPortal.NAMA_PLAYER, DataPortal.turnamenDiikuti()), BorderLayout.CENTER);
 
         setSize(1120, 760);
         setMinimumSize(new Dimension(920, 600));
@@ -79,9 +39,9 @@ public class UserFrame extends JFrame {
     }
 
     private JPanel buatHeader() {
-        JLabel lblPlayer = new JLabel("Masuk sebagai: " + DataPortal.NAMA_PLAYER + " (" + DataPortal.ID_PLAYER + ")");
-        lblPlayer.setForeground(Color.WHITE);
-        JButton btnKeluarAkun = new JButton("Keluar Akun");
+        JLabel lblPlayer = Tema.label("Masuk sebagai: " + DataPortal.NAMA_PLAYER + " (" + DataPortal.ID_PLAYER + ")",
+                java.awt.Font.PLAIN, 13f);
+        Tombol btnKeluarAkun = new Tombol("Keluar Akun", Tombol.Jenis.KEDUA);
         btnKeluarAkun.addActionListener(e -> keluarAkun());
 
         JPanel kanan = new JPanel();
@@ -92,33 +52,19 @@ public class UserFrame extends JFrame {
         kanan.add(btnKeluarAkun);
 
         JPanel header = Tema.header("ArenaForge", "Portal Player");
-        // Garis marun memisahkan header Swing dari isi JavaFX yang sama-sama hitam
-        header.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createMatteBorder(0, 0, 2, 0, Tema.MARUN),
-                Tema.padding(12, 16, 12, 16)));
         header.add(kanan, BorderLayout.EAST);
         return header;
     }
 
-    private void tampilkanGagal(Exception ex) {
-        String sebab = String.valueOf(ex).replace("&", "&amp;").replace("<", "&lt;");
-        lblPesan.setText("<html><div style='text-align:center'>Portal player gagal dimuat.<br>" + sebab
-                + "<br><br>Keluar akun lalu masuk lagi. Kalau masih gagal, kirim pesan ini ke panitia.</div></html>");
-    }
-
     private void keluarAkun() {
-        int pilihan = JOptionPane.showConfirmDialog(this, "Keluar dari akun player?",
-                "Keluar Akun", JOptionPane.YES_NO_OPTION);
-        if (pilihan == JOptionPane.YES_OPTION) {
+        if (Pesan.konfirmasi(this, "Keluar Akun", "Keluar dari akun player?")) {
             dispose();
             Main.mulai();
         }
     }
 
     private void konfirmasiTutup() {
-        int pilihan = JOptionPane.showConfirmDialog(this, "Tutup aplikasi ArenaForge?",
-                "Tutup Aplikasi", JOptionPane.YES_NO_OPTION);
-        if (pilihan == JOptionPane.YES_OPTION) {
+        if (Pesan.konfirmasi(this, "Tutup Aplikasi", "Tutup aplikasi ArenaForge?")) {
             System.exit(0);
         }
     }

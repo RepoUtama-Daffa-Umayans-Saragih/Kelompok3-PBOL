@@ -2,19 +2,14 @@ package arenaforge;
 
 import arenaforge.user.UserFrame;
 import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
 
-/** Titik masuk aplikasi ArenaForge. Jendela memakai Swing, halaman Player memakai JavaFX. */
+/** Titik masuk aplikasi ArenaForge. Seluruh antarmuka memakai Java Swing/AWT. */
 public class Main {
 
     public static void main(String[] args) {
         // Semua komponen Swing dibuat di Event Dispatch Thread
         SwingUtilities.invokeLater(() -> {
-            try {
-                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-            } catch (Exception e) {
-                // Kalau tampilan sistem tidak tersedia, pakai tampilan bawaan Java
-            }
+            Tema.terapkan(); // tampilan hitam-merah untuk semua komponen
             mulai();
         });
     }

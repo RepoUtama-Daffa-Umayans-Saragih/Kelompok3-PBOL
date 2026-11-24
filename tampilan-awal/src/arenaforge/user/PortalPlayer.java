@@ -1,6 +1,18 @@
 package arenaforge.user;
 
-import java.net.URL;
+import arenaforge.Tema;
+import arenaforge.ui.JalurTurnamen;
+import arenaforge.ui.Kartu;
+import arenaforge.ui.Lencana;
+import arenaforge.ui.PanelGulir;
+import arenaforge.ui.TeksBungkus;
+import arenaforge.ui.Tombol;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -9,27 +21,21 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.ToggleGroup;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
+import javax.swing.AbstractAction;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.KeyStroke;
+import javax.swing.SwingUtilities;
 
 /**
- * Portal Player (JavaFX) yang ditempel ke jendela Swing lewat JFXPanel.
- * Kiri: menu samping (Dashboard, Jadwal, Ikut lomba, Buat lomba). Kanan: isi menu yang dipilih.
+ * Portal Player (Swing): menu samping di kiri (Dashboard, Jadwal, Ikut lomba, Buat lomba),
+ * isi menu yang dipilih di kanan dan bisa digulir.
  */
-public class PortalPlayer {
+public class PortalPlayer extends JPanel {
     static final String DASHBOARD = "Dashboard";
     static final String JADWAL = "Jadwal";
     static final String IKUT_LOMBA = "Ikut lomba";
@@ -42,87 +48,79 @@ public class PortalPlayer {
 
     private final String namaPlayer;
     private final List<Turnamen> daftarTurnamen;
-    private final BorderPane akar = new BorderPane();
-    private final Map<String, ToggleButton> menu = new LinkedHashMap<>();
+    private final Map<String, Tombol> menu = new LinkedHashMap<>();
+    private final JScrollPane area = Tema.gulir(new JPanel());
     private String menuAktif;
 
     public PortalPlayer(String namaPlayer, List<Turnamen> daftarTurnamen) {
+        super(new BorderLayout());
         this.namaPlayer = namaPlayer;
         // Turnamen dengan laga terdekat tampil paling depan
         this.daftarTurnamen = new ArrayList<>(daftarTurnamen);
         this.daftarTurnamen.sort(Comparator.comparing(PortalPlayer::waktuBerikutnya,
                 Comparator.nullsLast(Comparator.naturalOrder())));
-    }
 
-    /** Membuat Scene JavaFX. Wajib dipanggil di JavaFX Application Thread. */
-    public Scene buatScene() {
-        URL css = PortalPlayer.class.getResource("portal.css");
-        if (css == null) {
-            throw new IllegalStateException("File tema portal.css tidak ditemukan");
-        }
-        Scene scene = new Scene(akar);
-        scene.getStylesheets().add(css.toExternalForm());
-        akar.setLeft(buatMenuSamping());
+        add(buatMenuSamping(), BorderLayout.WEST);
+        add(area, BorderLayout.CENTER);
         bukaMenu(DASHBOARD);
-        return scene;
     }
 
-    private VBox buatMenuSamping() {
-        ToggleGroup grup = new ToggleGroup();
-        VBox samping = new VBox(4);
-        for (String nama : List.of(DASHBOARD, JADWAL, IKUT_LOMBA, BUAT_LOMBA)) {
-            ToggleButton tombol = new ToggleButton(nama);
-            tombol.setToggleGroup(grup);
-            tombol.setMaxWidth(Double.MAX_VALUE);
-            tombol.getStyleClass().add("menu-samping");
-            tombol.setOnAction(e -> bukaMenu(nama));
-            menu.put(nama, tombol);
-            samping.getChildren().add(tombol);
-        }
-        // Klik menu yang sedang aktif tidak boleh membuat semua menu tidak terpilih
-        grup.selectedToggleProperty().addListener((obs, lama, baru) -> {
-            if (baru == null && lama != null) {
-                lama.setSelected(true);
-            }
-        });
-        // Panah atas/bawah langsung membuka menu sebelah, jadi posisi fokus selalu
-        // terlihat lewat blok marun menu yang terpilih
-        samping.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
-            boolean atas = e.getCode() == KeyCode.UP;
-            if ((atas || e.getCode() == KeyCode.DOWN) && e.getTarget() instanceof ToggleButton tombol
-                    && menu.containsValue(tombol)) {
-                List<String> urutan = new ArrayList<>(menu.keySet());
-                int berikut = Math.max(0, Math.min(urutan.size() - 1,
-                        urutan.indexOf(tombol.getText()) + (atas ? -1 : 1)));
-                bukaMenu(urutan.get(berikut));
-                menu.get(urutan.get(berikut)).requestFocus();
-                e.consume();
-            }
-        });
+    private JPanel buatMenuSamping() {
+        JPanel samping = new JPanel();
+        samping.setLayout(new BoxLayout(samping, BoxLayout.Y_AXIS));
+        samping.setBackground(Tema.PERMUKAAN);
+        samping.setBorder(javax.swing.BorderFactory.createCompoundBorder(
+                javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, Tema.GARIS), Tema.padding(20, 12, 20, 12)));
+        samping.setPreferredSize(new Dimension(220, 0));
 
-        Region dorong = new Region();
-        VBox.setVgrow(dorong, Priority.ALWAYS);
-        Label catatan = label("Data contoh, belum diambil dari database.", "catatan");
-        catatan.setWrapText(true);
-        samping.getChildren().addAll(dorong, catatan);
-        samping.getStyleClass().add("menu-kiri");
+        for (String nama : List.of(DASHBOARD, JADWAL, IKUT_LOMBA, BUAT_LOMBA)) {
+            Tombol tombol = new Tombol(nama, Tombol.Jenis.MENU);
+            tombol.setAlignmentX(Component.LEFT_ALIGNMENT);
+            tombol.addActionListener(e -> bukaMenu(nama));
+            menu.put(nama, tombol);
+            samping.add(tombol);
+            samping.add(Box.createVerticalStrut(4));
+        }
+        samping.add(Box.createVerticalGlue());
+        TeksBungkus catatan = new TeksBungkus("Data contoh, belum diambil dari database.", 12f, Tema.TEKS_REDUP, 190);
+        catatan.setAlignmentX(Component.LEFT_ALIGNMENT);
+        samping.add(catatan);
+
+        // Panah atas/bawah langsung membuka menu sebelah, jadi posisi fokus selalu terlihat
+        pasangPanah(samping, KeyEvent.VK_UP, -1);
+        pasangPanah(samping, KeyEvent.VK_DOWN, 1);
         return samping;
+    }
+
+    private void pasangPanah(JComponent samping, int tombolKeyboard, int arah) {
+        String kunci = "geser" + arah;
+        samping.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(tombolKeyboard, 0), kunci);
+        samping.getActionMap().put(kunci, new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                List<String> urutan = new ArrayList<>(menu.keySet());
+                int berikut = Math.max(0, Math.min(urutan.size() - 1, urutan.indexOf(menuAktif) + arah));
+                bukaMenu(urutan.get(berikut));
+                menu.get(urutan.get(berikut)).requestFocusInWindow();
+            }
+        });
     }
 
     /** Menampilkan isi satu menu di sebelah kanan dan menandai menunya di samping. */
     void bukaMenu(String nama) {
-        menu.get(nama).setSelected(true);
         if (nama.equals(menuAktif)) {
             return;
         }
         menuAktif = nama;
-        Node isi = switch (nama) {
-            case JADWAL -> new HalamanJadwal(daftarTurnamen).buat();
-            case IKUT_LOMBA -> new HalamanIkutLomba().buat();
-            case BUAT_LOMBA -> new HalamanBuatLomba().buat();
-            default -> new HalamanDashboard(namaPlayer, daftarTurnamen, () -> bukaMenu(IKUT_LOMBA)).buat();
+        menu.forEach((judul, tombol) -> tombol.setAktif(judul.equals(nama)));
+        JPanel isi = switch (nama) {
+            case JADWAL -> new HalamanJadwal(daftarTurnamen);
+            case IKUT_LOMBA -> new HalamanIkutLomba();
+            case BUAT_LOMBA -> new HalamanBuatLomba();
+            default -> new HalamanDashboard(namaPlayer, daftarTurnamen, () -> bukaMenu(IKUT_LOMBA));
         };
-        akar.setCenter(gulir(isi));
+        area.setViewportView(isi);
+        SwingUtilities.invokeLater(() -> area.getVerticalScrollBar().setValue(0));
     }
 
     private static LocalDateTime waktuBerikutnya(Turnamen t) {
@@ -132,31 +130,31 @@ public class PortalPlayer {
 
     // ---- Komponen kecil yang dipakai semua halaman ----
 
-    static Label label(String teks, String... kelas) {
-        Label label = new Label(teks);
-        label.getStyleClass().addAll(kelas);
-        return label;
-    }
-
-    static <T extends Node> T beriJarakAtas(T node, double jarak) {
-        VBox.setMargin(node, new Insets(jarak, 0, 0, 0));
-        return node;
-    }
-
-    static ScrollPane gulir(Node isi) {
-        ScrollPane gulir = new ScrollPane(isi);
-        gulir.setFitToWidth(true);
-        gulir.setHbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
-        return gulir;
-    }
-
-    /** Judul halaman dan satu kalimat penjelasan di bawahnya. */
-    static VBox kepalaHalaman(String judul, String penjelasan) {
-        Label lblPenjelasan = label(penjelasan, "teks-redup");
-        lblPenjelasan.setWrapText(true);
-        VBox halaman = new VBox(6, label(judul, "judul-halaman"), lblPenjelasan);
-        halaman.getStyleClass().add("halaman");
+    /** Dasar halaman: kolom vertikal yang lebarnya mengikuti jendela, dengan judul dan penjelasan di atas. */
+    static PanelGulir halaman(String judul, String penjelasan) {
+        PanelGulir halaman = new PanelGulir(null);
+        halaman.setLayout(new BoxLayout(halaman, BoxLayout.Y_AXIS));
+        halaman.setBackground(Tema.HITAM);
+        halaman.setBorder(Tema.padding(28, 32, 36, 32));
+        halaman.add(kiri(Tema.kepalaHalaman(judul, penjelasan)));
         return halaman;
+    }
+
+    static <T extends JComponent> T kiri(T komponen) {
+        komponen.setAlignmentX(Component.LEFT_ALIGNMENT);
+        return komponen;
+    }
+
+    static Component jarak(int px) {
+        return Box.createVerticalStrut(px);
+    }
+
+    static JLabel judulBagian(String teks) {
+        return kiri(Tema.label(teks, Font.BOLD, 17f));
+    }
+
+    static JLabel labelKecil(String teks) {
+        return kiri(Tema.redup(teks, Font.BOLD, 12f));
     }
 
     /** "Fase grup, Grup A" untuk laga grup, atau nama fase knockout seperti "Semifinal". */
@@ -164,67 +162,31 @@ public class PortalPlayer {
         return laga.faseGrup() ? "Fase grup, " + laga.grup() : laga.fase();
     }
 
-    /** Status tim sebagai label: lolos (merah tua), masih di grup (bingkai), atau tersingkir (abu). */
-    static Label badgeStatus(String status) {
-        String jenis = status.startsWith("Tersingkir") ? "badge-gugur"
-                : status.startsWith("Fase grup") ? "badge-grup" : "badge-lolos";
-        return label(status, "badge", jenis);
-    }
-
     /** Blok laga yang paling penting di layar: siapa lawan dan kapan mainnya. */
-    static VBox bannerLaga(Laga laga, String judul, String keterangan) {
-        HBox tim = new HBox(14, label(laga.timA(), "banner-tim"), label("vs", "banner-vs"),
-                label(laga.timB(), "banner-tim"));
-        tim.setAlignment(Pos.BASELINE_LEFT);
-
-        VBox banner = new VBox(6,
-                label(judul + ": " + keterangan, "banner-label"),
-                tim,
-                label(WAKTU_PANJANG.format(laga.waktu()), "banner-waktu"));
-        banner.getStyleClass().add("banner-laga");
-        return banner;
+    static Kartu bannerLaga(Laga laga, String judul, String keterangan) {
+        Kartu banner = new Kartu(new BorderLayout(0, 6)).warna(Tema.MARUN, null).lengkung(20);
+        banner.setBorder(Tema.padding(20, 24, 20, 24));
+        banner.add(Tema.label(judul + ": " + keterangan, Font.BOLD, 12f), BorderLayout.NORTH);
+        banner.add(Tema.label(laga.timA() + "   vs   " + laga.timB(), Font.BOLD, 24f), BorderLayout.CENTER);
+        banner.add(Tema.label(WAKTU_PANJANG.format(laga.waktu()), Font.PLAIN, 14f), BorderLayout.SOUTH);
+        banner.setMaximumSize(new Dimension(Integer.MAX_VALUE, banner.getPreferredSize().height + 20));
+        return kiri(banner);
     }
 
     /** Pesan untuk bagian yang belum ada isinya: apa sebabnya dan apa langkah berikutnya. */
-    static VBox kosong(String judul, String saran) {
-        Label lblSaran = label(saran, "teks-redup");
-        lblSaran.setWrapText(true);
-        VBox kosong = new VBox(4, label(judul, "kosong-judul"), lblSaran);
-        kosong.getStyleClass().add("kosong");
-        return kosong;
+    static Kartu kosong(String judul, String saran) {
+        Kartu kosong = new Kartu(new BorderLayout(0, 4)).warna(Tema.PERMUKAAN, Tema.GARIS);
+        kosong.add(Tema.label(judul, Font.BOLD, 14f), BorderLayout.NORTH);
+        kosong.add(new TeksBungkus(saran, 13f, Tema.TEKS_REDUP, 560), BorderLayout.CENTER);
+        return kiri(kosong);
     }
 
-    /**
-     * Jalur turnamen dari fase grup sampai final. Tahap yang sudah dicapai menyala mengikuti
-     * urutan palet (marun, merah tua, merah), jadi makin dekat ke final makin merah.
-     */
-    static HBox jalur(Turnamen t) {
-        List<String> tahapan = t.tahapan();
-        int sekarang = t.tahapSekarang();
-
-        HBox jalur = new HBox(4);
-        for (int i = 0; i < tahapan.size(); i++) {
-            Region batang = new Region();
-            batang.getStyleClass().addAll("batang-jalur",
-                    i <= sekarang ? "nyala-" + tingkatNyala(i, tahapan.size()) : "padam");
-
-            Label nama = label(tahapan.get(i).equals("Fase Grup") ? "Grup" : tahapan.get(i), "label-jalur");
-            if (i == sekarang) {
-                nama.getStyleClass().add("sekarang");
-            } else if (i > sekarang) {
-                nama.getStyleClass().add("belum");
-            }
-
-            VBox tahap = new VBox(6, batang, nama);
-            tahap.setPrefWidth(0); // semua tahap dapat lebar yang sama
-            HBox.setHgrow(tahap, Priority.ALWAYS);
-            jalur.getChildren().add(tahap);
-        }
-        return jalur;
+    /** Status tim sebagai lencana: lolos (merah tua), masih di grup (bingkai), atau tersingkir (abu). */
+    static Lencana lencanaStatus(String status) {
+        return kiri(Lencana.dariStatus(status));
     }
 
-    /** 0 = marun, 1 = merah tua, 2 = merah. Tahap terakhir (final) selalu merah. */
-    private static int tingkatNyala(int indeks, int jumlah) {
-        return jumlah <= 1 ? 2 : (int) Math.round(indeks * 2.0 / (jumlah - 1));
+    static JalurTurnamen jalur(Turnamen t) {
+        return kiri(new JalurTurnamen(t.tahapan(), t.tahapSekarang()));
     }
 }
