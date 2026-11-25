@@ -58,7 +58,11 @@ public class JalurTurnamen extends JComponent {
             g.setColor(i <= sekarang ? warnaNyala(i, n) : Tema.PADAM);
             g.fillRoundRect(x, 0, lebar, 6, 4, 4);
 
-            String nama = tahapan.get(i).equals("Fase Grup") ? "Grup" : tahapan.get(i);
+            String nama = switch (tahapan.get(i)) {
+                case "Fase Grup" -> "Grup";
+                case "Perempat Final" -> "Perempat";
+                default -> tahapan.get(i);
+            };
             g.setFont(Tema.font(i == sekarang ? Font.BOLD : Font.PLAIN, 11f));
             FontMetrics fm = g.getFontMetrics();
             g.setColor(i > sekarang ? Tema.TEKS_TBD : Tema.TEKS);
